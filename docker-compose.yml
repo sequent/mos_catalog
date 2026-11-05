@@ -1,0 +1,11 @@
+# Запуск: docker compose up --build      → страница http://localhost:8765 , документация API http://localhost:8765/docs
+# Другой порт на машине: APP_PORT=9000 docker compose up --build
+# Правка правил (config/rules.yaml) или словаря (config/dictionaries.yaml): сохранить файл и снова docker compose up --build
+# (правила пересобираются за секунды; после правки словаря пересобирается и каталог, ≈ 1 минута).
+services:
+  analog-search:
+    build: .
+    image: analog-search:latest
+    ports:
+      - "${APP_PORT:-8765}:8000"          # внутри контейнера сервис слушает 8000; снаружи 8765 (порт 8000 часто занят)
+    restart: unless-stopped

@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1900 1180" width="1900" height="1180" font-family="Helvetica, Arial, sans-serif">
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="context-stroke"/></marker><linearGradient id="mix" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#e8f1ff"/><stop offset="1" stop-color="#e3f5e8"/></linearGradient></defs>
+<rect width="1900" height="1180" fill="#ffffff"/>
+<text x="20" y="30" font-size="22" text-anchor="start" font-weight="700" fill="#111111">Как система решает по паре «запрос ↔ позиция из базы»</text>
+<text x="20" y="51" font-size="13" text-anchor="start" fill="#555555">Это шаг B4 и вердикт B6. Ни один балл на этот результат не влияет: оценка B5 только упорядочивает позиции внутри класса.</text>
+<rect x="560" y="70" width="460" height="85" rx="42.5" fill="#ffffff" stroke="#222222" stroke-width="2"/>
+<text x="790.0" y="98.5" font-size="14" text-anchor="middle" font-weight="700" fill="#111111">Пара: запрос ↔ кандидат из 50</text>
+<text x="790.0" y="116.5" font-size="13" text-anchor="middle" fill="#111111">после B2 и B3; сравнивается каждая</text>
+<text x="790.0" y="134.5" font-size="13" text-anchor="middle" fill="#111111">характеристика, названная в запросе</text>
+<rect x="560" y="190" width="460" height="120" rx="10" fill="#ffffff" stroke="#444444" stroke-width="2"/>
+<text x="790.0" y="218.0" font-size="14" text-anchor="middle" font-weight="700" fill="#111111">1. Есть конфликт по названной характеристике?</text>
+<text x="790.0" y="236.0" font-size="13" text-anchor="middle" fill="#111111">другое сечение, ток, размер, материал, класс пожарной</text>
+<text x="790.0" y="254.0" font-size="13" text-anchor="middle" fill="#111111">безопасности; другая модель или серия; два разных</text>
+<text x="790.0" y="272.0" font-size="13" text-anchor="middle" fill="#111111">конкретных типа из словаря (розетка ≠ выключатель);</text>
+<text x="790.0" y="290.0" font-size="13" text-anchor="middle" fill="#111111">разрешённого правилом отличия недостаточно</text>
+<rect x="40" y="190" width="380" height="120" rx="10" fill="#fbe4e4" stroke="#c43b3b" stroke-width="2"/>
+<text x="230.0" y="227.0" font-size="14" text-anchor="middle" font-weight="700" fill="#6b1414">Не подходит (reject)</text>
+<text x="230.0" y="245.0" font-size="13" text-anchor="middle" fill="#6b1414">в выдачу не попадает;</text>
+<text x="230.0" y="263.0" font-size="13" text-anchor="middle" fill="#6b1414">ближайший по числу конфликтов виден</text>
+<text x="230.0" y="281.0" font-size="13" text-anchor="middle" fill="#6b1414">как диагностика с причиной</text>
+<rect x="560" y="360" width="460" height="160" rx="10" fill="#ffffff" stroke="#444444" stroke-width="2"/>
+<text x="790.0" y="399.0" font-size="14" text-anchor="middle" font-weight="700" fill="#111111">2. Что-то нельзя проверить?</text>
+<text x="790.0" y="417.0" font-size="13" text-anchor="middle" fill="#111111">у кандидата нет характеристики; порядок сторон не подтверждён;</text>
+<text x="790.0" y="435.0" font-size="13" text-anchor="middle" fill="#111111">значение только в «прим.»; ограничение запроса не разобрано</text>
+<text x="790.0" y="453.0" font-size="13" text-anchor="middle" fill="#111111">(число с единицей или после названия величины), если то же</text>
+<text x="790.0" y="471.0" font-size="13" text-anchor="middle" fill="#111111">не записано у позиции (исключение: то же написание, с пометкой);</text>
+<text x="790.0" y="489.0" font-size="13" text-anchor="middle" fill="#111111">непроверенный состав; нет слова-предмета; слов мало</text>
+<rect x="1100" y="360" width="400" height="160" rx="10" fill="#fdf0d4" stroke="#d08a1a" stroke-width="2"/>
+<text x="1300.0" y="417.0" font-size="14" text-anchor="middle" font-weight="700" fill="#5c3500">Проверить (check)</text>
+<text x="1300.0" y="435.0" font-size="13" text-anchor="middle" fill="#5c3500">«требует проверки»: специалист решает;</text>
+<text x="1300.0" y="453.0" font-size="13" text-anchor="middle" fill="#5c3500">причина названа в карточке;</text>
+<text x="1300.0" y="471.0" font-size="13" text-anchor="middle" fill="#5c3500">в таблице идёт после подтверждённых</text>
+<rect x="560" y="570" width="460" height="120" rx="10" fill="#ffffff" stroke="#444444" stroke-width="2"/>
+<text x="790.0" y="598.0" font-size="14" text-anchor="middle" font-weight="700" fill="#111111">3. Есть достаточное основание подтверждения?</text>
+<text x="790.0" y="616.0" font-size="13" text-anchor="middle" fill="#111111">характеристика или код модели совпали, либо замена</text>
+<text x="790.0" y="634.0" font-size="13" text-anchor="middle" fill="#111111">по правилу (цвет, «уличный», «шт», римский класс</text>
+<text x="790.0" y="652.0" font-size="13" text-anchor="middle" fill="#111111">и один бренд не в счёт); или совпал весь текст;</text>
+<text x="790.0" y="670.0" font-size="13" text-anchor="middle" fill="#111111">или допущение по типу (термометр), с пометкой</text>
+<rect x="560" y="740" width="460" height="110" rx="10" fill="#ffffff" stroke="#444444" stroke-width="2"/>
+<text x="790.0" y="781.0" font-size="14" text-anchor="middle" font-weight="700" fill="#111111">4. Отличие разрешено правилом?</text>
+<text x="790.0" y="799.0" font-size="13" text-anchor="middle" fill="#111111">например, камера 3 Мп ↔ 2 Мп при допуске ±1 ступень</text>
+<text x="790.0" y="817.0" font-size="13" text-anchor="middle" fill="#111111">правило названо в карточке (rule_id)</text>
+<rect x="1100" y="740" width="400" height="110" rx="10" fill="#e4eefc" stroke="#3b6fd4" stroke-width="2"/>
+<text x="1300.0" y="781.0" font-size="14" text-anchor="middle" font-weight="700" fill="#12315f">Допустимая замена (substitute)</text>
+<text x="1300.0" y="799.0" font-size="13" text-anchor="middle" fill="#12315f">«допустимо по правилу …», с исходным</text>
+<text x="1300.0" y="817.0" font-size="13" text-anchor="middle" fill="#12315f">и допустимым значением</text>
+<rect x="560" y="890" width="460" height="110" rx="10" fill="#ffffff" stroke="#444444" stroke-width="2"/>
+<text x="790.0" y="931.0" font-size="14" text-anchor="middle" font-weight="700" fill="#111111">5. Совпало всё основное название?</text>
+<text x="790.0" y="949.0" font-size="13" text-anchor="middle" fill="#111111">после нормализации чисел, регистра, запятых и пробелов;</text>
+<text x="790.0" y="967.0" font-size="13" text-anchor="middle" fill="#111111">не комплект; синонимы словаря не в счёт</text>
+<rect x="1100" y="1030" width="400" height="110" rx="10" fill="#e3f4e8" stroke="#2f9e57" stroke-width="2"/>
+<text x="1300.0" y="1071.0" font-size="14" text-anchor="middle" font-weight="700" fill="#0f4a26">Та же позиция по данным названия</text>
+<text x="1300.0" y="1089.0" font-size="13" text-anchor="middle" fill="#0f4a26">единственное основание, при котором</text>
+<text x="1300.0" y="1107.0" font-size="13" text-anchor="middle" fill="#0f4a26">система так пишет</text>
+<rect x="40" y="890" width="380" height="110" rx="10" fill="#e3f4e8" stroke="#2f9e57" stroke-width="2"/>
+<text x="230.0" y="922.0" font-size="14" text-anchor="middle" font-weight="700" fill="#0f4a26">Совпадает по указанным параметрам</text>
+<text x="230.0" y="940.0" font-size="13" text-anchor="middle" fill="#0f4a26">параметры запроса совпали; остальное не проверялось;</text>
+<text x="230.0" y="958.0" font-size="13" text-anchor="middle" fill="#0f4a26">основание request_constraints; при допущении</text>
+<text x="230.0" y="976.0" font-size="13" text-anchor="middle" fill="#0f4a26">по типу: type_assumption, с пометкой</text>
+<rect x="40" y="1030" width="1000" height="120" rx="10" fill="#ffffff" stroke="#444444" stroke-width="2"/>
+<text x="540.0" y="1068.0" font-size="13" text-anchor="middle" font-weight="700" fill="#111111">Чего это решение НЕ доказывает</text>
+<text x="540.0" y="1085.0" font-size="12" text-anchor="middle" fill="#111111">• что позиции одна и та же вещь: «труба 25 мм» подойдёт и ПВХ, и ПНД, пока в запросе не назван материал;</text>
+<text x="540.0" y="1102.0" font-size="12" text-anchor="middle" fill="#111111">• полноты разбора: числовой guard не ловит все словесные требования; нераспознанное свойство может быть потеряно;</text>
+<text x="540.0" y="1119.0" font-size="12" text-anchor="middle" fill="#111111">• при допущении по типу: диапазон и точность не проверялись, действует допущение автора, не правило заказчика.</text>
+<path d="M1560,94 q0,-14 160.0,-14 q160.0,0 160.0,14 v232 q0,14 -160.0,14 q-160.0,0 -160.0,-14 z" fill="#fff0dc" stroke="#e08a1e" stroke-width="2"/><path d="M1560,94 q0,14 160.0,14 q160.0,0 160.0,-14" fill="none" stroke="#e08a1e" stroke-width="1.5"/>
+<text x="1720.0" y="162.0" font-size="14" text-anchor="middle" font-weight="700" fill="#5c3500">Кто что задаёт</text>
+<text x="1720.0" y="180.0" font-size="13" text-anchor="middle" fill="#5c3500">конфликты и допуски:</text>
+<text x="1720.0" y="198.0" font-size="13" text-anchor="middle" fill="#5c3500">config/rules.yaml, специалист;</text>
+<text x="1720.0" y="216.0" font-size="13" text-anchor="middle" fill="#5c3500">что считается подтверждением,</text>
+<text x="1720.0" y="234.0" font-size="13" text-anchor="middle" fill="#5c3500">слабые признаки, лимиты:</text>
+<text x="1720.0" y="252.0" font-size="13" text-anchor="middle" fill="#5c3500">policy в том же файле;</text>
+<text x="1720.0" y="270.0" font-size="13" text-anchor="middle" fill="#5c3500">типы, синонимы, материалы:</text>
+<text x="1720.0" y="288.0" font-size="13" text-anchor="middle" fill="#5c3500">config/dictionaries.yaml</text>
+<polyline points="790.0,155.0 790.0,190.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+<polyline points="560.0,250.0 420.0,250.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="477.8" y="240.0" width="24.4" height="20" rx="4" fill="#ffffff" opacity="0.92"/>
+<text x="490.0" y="255.0" font-size="12.5" text-anchor="middle" fill="#333333">да</text>
+<polyline points="790.0,310.0 790.0,360.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="774.2" y="325.0" width="31.6" height="20" rx="4" fill="#ffffff" opacity="0.92"/>
+<text x="790.0" y="340.0" font-size="12.5" text-anchor="middle" fill="#333333">нет</text>
+<polyline points="1020.0,440.0 1100.0,440.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="1047.8" y="430.0" width="24.4" height="20" rx="4" fill="#ffffff" opacity="0.92"/>
+<text x="1060.0" y="445.0" font-size="12.5" text-anchor="middle" fill="#333333">да</text>
+<polyline points="790.0,520.0 790.0,570.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="774.2" y="535.0" width="31.6" height="20" rx="4" fill="#ffffff" opacity="0.92"/>
+<text x="790.0" y="550.0" font-size="12.5" text-anchor="middle" fill="#333333">нет</text>
+<polyline points="1020.0,630.0 1200.0,630.0 1200.0,520.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="1029.4" y="620.0" width="161.2" height="20" rx="4" fill="#ffffff" opacity="0.92"/>
+<text x="1110.0" y="635.0" font-size="12.5" text-anchor="middle" fill="#333333">нет: одного типа мало</text>
+<polyline points="790.0,690.0 790.0,740.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="777.8" y="705.0" width="24.4" height="20" rx="4" fill="#ffffff" opacity="0.92"/>
+<text x="790.0" y="720.0" font-size="12.5" text-anchor="middle" fill="#333333">да</text>
+<polyline points="1020.0,795.0 1100.0,795.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="1047.8" y="785.0" width="24.4" height="20" rx="4" fill="#ffffff" opacity="0.92"/>
+<text x="1060.0" y="800.0" font-size="12.5" text-anchor="middle" fill="#333333">да</text>
+<polyline points="790.0,850.0 790.0,890.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="774.2" y="860.0" width="31.6" height="20" rx="4" fill="#ffffff" opacity="0.92"/>
+<text x="790.0" y="875.0" font-size="12.5" text-anchor="middle" fill="#333333">нет</text>
+<polyline points="1020.0,945.0 1060.0,945.0 1060.0,1085.0 1100.0,1085.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="1047.8" y="1005.0" width="24.4" height="20" rx="4" fill="#ffffff" opacity="0.92"/>
+<text x="1060.0" y="1020.0" font-size="12.5" text-anchor="middle" fill="#333333">да</text>
+<polyline points="560.0,945.0 420.0,945.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="474.2" y="935.0" width="31.6" height="20" rx="4" fill="#ffffff" opacity="0.92"/>
+<text x="490.0" y="950.0" font-size="12.5" text-anchor="middle" fill="#333333">нет</text>
+</svg>

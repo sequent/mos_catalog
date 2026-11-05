@@ -1,0 +1,29 @@
+# Шаблон независимого набора запросов. Скопировать в eval/independent_v1.yaml и заполнить ДО первого прогона (см. eval/PROTOCOL.md).
+usage: independent
+independence: independent
+set_name: independent-v1
+reviewed_by: null              # ФИО эксперта, проверившего допустимость замен
+frozen_commit: null            # git rev-parse HEAD на момент заморозки
+author_of_queries: null        # ФИО автора запросов (не участник разработки системы)
+splits:
+  holdout: "независимый набор: запросы написаны не разработчиком и заморожены до первого прогона"
+queries:
+  # запрос с ответом
+  - id: I01
+    split: holdout
+    query: ""                  # как написал бы пользователь
+    answer_rows: []            # строки базы (id вида row-000123), которые допустимо выдать
+    answer_note: ""
+    key: null
+  # запрос без допустимого ответа
+  - id: I13
+    split: holdout
+    query: ""
+    answer_rows: []
+    answer_note: "почему допустимого ответа в базе нет"
+    absence_checks:
+      - patterns: [""]
+        synthetic_witness: ""
+        near_miss: ""
+    variants_checked: []
+    expert_decision: null

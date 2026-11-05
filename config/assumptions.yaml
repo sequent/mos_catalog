@@ -1,0 +1,198 @@
+# Реестр допущений прототипа Правила и словарь придумал автор прототипа; настоящие задаёт специалист заказчика.
+# status:  author_assumption   решение автора, специалист не утверждал
+#          specialist_approved утверждено специалистом: ТОЛЬКО с approved_by и approved_on (иначе загрузка не пройдёт)
+#          rejected            специалист отклонил
+# Примеры из задания не являются утверждённой методикой заказчика.
+# config_refs: где допущение записано (файл:путь); тест проверяет, что путь существует.
+# rules.yaml ссылается на реестр полем `assumption: Axx` у правила (идентификатор должен существовать).
+version: 1
+assumptions:
+  - id: A01
+    statement: "Число жил и сечение кабеля должны совпадать строго"
+    source: "пример из задания («сечение кабеля должно совпадать строго»), оформлено автором"
+    status: author_assumption
+    affected_types: [кабель контрольный, кабель силовой, кабель, провод]
+    examples: ["КВВГнг-LS 7*1.5 ≠ КВВГЭнг(A)-LS 7х2,5"]
+    config_refs: ["rules:cable_cores_section"]
+  - id: A02
+    statement: "Класс пожарной безопасности кабеля (LS / FRLS / HF) должен совпадать"
+    source: "автор прототипа"
+    status: author_assumption
+    affected_types: [кабель контрольный, кабель силовой, кабель, провод]
+    examples: ["ВВГнг(A)-LS 3х6 ≠ ВВГнг(A)-FRLS 3х6"]
+    config_refs: ["rules:cable_fire_class"]
+  - id: A03
+    statement: "Экран кабеля (буква Э в маркировке) только помечается: отличие не отклоняет, итог «проверить»"
+    source: "решение автора («Оставить»)"
+    status: author_assumption
+    affected_types: [кабель контрольный, кабель силовой, кабель, провод]
+    examples: ["КВВГнг-LS 7*1.5 → КВВГЭнг(A)-LS 7х1,5: проверить"]
+    config_refs: ["rules:cable_screen"]
+  - id: A04
+    statement: "Разрешение камеры: допустимо отличие на одну ступень шкалы 1–2–3–4–5–8–12 Мп (по шкале, а не «±1 Мп»)"
+    source: "пример из задания («разрешение камеры ±1 ступень»), шкала придумана автором"
+    status: author_assumption
+    affected_types: [видеокамера]
+    examples: ["камера 3 Мп → 2 Мп: замена; 4 Мп → 2 Мп: нет; 5 Мп → 8 Мп: замена"]
+    config_refs: ["rules:camera_resolution"]
+  - id: A05
+    statement: "Размеры ворот должны совпасть; порядок сторон не важен"
+    source: "автор прототипа"
+    status: author_assumption
+    affected_types: [ворота, ворота откатные]
+    examples: ["ворота откатные 6000х2250 = 2250х6000"]
+    config_refs: ["rules:gate_size", "dims_order:sorted"]
+  - id: A06
+    statement: "Порядок сторон важен (ширина×высота) у лотка, воздуховода, решётки жалюзийной"
+    source: "автор прототипа"
+    status: author_assumption
+    affected_types: [лоток, воздуховод, решетка жалюзийная]
+    examples: ["воздуховод 500х300 ≠ 300х500"]
+    config_refs: ["dims_order:ordered"]
+  - id: A07
+    statement: "Порядок сторон у остальных типов неизвестен: размеры, совпавшие после перестановки, дают «проверить»"
+    source: "осторожное умолчание автора; вопрос к специалисту"
+    status: author_assumption
+    affected_types: []
+    examples: ["шкаф 400х700 ↔ 700х400: проверить"]
+    config_refs: ["defaults:dims_order_unlisted"]
+  - id: A08
+    statement: "Комплект («… в составе:») не может быть подтверждённым: состав в названии не проверяется"
+    source: "решение автора по замечанию A2"
+    status: author_assumption
+    affected_types: []
+    examples: ["Шкаф управления IP66 в составе: → проверить"]
+    config_refs: ["policy:composite.max_compatibility"]
+  - id: A09
+    statement: "Одного совпадения типа недостаточно; подтверждающими не считаются слабые признаки (исполнение, цвет)"
+    source: "автор прототипа"
+    status: author_assumption
+    affected_types: []
+    examples: ["камера PTZ с ИК-подсветкой (без параметров) → проверить"]
+    config_refs: ["policy:evidence.require_confirmed_attribute", "policy:evidence.weak_attributes"]
+  - id: A10
+    statement: "Для типа «термометр инфракрасный» достаточно совпадения типа (производитель и модель не важны); диапазон и точность не проверяются"
+    source: "решение автора"
+    status: author_assumption
+    affected_types: [термометр инфракрасный]
+    examples: ["Инфракрасный термометр любого производителя → Fluke 561"]
+    config_refs: ["policy:evidence.confirm_by_type"]
+  - id: A11
+    statement: "Число с единицей и число после названия величины, которое не стало параметром, не может молча исчезнуть: ответ не выше «проверить», пока то же значение не названо у позиции"
+    source: "решение автора"
+    status: author_assumption
+    affected_types: []
+    examples: ["ноутбук 8 Гб → проверить"]
+    config_refs: ["policy:unparsed_constraints.blocking_reasons"]
+  - id: A12
+    statement: "Слово-тип запроса должно быть в названии позиции другого семейства; слов запроса, не объяснённых параметрами, должно быть не менее половины"
+    source: "автор прототипа (порог 0,5 подобран на dev)"
+    status: author_assumption
+    affected_types: []
+    examples: ["задвижка диаметр 200 мм ≠ подставка диаметр 200 мм"]
+    config_refs: ["policy:word_coverage.type_word_required", "policy:word_coverage.min_for_confirmed"]
+  - id: A13
+    statement: "Фразы «любой цвет» и «любого производителя» отключают сравнение этой характеристики; без фразы другой цвет даёт «проверить»"
+    source: "решение автора"
+    status: author_assumption
+    affected_types: [тройник]
+    examples: ["Тройник 25х30 мм любой цвет → белый"]
+    config_refs: ["dictionaries:any_phrases", "defaults:per_attribute.color"]
+  - id: A14
+    statement: "«Металлическая» = стальная; с другими металлами общее слово не конфликтует («нет данных»)"
+    source: "решение автора"
+    status: author_assumption
+    affected_types: []
+    examples: ["дверь стальная ДПМ-01/30 = «металлическая»"]
+    config_refs: ["dictionaries:generic_materials"]
+  - id: A15
+    statement: "Синонимы: датчик пожарный/охранный/дымовой = извещатель; огнезадерживающий = противопожарный; дооснащение = доукомплектация; Хуавей = Huawei"
+    source: "решение автора"
+    status: author_assumption
+    affected_types: [извещатель, клапан противопожарный]
+    examples: ["огнезадерживающий клапан EI60 = клапан противопожарный"]
+    config_refs: ["dictionaries:synonyms.replace"]
+  - id: A16
+    statement: "Основная таблица: подтверждённые первыми, затем до 2 вариантов «требует проверки»; без подтверждённых только «к проверке» (до limit ≤ 5)"
+    source: "решение автора"
+    status: author_assumption
+    affected_types: []
+    examples: ["ИБП 12В для улицы → вариант к проверке"]
+    config_refs: ["policy:ui.review_in_main_table", "policy:ui.review_rows_when_found", "policy:ui.review_table_limit"]
+  - id: A17
+    statement: "Оценка = 0,6 × доля подтверждённых параметров + 0,4 × текстовая близость (0,7 BM25 + 0,3 смысл); только упорядочивает внутри класса"
+    source: "подобрано автором на dev-запросах"
+    status: author_assumption
+    affected_types: []
+    examples: []
+    config_refs: ["policy:ranking.score.weights", "policy:ranking.score.text_mix"]
+  - id: A18
+    statement: "Тип «выключатель» отличается от «розетка», «толщиномер» от «труба»; «выкл.» читается как «выключатель»; добавлены типы толщиномер, манометр, хроматограф, пробоотборник (по итогам контрольной проверки)"
+    source: "решение автора по результатам контрольной проверки; специалист не утверждал"
+    status: author_assumption
+    affected_types: [выключатель, розетка, толщиномер, манометр, хроматограф, пробоотборник]
+    examples: ["розетка 250 В/16 А не подтверждает выключатель; стальная труба не подтверждает ультразвуковой толщиномер"]
+    config_refs: ["dictionaries:types", "dictionaries:synonyms.replace", "dictionaries:specific_single_word_types"]
+  - id: A19
+    statement: "Предмет запроса (первое слово, не прилагательное и не код) должен быть назван в позиции; совпавшие числа, материал или код его не заменяют (компонент matching/compat.py: query_subject)"
+    source: "автор по результатам внешней проверки"
+    status: author_assumption
+    affected_types: []
+    examples: ["«анализатор вибрации 220 В IP65» не подтверждается блоком питания 220 В IP65"]
+    config_refs: ["policy:word_coverage.type_word_required"]
+  - id: A20
+    statement: "Явно названные модель, серия и производитель обязательны: другая модель той же серии (BA10-001B ≠ BA10-006B) и другая серия (JKL ≠ BN-Z) это конфликт; бренд сам по себе подтверждения не даёт; «любого производителя» снимает требование; короткий код из четырёх знаков считается моделью только при одинаковом типе (matching/compat.py: _series_requirement, _other_model_of_the_same_series, strong_codes)"
+    source: "решение автора по результатам контрольной проверки; специалист не утверждал"
+    status: author_assumption
+    affected_types: []
+    examples: ["воздушный клапан JKL 700х400 не подтверждается клапаном BN-Z-200", "манометр МО-05 ≠ МО-06"]
+    config_refs: ["policy:evidence"]
+  - id: A21
+    statement: "Назначение («для контроля/измерения/проверки … X») не свойство самого изделия: материал из этой фразы не считается материалом изделия (attributes.py: PURPOSE_RE)"
+    source: "автор по результатам внешней проверки"
+    status: author_assumption
+    affected_types: [толщиномер]
+    examples: ["толщиномер для контроля толщины стальных труб: материал «сталь» не извлекается"]
+    config_refs: ["dictionaries:materials"]
+  - id: A22
+    statement: "Строчные «в» и «а» после числа и пробела — вольты и амперы, если дальше не идёт русское слово (normalize.py)"
+    source: "автор по замечанию F1 повторной проверки"
+    status: author_assumption
+    affected_types: []
+    examples: ["380 в IP66 = 380 В; 100 в комплекте остаётся словами"]
+    config_refs: ["policy:unparsed_constraints.blocking_reasons"]
+  - id: A23
+    statement: "Категориальные признаки (технология и цвет печати, формат бумаги, тип разъёма, монтаж) и состав комплекта (пигтейлы, гильзы, метизы, матрицы) берутся из словаря features/kit_components; известное другое значение это конфликт, неназванное это «нет данных»; количество «шт» само по себе не подтверждает"
+    source: "автор по результатам внешней проверки; специалист не утверждал"
+    status: author_assumption
+    affected_types: [принтер, мфу, сканер, кросс, пресс гидравлический, комплект]
+    examples: ["лазерный цветной принтер A3 не подтверждается принтером без указанной технологии", "кросс с пигтейлами и гильзами не подтверждается кроссом без перечня"]
+    config_refs: ["dictionaries:features", "dictionaries:kit_components", "policy:evidence.weak_attributes"]
+  - id: A24
+    statement: "Комплект с перечнем в самом названии (`в комплекте: …`) не удерживается как «состав не сверяется», если позиция называет все компоненты, названные в запросе; заголовок «в составе:» без перечня удерживается"
+    source: "автор по результатам внешней проверки; специалист не утверждал"
+    status: author_assumption
+    affected_types: []
+    examples: ["Оптический кросс 16 портов. В комплекте: пигтейлы, гильзы подтверждает запрос с пигтейлами и гильзами"]
+    config_refs: ["policy:composite.max_compatibility"]
+  - id: A25
+    statement: "Сокращённые названия величин с точкой («диам.», «толщ.», «дл.», «выс.», «шир.», «глуб.») читаются как полные слова; латинские «t» и «km» после числа и пробела — тонны и километры; «Погр.», «Разгр.», «Перевоз.», «Трансп.» с точкой — услуги; прилагательное в начале названия («соединительный») не тип (normalize.py, flags.py, product_type.py)"
+    source: "автор по результатам диагностического прогона набора проверки устойчивости записи; специалист не утверждал"
+    status: author_assumption
+    affected_types: []
+    examples: ["диам. 20 мм = диаметр 20 мм; до 3 t = до 3 т; «Погр. материалов» — услуга погрузки"]
+    config_refs: ["policy:unparsed_constraints.blocking_reasons"]
+  - id: A26
+    statement: "Название считается тем же, если отличается только сокращением слов с точкой («компл. соед.» = «комплект соединительный»), перестановкой соседних слов внутри ряда простых слов («скоба прижимная» = «прижимная скоба»), кавычками и двоеточием; числа и коды остаются на своих местах (matching/compat.py: _same_name_written_differently)"
+    source: "автор по результатам набора проверки устойчивости записи; узкое второе основание рядом со строгим ключом названия, специалист не утверждал"
+    status: author_assumption
+    affected_types: []
+    examples: ["Прижимная скоба СР = Скоба прижимная СР; 2x16 ≠ 16x2"]
+    config_refs: ["policy:evidence"]
+  - id: A27
+    statement: "Класс римской цифрой («II класса», «класс I») это требование: другой класс конфликт, но совпавший класс сам по себе вещь не подтверждает (слабый признак)"
+    source: "автор по результатам набора проверки устойчивости записи: «II класса» подтверждало строку «I класса»; специалист не утверждал"
+    status: author_assumption
+    affected_types: []
+    examples: ["перевозка грузов II класса не подтверждается строкой I класса"]
+    config_refs: ["policy:evidence.weak_attributes"]

@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Поиск аналогов</title>
+<style>
+  :root {
+    --bg: #f6f7f9; --surface: #ffffff; --text: #1b1f27; --muted: #5b6472; --line: #dde1e8; --accent: #1f5fd1; --accent-text: #ffffff;
+    --same-bg: #e3f4e8; --same-fg: #0f6b2f;
+    --sub-bg: #e4eefc; --sub-fg: #1747a6;
+    --check-bg: #fdf0d4; --check-fg: #85560a;
+    --rej-bg: #fbe4e4; --rej-fg: #9a1f1f;
+    --bar: #1f5fd1; --bar-bg: #e6e9ef;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14171c; --surface: #1c2027; --text: #e6e9ef; --muted: #9aa3b2; --line: #2d333d; --accent: #6b9bff; --accent-text: #0d1117;
+      --same-bg: #16341f; --same-fg: #7fd69a;
+      --sub-bg: #172a4d; --sub-fg: #9bbcff;
+      --check-bg: #3b2d0e; --check-fg: #f1c76a;
+      --rej-bg: #3d1a1a; --rej-fg: #f19a9a;
+      --bar: #6b9bff; --bar-bg: #2d333d;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14171c; --surface: #1c2027; --text: #e6e9ef; --muted: #9aa3b2; --line: #2d333d; --accent: #6b9bff; --accent-text: #0d1117;
+    --same-bg: #16341f; --same-fg: #7fd69a;
+    --sub-bg: #172a4d; --sub-fg: #9bbcff;
+    --check-bg: #3b2d0e; --check-fg: #f1c76a;
+    --rej-bg: #3d1a1a; --rej-fg: #f19a9a;
+    --bar: #6b9bff; --bar-bg: #2d333d;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 980px; margin: 0 auto; padding: 24px 16px 48px; }
+  h1 { font-size: 1.6rem; margin: 0 0 4px; }
+  .lead { margin: 0 0 20px; color: var(--muted); max-width: 70ch; }
+  form { display: flex; gap: 8px; }
+  input[type="search"] { flex: 1; min-width: 0; padding: 12px 14px; font: inherit; color: var(--text); background: var(--surface);
+    border: 1px solid var(--line); border-radius: 10px; }
+  input[type="search"]:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+  button.primary { padding: 12px 20px; font: inherit; font-weight: 600; color: var(--accent-text); background: var(--accent); border: 0; border-radius: 10px; cursor: pointer; }
+  button.primary:disabled { opacity: .6; cursor: progress; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0 0; padding: 0; list-style: none; }
+  .chips button { padding: 6px 12px; font: inherit; font-size: .88rem; color: var(--text); background: var(--surface); border: 1px solid var(--line);
+    border-radius: 999px; cursor: pointer; }
+  .chips button:hover { border-color: var(--accent); }
+  .caption { margin: 18px 0 6px; font-size: .85rem; color: var(--muted); }
+  #status { margin: 22px 0 8px; padding: 14px 16px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); font-weight: 600; }
+  #status.found { background: var(--same-bg); color: var(--same-fg); border-color: transparent; }
+  #status.review { background: var(--check-bg); color: var(--check-fg); border-color: transparent; }
+  #status.not_found, #status.error { background: var(--rej-bg); color: var(--rej-fg); border-color: transparent; }
+  #status .sub { display: block; margin-top: 4px; font-weight: 400; font-size: .9rem; }
+  .assume { margin: 0 0 8px; font-size: .9rem; color: var(--muted); }
+  .understood { margin: 0 0 16px; font-size: .9rem; color: var(--muted); }
+  .understood b { color: var(--text); font-weight: 600; }
+  ol#results, ul#rejected { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+  .card.review { border-left: 5px solid var(--check-fg); }
+  .card.confirmed { border-left: 5px solid var(--same-fg); }
+  .card.rejected { border-left: 5px solid var(--rej-fg); }
+  .head { display: flex; gap: 12px; justify-content: space-between; align-items: baseline; }
+  .name { font-weight: 600; overflow-wrap: anywhere; }
+  .price { white-space: nowrap; font-variant-numeric: tabular-nums; font-weight: 600; }
+  .meta { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; margin: 10px 0 8px; }
+  .badge { display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: .85rem; font-weight: 600; }
+  .badge.same { background: var(--same-bg); color: var(--same-fg); }
+  .badge.substitute { background: var(--sub-bg); color: var(--sub-fg); }
+  .badge.check { background: var(--check-bg); color: var(--check-fg); }
+  .badge.reject { background: var(--rej-bg); color: var(--rej-fg); }
+  .mark { font-size: .85rem; font-weight: 600; color: var(--check-fg); }
+  .id { font-size: .8rem; color: var(--muted); }
+  .score { display: grid; grid-template-columns: auto 1fr; gap: 2px 12px; align-items: center; margin: 6px 0 10px; font-size: .88rem; color: var(--muted); }
+  .score .total { grid-column: 1 / -1; color: var(--text); }
+  .bar { height: 8px; background: var(--bar-bg); border-radius: 4px; overflow: hidden; }
+  .bar > span { display: block; height: 100%; background: var(--bar); }
+  .explain { margin: 8px 0; }
+  .note { margin: 6px 0 0; font-size: .88rem; color: var(--muted); }
+  .ev { margin-top: 2px; font-size: .8rem; color: var(--muted); overflow-wrap: anywhere; }
+  .ev.alt { color: var(--check-fg); }
+  ul.extra { margin: 6px 0 0; padding-left: 18px; font-size: .9rem; }
+  ul.extra li { margin: 3px 0; overflow-wrap: anywhere; }
+  ul.extra .src { color: var(--muted); font-size: .82rem; }
+  ul.extra .alt { color: var(--check-fg); }
+  .unparsed { margin: 0 0 12px; padding: 10px 14px; border-radius: 10px; border: 1px solid var(--line); background: var(--check-bg); color: var(--check-fg); font-size: .92rem; }
+  table.cmp { width: 100%; border-collapse: collapse; font-size: .9rem; margin-top: 8px; }
+  table.cmp th { text-align: left; color: var(--muted); font-weight: 600; border-bottom: 1px solid var(--line); padding: 6px 8px 6px 0; }
+  table.cmp td { padding: 6px 8px 6px 0; border-bottom: 1px solid var(--line); vertical-align: top; overflow-wrap: anywhere; }
+  table.cmp tr:last-child td { border-bottom: 0; }
+  .st { font-weight: 600; white-space: nowrap; }
+  .st.match, .st.match_reordered { color: var(--same-fg); }
+  .st.substitute { color: var(--sub-fg); }
+  .st.conflict { color: var(--rej-fg); }
+  .st.flag, .st.no_data, .st.alt_only, .st.ambiguous { color: var(--check-fg); }
+  .st.info, .st.info_diff { color: var(--muted); }
+  details { margin-top: 8px; }
+  summary { cursor: pointer; font-size: .9rem; color: var(--accent); }
+  footer { margin-top: 28px; padding-top: 12px; border-top: 1px solid var(--line); font-size: .85rem; color: var(--muted); }
+  h2 { font-size: 1.05rem; margin: 22px 0 8px; }
+  @media (max-width: 640px) {
+    form { flex-direction: column; }
+    .head { flex-direction: column; gap: 2px; }
+    table.cmp thead { display: none; }
+    table.cmp tr { display: block; padding: 6px 0; border-bottom: 1px solid var(--line); }
+    table.cmp td { display: block; border: 0; padding: 1px 0; }
+    table.cmp td::before { content: attr(data-label) ": "; color: var(--muted); }
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>Поиск аналогов</h1>
+  <p class="lead">Опишите позицию своими словами. Система найдёт похожие в базе, покажет, что совпало, что отличается и чего нет в названии, и честно скажет «не найдено», если подтвердить нечем.</p>
+
+  <form id="form" role="search">
+    <input type="search" id="q" name="q" maxlength="500" autocomplete="off" placeholder="Например: кабель КВВГнг-LS 7*1.5" aria-label="Запрос" required>
+    <button class="primary" id="go" type="submit">Найти</button>
+  </form>
+
+  <p class="caption" id="examples-caption">Примеры (7 запросов из задания и 2 с принятыми допущениями):</p>
+  <ul class="chips" id="chips" aria-labelledby="examples-caption"></ul>
+
+  <div id="status" role="status" aria-live="polite" hidden></div>
+  <p class="assume" id="assume" hidden></p>
+  <p class="understood" id="understood" hidden></p>
+  <p class="unparsed" id="unparsed" role="note" hidden></p>
+  <ol id="results"></ol>
+  <section id="rejected-block" hidden>
+    <h2>Ближайшее, но не подходит</h2>
+    <ul id="rejected"></ul>
+  </section>
+
+  <footer id="footer">Правила и допущения: <code>config/rules.yaml</code>, словарь: <code>config/dictionaries.yaml</code>. Цена только показывается и на выбор не влияет.</footer>
+</main>
+
+<script>
+"use strict";
+const EXAMPLES = [
+  "кабель КВВГнг-LS 7*1.5",
+  "камера IP уличная 2 Мп вариофокальная",
+  "ворота откатные 6000х2250",
+  "труба гофра ПВХ 25 мм",
+  "ИБП 12В для улицы",
+  "трансформатор силовой сухой 1000 кВА",
+  "огнетушитель порошковый ОП-5",
+  "Инфракрасный термометр любого производителя",
+  "Тройник 25х30 мм любой цвет",
+];
+const STATUS_ICON = { match: "✔", match_reordered: "✔", substitute: "≈", conflict: "✖", flag: "⚠", no_data: "?", alt_only: "?", ambiguous: "?", info: "ℹ", info_diff: "ℹ" };
+const VERDICT_ICON = { same: "✔", substitute: "≈", check: "?", reject: "✖" };
+const $ = (id) => document.getElementById(id);
+
+// Only textContent is ever used for data: names come from the database and the query is typed by a person.
+function h(tag, attrs, ...children) {
+  const el = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs || {})) {
+    if (v === false || v == null) continue;
+    if (k === "class") el.className = v; else if (k === "text") el.textContent = v; else el.setAttribute(k, v === true ? "" : v);
+  }
+  for (const c of children.flat()) if (c != null) el.append(c);
+  return el;
+}
+const money = (n) => new Intl.NumberFormat("ru-RU").format(n) + " руб.";
+const num = (x) => Number(x).toFixed(2).replace(".", ",");
+
+function bar(label, value) {
+  return [h("span", { text: `${label} ${num(value)}` }), h("div", { class: "bar", "aria-hidden": "true" }, h("span", { style: `width:${Math.round(Math.max(0, Math.min(1, value)) * 100)}%` }))];
+}
+
+// where a value was read from: the fragment and its source; a value from the «прим.» note is marked, it does not confirm the main name
+function evidenceLines(row, side) {
+  return (row.evidence || []).filter((v) => v.side === side).map((v) =>
+    h("div", { class: `ev${v.source === "alt" ? " alt" : ""}`, text: `${v.source_text}: «${v.fragment}»${v.note ? " (" + v.note + ")" : ""}` }));
+}
+
+function comparisonTable(rows) {
+  const body = rows.map((r) => h("tr", {},
+    h("td", { "data-label": "Характеристика", text: r.label }),
+    h("td", { "data-label": "Запрос" }, r.query, ...evidenceLines(r, "query")),
+    h("td", { "data-label": "В базе" }, r.candidate, ...evidenceLines(r, "candidate")),
+    h("td", { "data-label": "Итог" }, h("span", { class: `st ${r.status}`, text: `${STATUS_ICON[r.status] || ""} ${r.status_text}` }),
+      r.rule ? h("span", { class: "id", text: ` (правило ${r.rule})` }) : null)));
+  return h("table", { class: "cmp" },
+    h("thead", {}, h("tr", {}, ["Характеристика", "Запрос", "В базе", "Итог"].map((t) => h("th", { scope: "col", text: t })))),
+    h("tbody", {}, body));
+}
+
+// what the position states that the query did not ask for («труба 25 мм» → материал ПВХ); a note value is marked as an alternative
+function extraBlock(item) {
+  const xs = item.candidate_extra_attributes || [];
+  if (!xs.length) return null;
+  return h("details", {}, h("summary", { text: `Дополнительные характеристики позиции (${xs.length})` }),
+    h("ul", { class: "extra" }, xs.map((x) => h("li", { class: x.source === "alt" ? "alt" : "" },
+      h("b", { text: x.label + ": " }), x.value, h("span", { class: "src", text: ` · ${x.source_text}: «${x.fragment}»${x.note ? " (" + x.note + ")" : ""}` })))));
+}
+
+// numbers of the position's name that nothing explains: the system could not read them as requirements
+function unparsedBlock(item) {
+  const us = item.candidate_unparsed_constraints || [];
+  if (!us.length) return null;
+  return h("details", {}, h("summary", { text: `Не удалось разобрать в названии позиции (${us.length})` }),
+    h("ul", { class: "extra" }, us.map((u) => h("li", {}, h("b", { text: u.raw }), h("span", { class: "src", text: ` · ${u.reason_text}` })))));
+}
+
+function card(item, rank, weights, kind) {
+  const wc = weights ? weights.attribute_coverage : null, wt = weights ? weights.text_relevance : null;
+  const parts = item.score_parts;
+  const cls = item.verdict === "reject" ? "rejected" : item.needs_review ? "review" : "confirmed";
+  const formula = wc != null ? `оценка = ${num(wc)} × характеристики + ${num(wt)} × текст; она только упорядочивает позиции внутри своей группы` : "";
+  return h("li", { class: `card ${cls}` },
+    h("div", { class: "head" },
+      h("div", { class: "name", text: (rank ? `${rank}. ` : "") + item.name }),
+      h("div", { class: "price", text: money(item.price) })),
+    h("div", { class: "meta" },
+      h("span", { class: `badge ${item.verdict}`, text: `${VERDICT_ICON[item.verdict] || ""} ${item.verdict_text[0].toUpperCase() + item.verdict_text.slice(1)}` }),
+      item.needs_review ? h("span", { class: "mark", text: "требует проверки" }) : null,
+      item.composite ? h("span", { class: "id", text: "комплект" }) : null,
+      h("span", { class: "id", text: item.id })),
+    kind === "rejected" ? null : h("div", { class: "score", title: formula },
+      h("span", { class: "total", text: `Оценка сходства ${num(item.score)}` }),
+      bar("совпадение характеристик", parts.attribute_coverage), bar("близость текста", parts.text_relevance)),
+    item.match_note ? h("p", { class: "note", text: item.match_note }) : null,
+    h("p", { class: "explain", text: item.explanation }),
+    h("details", { open: kind !== "rejected" && rank === 1 }, h("summary", { text: "Сравнение характеристик" }), comparisonTable(item.comparison)),
+    extraBlock(item), unparsedBlock(item),
+    formula && kind !== "rejected" ? h("p", { class: "id", text: formula }) : null);
+}
+
+function render(a) {
+  const st = $("status");
+  st.hidden = false;
+  st.className = a.display_status;
+  const found = a.results.length, review = a.table.length - (a.display_status === "found" ? found : 0);
+  st.replaceChildren(a.status_line,
+    h("span", { class: "sub", text: a.display_status === "found" ? "Подтверждённые позиции идут первыми; помеченные «требует проверки» нельзя брать без решения специалиста."
+      : a.display_status === "review" ? "Ни одна позиция не подтверждена по названию: это наиболее похожие, сравнение характеристик ниже."
+      : "В базе нет позиции, которую можно подтвердить по названию." }));
+  const asm = a.query.assumptions || [];
+  $("assume").hidden = !asm.length;
+  if (asm.length) $("assume").textContent = "Принято допущение: " + asm.map((x) => `${x.label} не важен («${x.phrase}»)`).join("; ") + ".";
+  const q = a.query, attrs = q.attributes.map((x) => `${x.label} = ${x.value}`);
+  if (q.model_codes.length) attrs.push("модель " + q.model_codes.join(", "));
+  const u = $("understood");
+  u.hidden = false;
+  u.replaceChildren("Система поняла: тип — ", h("b", { text: q.type || "не определён" }), q.type ? ` (${q.type_specific ? "конкретный" : "общий"})` : "", attrs.length ? "; " + attrs.join("; ") : "; характеристик в запросе нет", ".");
+  const blocking = (q.unparsed_constraints || []).filter((x) => x.severity === "blocking").map((x) => x.raw);
+  $("unparsed").hidden = !blocking.length;
+  if (blocking.length) $("unparsed").textContent = "Не удалось разобрать: " + blocking.join("; ") + ". Эти требования не сравнивались, поэтому ответ не выше «проверить»; уточните значение (единицу или название величины).";
+  $("results").replaceChildren(...a.table.map((it, i) => card(it, i + 1, a.score_weights, "table")));
+  const rj = $("rejected-block");
+  rj.hidden = !a.nearest_rejected;
+  $("rejected").replaceChildren(...(a.nearest_rejected ? [card(a.nearest_rejected, 0, a.score_weights, "rejected")] : []));
+  $("footer").replaceChildren("Правила: версия ", h("b", { text: a.rules_version }), ` (${a.rules_status === "assumption" ? "допущения автора, не утверждены специалистом" : a.rules_status}). `,
+    `Кандидатов проверено: ${a.diagnostics.candidates}; поиск ${a.diagnostics.retrieval_ms} мс, сравнение ${a.diagnostics.matching_ms} мс. Цена только показывается и на выбор не влияет.`);
+}
+
+function fail(text) {
+  const st = $("status");
+  st.hidden = false; st.className = "error"; st.textContent = text;
+  for (const id of ["assume", "understood", "unparsed"]) $(id).hidden = true;
+  $("results").replaceChildren(); $("rejected-block").hidden = true;
+}
+
+async function search(query) {
+  const go = $("go");
+  go.disabled = true; go.textContent = "Ищу…";
+  try {
+    const r = await fetch("/search", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ query, limit: 5 }) });
+    if (r.status === 422) return fail("Запрос не принят: он пуст или длиннее 500 символов.");
+    if (!r.ok) return fail("Сервис вернул ошибку. Попробуйте ещё раз.");
+    render(await r.json());
+  } catch (e) {
+    fail("Нет связи с сервисом. Проверьте, что он запущен.");
+  } finally {
+    go.disabled = false; go.textContent = "Найти";
+  }
+}
+
+$("form").addEventListener("submit", (e) => { e.preventDefault(); const v = $("q").value.trim(); if (v) search(v); });
+$("chips").replaceChildren(...EXAMPLES.map((t) => h("li", {}, h("button", { type: "button", text: t, onclick: null }))));
+$("chips").addEventListener("click", (e) => { const b = e.target.closest("button"); if (b) { $("q").value = b.textContent; search(b.textContent); } });
+</script>
+</body>
+</html>

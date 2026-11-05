@@ -1,0 +1,5306 @@
+{
+ "run_id": "hv2-after-robustness",
+ "set": {
+  "set_name": "internal-regression-v1",
+  "usage": "regression",
+  "independence": "not_independent",
+  "reviewed_by": null,
+  "queries_sha256": "ae876a357d4f38028d76f6c11a2e2764909bae0ef769b6e1578d697ef8d99e2b",
+  "effective_independence": "not_independent"
+ },
+ "systems": {
+  "1 простой поиск по словам (baseline)": {
+   "all": {
+    "ans": 26,
+    "hit5": 23,
+    "hit1": 18,
+    "hit5_lenient": 23,
+    "wrong_key": 11,
+    "wrong_top1": 22,
+    "noans": 14,
+    "honest": 0,
+    "false_answer": 14,
+    "per_query": {
+     "Q01": {
+      "top5": [
+       "row-000106",
+       "row-000744",
+       "row-001171",
+       "row-001758",
+       "row-001862"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000106",
+      "rank": 1
+     },
+     "Q02": {
+      "top5": [
+       "row-001999",
+       "row-000100",
+       "row-000153",
+       "row-001456",
+       "row-001654"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001999",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": 2
+     },
+     "Q03": {
+      "top5": [
+       "row-000576",
+       "row-001116",
+       "row-001447",
+       "row-001760",
+       "row-001885"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000576",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": null
+     },
+     "Q05": {
+      "top5": [
+       "row-000585",
+       "row-000495",
+       "row-001668",
+       "row-001778",
+       "row-000872"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000585",
+      "rank": 1
+     },
+     "Q07": {
+      "top5": [
+       "row-001129",
+       "row-001502",
+       "row-000584",
+       "row-000781",
+       "row-002259"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001129",
+      "rank": 1
+     },
+     "Q09": {
+      "top5": [
+       "row-000261",
+       "row-001818",
+       "row-000447",
+       "row-000846",
+       "row-001985"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000261",
+      "rank": 1
+     },
+     "Q11": {
+      "top5": [
+       "row-001561",
+       "row-000201",
+       "row-000342",
+       "row-000842",
+       "row-000970"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001561",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": 2
+     },
+     "Q13": {
+      "top5": [
+       "row-000159",
+       "row-001178"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000159",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": 2
+     },
+     "N1": {
+      "top5": [
+       "row-000224",
+       "row-000650",
+       "row-000975",
+       "row-001907",
+       "row-002073"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000224",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": null
+     },
+     "N3": {
+      "top5": [
+       "row-001729",
+       "row-001646",
+       "row-000538",
+       "row-000980",
+       "row-002291"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001729",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": null
+     },
+     "Q04": {
+      "top5": [
+       "row-000361",
+       "row-000891",
+       "row-001749",
+       "row-000871",
+       "row-000364"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000361",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": 2
+     },
+     "Q06": {
+      "top5": [
+       "row-000646",
+       "row-002134",
+       "row-001759",
+       "row-001770",
+       "row-000213"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000646",
+      "rank": 1
+     },
+     "Q08": {
+      "top5": [
+       "row-000507",
+       "row-000808",
+       "row-001150",
+       "row-000054",
+       "row-001021"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000507",
+      "rank": 1
+     },
+     "Q10": {
+      "top5": [
+       "row-000145",
+       "row-000321",
+       "row-001250",
+       "row-000357",
+       "row-000006"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000145",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": 4
+     },
+     "Q12": {
+      "top5": [
+       "row-001879",
+       "row-000007",
+       "row-001146",
+       "row-001382",
+       "row-001846"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001879",
+      "rank": 1
+     },
+     "Q14": {
+      "top5": [
+       "row-000971",
+       "row-002336",
+       "row-001064",
+       "row-001333",
+       "row-001884"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000971",
+      "rank": 1
+     },
+     "Q15": {
+      "top5": [
+       "row-001866"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001866",
+      "rank": 1
+     },
+     "Q16": {
+      "top5": [
+       "row-000393",
+       "row-000553",
+       "row-001671",
+       "row-001705",
+       "row-001938"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000393",
+      "rank": 1
+     },
+     "N2": {
+      "top5": [
+       "row-000428",
+       "row-000887",
+       "row-000480",
+       "row-000467",
+       "row-000859"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000428",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": null
+     },
+     "N4": {
+      "top5": [
+       "row-000365",
+       "row-000730",
+       "row-000372",
+       "row-001508",
+       "row-001946"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000365",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": null
+     },
+     "H01": {
+      "top5": [
+       "row-000723",
+       "row-002087",
+       "row-000232",
+       "row-001282",
+       "row-001477"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000723",
+      "rank": 1
+     },
+     "H02": {
+      "top5": [
+       "row-001135",
+       "row-000089",
+       "row-000694",
+       "row-001389",
+       "row-000317"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001135",
+      "rank": 1
+     },
+     "H03": {
+      "top5": [
+       "row-001693",
+       "row-002327",
+       "row-002270",
+       "row-002082",
+       "row-000827"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001693",
+      "rank": 1
+     },
+     "H04": {
+      "top5": [
+       "row-001579",
+       "row-001974",
+       "row-000690",
+       "row-001110",
+       "row-002061"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001579",
+      "rank": 1
+     },
+     "H05": {
+      "top5": [
+       "row-001066",
+       "row-000363",
+       "row-000217",
+       "row-000567",
+       "row-000926"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001066",
+      "rank": 1
+     },
+     "H06": {
+      "top5": [
+       "row-000802",
+       "row-001640",
+       "row-002078",
+       "row-002249",
+       "row-002258"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000802",
+      "rank": 1
+     },
+     "H07": {
+      "top5": [
+       "row-000006",
+       "row-001130",
+       "row-001057",
+       "row-000155",
+       "row-000849"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000006",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": null
+     },
+     "H08": {
+      "top5": [
+       "row-000144",
+       "row-001947",
+       "row-001524",
+       "row-001344",
+       "row-000706"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000144",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": null
+     },
+     "H09": {
+      "top5": [
+       "row-001762",
+       "row-001661",
+       "row-001970",
+       "row-001128",
+       "row-001639"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001762",
+      "rank": 1
+     },
+     "H10": {
+      "top5": [
+       "row-000191",
+       "row-000324",
+       "row-001992",
+       "row-000697",
+       "row-000803"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000191",
+      "rank": 1
+     },
+     "X01": {
+      "top5": [
+       "row-000915",
+       "row-002093",
+       "row-000584",
+       "row-001327",
+       "row-001718"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000915",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": null
+     },
+     "X02": {
+      "top5": [
+       "row-002297",
+       "row-000796",
+       "row-001154",
+       "row-001215",
+       "row-001306"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-002297",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": null
+     },
+     "X03": {
+      "top5": [
+       "row-002041",
+       "row-000311",
+       "row-001896",
+       "row-001481",
+       "row-002341"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-002041",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": null
+     },
+     "X04": {
+      "top5": [
+       "row-000305",
+       "row-002054",
+       "row-000415",
+       "row-000121",
+       "row-000994"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000305",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": null
+     },
+     "X05": {
+      "top5": [
+       "row-000926",
+       "row-001258",
+       "row-001570",
+       "row-000217",
+       "row-001040"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000926",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": null
+     },
+     "X06": {
+      "top5": [
+       "row-001999",
+       "row-000100",
+       "row-000339",
+       "row-001654",
+       "row-001824"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001999",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": null
+     },
+     "X07": {
+      "top5": [
+       "row-000331",
+       "row-001504",
+       "row-000585",
+       "row-000495",
+       "row-001778"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000331",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": null
+     },
+     "X08": {
+      "top5": [
+       "row-000049",
+       "row-002267",
+       "row-000326",
+       "row-001506",
+       "row-000670"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000049",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": null
+     },
+     "X09": {
+      "top5": [
+       "row-001872",
+       "row-001729",
+       "row-000176",
+       "row-002219",
+       "row-001646"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001872",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": null
+     },
+     "X10": {
+      "top5": [
+       "row-000159",
+       "row-001828"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000159",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": null
+     }
+    }
+   },
+   "dev": {
+    "ans": 8,
+    "hit5": 7,
+    "hit1": 4,
+    "hit5_lenient": 7,
+    "wrong_key": 4,
+    "wrong_top1": 6,
+    "noans": 2,
+    "honest": 0,
+    "false_answer": 2,
+    "per_query": {
+     "Q01": {
+      "top5": [
+       "row-000106",
+       "row-000744",
+       "row-001171",
+       "row-001758",
+       "row-001862"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000106",
+      "rank": 1
+     },
+     "Q02": {
+      "top5": [
+       "row-001999",
+       "row-000100",
+       "row-000153",
+       "row-001456",
+       "row-001654"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001999",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": 2
+     },
+     "Q03": {
+      "top5": [
+       "row-000576",
+       "row-001116",
+       "row-001447",
+       "row-001760",
+       "row-001885"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000576",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": null
+     },
+     "Q05": {
+      "top5": [
+       "row-000585",
+       "row-000495",
+       "row-001668",
+       "row-001778",
+       "row-000872"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000585",
+      "rank": 1
+     },
+     "Q07": {
+      "top5": [
+       "row-001129",
+       "row-001502",
+       "row-000584",
+       "row-000781",
+       "row-002259"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001129",
+      "rank": 1
+     },
+     "Q09": {
+      "top5": [
+       "row-000261",
+       "row-001818",
+       "row-000447",
+       "row-000846",
+       "row-001985"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000261",
+      "rank": 1
+     },
+     "Q11": {
+      "top5": [
+       "row-001561",
+       "row-000201",
+       "row-000342",
+       "row-000842",
+       "row-000970"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001561",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": 2
+     },
+     "Q13": {
+      "top5": [
+       "row-000159",
+       "row-001178"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000159",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": 2
+     },
+     "N1": {
+      "top5": [
+       "row-000224",
+       "row-000650",
+       "row-000975",
+       "row-001907",
+       "row-002073"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000224",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": null
+     },
+     "N3": {
+      "top5": [
+       "row-001729",
+       "row-001646",
+       "row-000538",
+       "row-000980",
+       "row-002291"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001729",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": null
+     }
+    }
+   },
+   "test": {
+    "ans": 8,
+    "hit5": 8,
+    "hit1": 6,
+    "hit5_lenient": 8,
+    "wrong_key": 3,
+    "wrong_top1": 4,
+    "noans": 2,
+    "honest": 0,
+    "false_answer": 2,
+    "per_query": {
+     "Q04": {
+      "top5": [
+       "row-000361",
+       "row-000891",
+       "row-001749",
+       "row-000871",
+       "row-000364"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000361",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": 2
+     },
+     "Q06": {
+      "top5": [
+       "row-000646",
+       "row-002134",
+       "row-001759",
+       "row-001770",
+       "row-000213"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000646",
+      "rank": 1
+     },
+     "Q08": {
+      "top5": [
+       "row-000507",
+       "row-000808",
+       "row-001150",
+       "row-000054",
+       "row-001021"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000507",
+      "rank": 1
+     },
+     "Q10": {
+      "top5": [
+       "row-000145",
+       "row-000321",
+       "row-001250",
+       "row-000357",
+       "row-000006"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000145",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": 4
+     },
+     "Q12": {
+      "top5": [
+       "row-001879",
+       "row-000007",
+       "row-001146",
+       "row-001382",
+       "row-001846"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001879",
+      "rank": 1
+     },
+     "Q14": {
+      "top5": [
+       "row-000971",
+       "row-002336",
+       "row-001064",
+       "row-001333",
+       "row-001884"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000971",
+      "rank": 1
+     },
+     "Q15": {
+      "top5": [
+       "row-001866"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001866",
+      "rank": 1
+     },
+     "Q16": {
+      "top5": [
+       "row-000393",
+       "row-000553",
+       "row-001671",
+       "row-001705",
+       "row-001938"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000393",
+      "rank": 1
+     },
+     "N2": {
+      "top5": [
+       "row-000428",
+       "row-000887",
+       "row-000480",
+       "row-000467",
+       "row-000859"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000428",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": null
+     },
+     "N4": {
+      "top5": [
+       "row-000365",
+       "row-000730",
+       "row-000372",
+       "row-001508",
+       "row-001946"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000365",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": null
+     }
+    }
+   },
+   "holdout": {
+    "ans": 10,
+    "hit5": 8,
+    "hit1": 8,
+    "hit5_lenient": 8,
+    "wrong_key": 4,
+    "wrong_top1": 12,
+    "noans": 10,
+    "honest": 0,
+    "false_answer": 10,
+    "per_query": {
+     "H01": {
+      "top5": [
+       "row-000723",
+       "row-002087",
+       "row-000232",
+       "row-001282",
+       "row-001477"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000723",
+      "rank": 1
+     },
+     "H02": {
+      "top5": [
+       "row-001135",
+       "row-000089",
+       "row-000694",
+       "row-001389",
+       "row-000317"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001135",
+      "rank": 1
+     },
+     "H03": {
+      "top5": [
+       "row-001693",
+       "row-002327",
+       "row-002270",
+       "row-002082",
+       "row-000827"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001693",
+      "rank": 1
+     },
+     "H04": {
+      "top5": [
+       "row-001579",
+       "row-001974",
+       "row-000690",
+       "row-001110",
+       "row-002061"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001579",
+      "rank": 1
+     },
+     "H05": {
+      "top5": [
+       "row-001066",
+       "row-000363",
+       "row-000217",
+       "row-000567",
+       "row-000926"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001066",
+      "rank": 1
+     },
+     "H06": {
+      "top5": [
+       "row-000802",
+       "row-001640",
+       "row-002078",
+       "row-002249",
+       "row-002258"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000802",
+      "rank": 1
+     },
+     "H07": {
+      "top5": [
+       "row-000006",
+       "row-001130",
+       "row-001057",
+       "row-000155",
+       "row-000849"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000006",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": null
+     },
+     "H08": {
+      "top5": [
+       "row-000144",
+       "row-001947",
+       "row-001524",
+       "row-001344",
+       "row-000706"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000144",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": null
+     },
+     "H09": {
+      "top5": [
+       "row-001762",
+       "row-001661",
+       "row-001970",
+       "row-001128",
+       "row-001639"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001762",
+      "rank": 1
+     },
+     "H10": {
+      "top5": [
+       "row-000191",
+       "row-000324",
+       "row-001992",
+       "row-000697",
+       "row-000803"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000191",
+      "rank": 1
+     },
+     "X01": {
+      "top5": [
+       "row-000915",
+       "row-002093",
+       "row-000584",
+       "row-001327",
+       "row-001718"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000915",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": null
+     },
+     "X02": {
+      "top5": [
+       "row-002297",
+       "row-000796",
+       "row-001154",
+       "row-001215",
+       "row-001306"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-002297",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": null
+     },
+     "X03": {
+      "top5": [
+       "row-002041",
+       "row-000311",
+       "row-001896",
+       "row-001481",
+       "row-002341"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-002041",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": null
+     },
+     "X04": {
+      "top5": [
+       "row-000305",
+       "row-002054",
+       "row-000415",
+       "row-000121",
+       "row-000994"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000305",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": null
+     },
+     "X05": {
+      "top5": [
+       "row-000926",
+       "row-001258",
+       "row-001570",
+       "row-000217",
+       "row-001040"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000926",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": null
+     },
+     "X06": {
+      "top5": [
+       "row-001999",
+       "row-000100",
+       "row-000339",
+       "row-001654",
+       "row-001824"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001999",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": null
+     },
+     "X07": {
+      "top5": [
+       "row-000331",
+       "row-001504",
+       "row-000585",
+       "row-000495",
+       "row-001778"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000331",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": null
+     },
+     "X08": {
+      "top5": [
+       "row-000049",
+       "row-002267",
+       "row-000326",
+       "row-001506",
+       "row-000670"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000049",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": null
+     },
+     "X09": {
+      "top5": [
+       "row-001872",
+       "row-001729",
+       "row-000176",
+       "row-002219",
+       "row-001646"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001872",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": null
+     },
+     "X10": {
+      "top5": [
+       "row-000159",
+       "row-001828"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000159",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": null
+     }
+    }
+   }
+  },
+  "2 слова + нормализация и токены характеристик (B2 без смысла)": {
+   "all": {
+    "ans": 26,
+    "hit5": 24,
+    "hit1": 20,
+    "hit5_lenient": 24,
+    "wrong_key": 8,
+    "wrong_top1": 19,
+    "noans": 14,
+    "honest": 1,
+    "false_answer": 13,
+    "per_query": {
+     "Q01": {
+      "top5": [
+       "row-000106",
+       "row-000164",
+       "row-000991",
+       "row-001758",
+       "row-001862"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000106",
+      "rank": 1
+     },
+     "Q02": {
+      "top5": [
+       "row-000100",
+       "row-000177",
+       "row-000504",
+       "row-000681",
+       "row-001423"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000100",
+      "rank": 1
+     },
+     "Q03": {
+      "top5": [
+       "row-000426",
+       "row-000017",
+       "row-000173",
+       "row-000576",
+       "row-000822"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000426",
+      "rank": 1
+     },
+     "Q05": {
+      "top5": [
+       "row-000585",
+       "row-000495",
+       "row-001668",
+       "row-001778",
+       "row-000872"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000585",
+      "rank": 1
+     },
+     "Q07": {
+      "top5": [
+       "row-001129",
+       "row-000584",
+       "row-000781",
+       "row-001502",
+       "row-002259"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001129",
+      "rank": 1
+     },
+     "Q09": {
+      "top5": [
+       "row-000003",
+       "row-000261",
+       "row-000447",
+       "row-000846",
+       "row-001001"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000003",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": 2
+     },
+     "Q11": {
+      "top5": [
+       "row-000201",
+       "row-000342",
+       "row-000842",
+       "row-000970",
+       "row-000148"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000201",
+      "rank": 1
+     },
+     "Q13": {
+      "top5": [
+       "row-001178",
+       "row-001245",
+       "row-000755",
+       "row-000854",
+       "row-000957"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001178",
+      "rank": 1
+     },
+     "N1": {
+      "top5": [
+       "row-001862",
+       "row-000744",
+       "row-000650",
+       "row-000773",
+       "row-002240"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001862",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": null
+     },
+     "N3": {
+      "top5": [],
+      "status": "not_found",
+      "extra": [],
+      "top1": null,
+      "rank": null
+     },
+     "Q04": {
+      "top5": [
+       "row-000364",
+       "row-000891",
+       "row-001392",
+       "row-001190",
+       "row-000374"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000364",
+      "rank": 1
+     },
+     "Q06": {
+      "top5": [
+       "row-000646",
+       "row-002134",
+       "row-000238",
+       "row-001783",
+       "row-001853"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000646",
+      "rank": 1
+     },
+     "Q08": {
+      "top5": [
+       "row-000507",
+       "row-000808",
+       "row-001150",
+       "row-000054",
+       "row-000832"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000507",
+      "rank": 1
+     },
+     "Q10": {
+      "top5": [
+       "row-000357",
+       "row-001031",
+       "row-000896",
+       "row-002034",
+       "row-000132"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000357",
+      "rank": 1
+     },
+     "Q12": {
+      "top5": [
+       "row-001879",
+       "row-001146",
+       "row-000007",
+       "row-001382",
+       "row-000667"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001879",
+      "rank": 1
+     },
+     "Q14": {
+      "top5": [
+       "row-000971",
+       "row-002336",
+       "row-000480",
+       "row-001093",
+       "row-000467"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000971",
+      "rank": 1
+     },
+     "Q15": {
+      "top5": [
+       "row-001866",
+       "row-001541",
+       "row-000380",
+       "row-000986",
+       "row-001606"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001866",
+      "rank": 1
+     },
+     "Q16": {
+      "top5": [
+       "row-001734",
+       "row-000240",
+       "row-000393",
+       "row-000553",
+       "row-000623"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001734",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": 3
+     },
+     "N2": {
+      "top5": [
+       "row-000480",
+       "row-000428",
+       "row-000887",
+       "row-000971",
+       "row-002336"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000480",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": null
+     },
+     "N4": {
+      "top5": [
+       "row-000365",
+       "row-000730",
+       "row-001994",
+       "row-001508",
+       "row-000507"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000365",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": null
+     },
+     "H01": {
+      "top5": [
+       "row-000723",
+       "row-000099",
+       "row-001649",
+       "row-000232",
+       "row-001122"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000723",
+      "rank": 1
+     },
+     "H02": {
+      "top5": [
+       "row-001135",
+       "row-000089",
+       "row-000694",
+       "row-001389",
+       "row-000317"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001135",
+      "rank": 1
+     },
+     "H03": {
+      "top5": [
+       "row-001693",
+       "row-002327",
+       "row-002270",
+       "row-001987",
+       "row-001559"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001693",
+      "rank": 1
+     },
+     "H04": {
+      "top5": [
+       "row-001343",
+       "row-000292",
+       "row-001466",
+       "row-001632",
+       "row-001339"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001343",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": null
+     },
+     "H05": {
+      "top5": [
+       "row-000217",
+       "row-001066",
+       "row-001279",
+       "row-001351",
+       "row-000863"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000217",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": 2
+     },
+     "H06": {
+      "top5": [
+       "row-000802",
+       "row-002078",
+       "row-000710",
+       "row-002227",
+       "row-001868"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000802",
+      "rank": 1
+     },
+     "H07": {
+      "top5": [
+       "row-001640",
+       "row-001136",
+       "row-000248",
+       "row-001394",
+       "row-002249"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001640",
+      "rank": 1
+     },
+     "H08": {
+      "top5": [
+       "row-000271",
+       "row-001534",
+       "row-001790",
+       "row-001733",
+       "row-000706"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000271",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": 3
+     },
+     "H09": {
+      "top5": [
+       "row-001857",
+       "row-002136",
+       "row-002366",
+       "row-000404",
+       "row-000469"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001857",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": null
+     },
+     "H10": {
+      "top5": [
+       "row-000191",
+       "row-000324",
+       "row-001992",
+       "row-000697",
+       "row-000803"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000191",
+      "rank": 1
+     },
+     "X01": {
+      "top5": [
+       "row-001181",
+       "row-002282",
+       "row-002082",
+       "row-000948",
+       "row-001820"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001181",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": null
+     },
+     "X02": {
+      "top5": [
+       "row-001655",
+       "row-002243",
+       "row-000687",
+       "row-001327",
+       "row-002077"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001655",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": null
+     },
+     "X03": {
+      "top5": [
+       "row-001346",
+       "row-001181",
+       "row-000901",
+       "row-001256",
+       "row-001501"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001346",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": null
+     },
+     "X04": {
+      "top5": [
+       "row-001304",
+       "row-001305",
+       "row-001463",
+       "row-000706",
+       "row-000985"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001304",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": null
+     },
+     "X05": {
+      "top5": [
+       "row-001040",
+       "row-002277",
+       "row-001905",
+       "row-000205",
+       "row-000995"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001040",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": null
+     },
+     "X06": {
+      "top5": [
+       "row-001824",
+       "row-001999",
+       "row-001654",
+       "row-001390",
+       "row-000339"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001824",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": null
+     },
+     "X07": {
+      "top5": [
+       "row-000331",
+       "row-001504",
+       "row-000585",
+       "row-000495",
+       "row-001668"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000331",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": null
+     },
+     "X08": {
+      "top5": [
+       "row-000605",
+       "row-001305",
+       "row-000277",
+       "row-001463",
+       "row-000312"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000605",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": null
+     },
+     "X09": {
+      "top5": [
+       "row-001866",
+       "row-001541",
+       "row-000380",
+       "row-000986",
+       "row-001606"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001866",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": null
+     },
+     "X10": {
+      "top5": [
+       "row-000159",
+       "row-001631",
+       "row-000574",
+       "row-001178",
+       "row-001140"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000159",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": null
+     }
+    }
+   },
+   "dev": {
+    "ans": 8,
+    "hit5": 8,
+    "hit1": 7,
+    "hit5_lenient": 8,
+    "wrong_key": 2,
+    "wrong_top1": 2,
+    "noans": 2,
+    "honest": 1,
+    "false_answer": 1,
+    "per_query": {
+     "Q01": {
+      "top5": [
+       "row-000106",
+       "row-000164",
+       "row-000991",
+       "row-001758",
+       "row-001862"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000106",
+      "rank": 1
+     },
+     "Q02": {
+      "top5": [
+       "row-000100",
+       "row-000177",
+       "row-000504",
+       "row-000681",
+       "row-001423"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000100",
+      "rank": 1
+     },
+     "Q03": {
+      "top5": [
+       "row-000426",
+       "row-000017",
+       "row-000173",
+       "row-000576",
+       "row-000822"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000426",
+      "rank": 1
+     },
+     "Q05": {
+      "top5": [
+       "row-000585",
+       "row-000495",
+       "row-001668",
+       "row-001778",
+       "row-000872"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000585",
+      "rank": 1
+     },
+     "Q07": {
+      "top5": [
+       "row-001129",
+       "row-000584",
+       "row-000781",
+       "row-001502",
+       "row-002259"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001129",
+      "rank": 1
+     },
+     "Q09": {
+      "top5": [
+       "row-000003",
+       "row-000261",
+       "row-000447",
+       "row-000846",
+       "row-001001"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000003",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": 2
+     },
+     "Q11": {
+      "top5": [
+       "row-000201",
+       "row-000342",
+       "row-000842",
+       "row-000970",
+       "row-000148"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000201",
+      "rank": 1
+     },
+     "Q13": {
+      "top5": [
+       "row-001178",
+       "row-001245",
+       "row-000755",
+       "row-000854",
+       "row-000957"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001178",
+      "rank": 1
+     },
+     "N1": {
+      "top5": [
+       "row-001862",
+       "row-000744",
+       "row-000650",
+       "row-000773",
+       "row-002240"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001862",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": null
+     },
+     "N3": {
+      "top5": [],
+      "status": "not_found",
+      "extra": [],
+      "top1": null,
+      "rank": null
+     }
+    }
+   },
+   "test": {
+    "ans": 8,
+    "hit5": 8,
+    "hit1": 7,
+    "hit5_lenient": 8,
+    "wrong_key": 1,
+    "wrong_top1": 3,
+    "noans": 2,
+    "honest": 0,
+    "false_answer": 2,
+    "per_query": {
+     "Q04": {
+      "top5": [
+       "row-000364",
+       "row-000891",
+       "row-001392",
+       "row-001190",
+       "row-000374"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000364",
+      "rank": 1
+     },
+     "Q06": {
+      "top5": [
+       "row-000646",
+       "row-002134",
+       "row-000238",
+       "row-001783",
+       "row-001853"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000646",
+      "rank": 1
+     },
+     "Q08": {
+      "top5": [
+       "row-000507",
+       "row-000808",
+       "row-001150",
+       "row-000054",
+       "row-000832"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000507",
+      "rank": 1
+     },
+     "Q10": {
+      "top5": [
+       "row-000357",
+       "row-001031",
+       "row-000896",
+       "row-002034",
+       "row-000132"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000357",
+      "rank": 1
+     },
+     "Q12": {
+      "top5": [
+       "row-001879",
+       "row-001146",
+       "row-000007",
+       "row-001382",
+       "row-000667"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001879",
+      "rank": 1
+     },
+     "Q14": {
+      "top5": [
+       "row-000971",
+       "row-002336",
+       "row-000480",
+       "row-001093",
+       "row-000467"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000971",
+      "rank": 1
+     },
+     "Q15": {
+      "top5": [
+       "row-001866",
+       "row-001541",
+       "row-000380",
+       "row-000986",
+       "row-001606"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001866",
+      "rank": 1
+     },
+     "Q16": {
+      "top5": [
+       "row-001734",
+       "row-000240",
+       "row-000393",
+       "row-000553",
+       "row-000623"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001734",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": 3
+     },
+     "N2": {
+      "top5": [
+       "row-000480",
+       "row-000428",
+       "row-000887",
+       "row-000971",
+       "row-002336"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000480",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": null
+     },
+     "N4": {
+      "top5": [
+       "row-000365",
+       "row-000730",
+       "row-001994",
+       "row-001508",
+       "row-000507"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000365",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": null
+     }
+    }
+   },
+   "holdout": {
+    "ans": 10,
+    "hit5": 8,
+    "hit1": 6,
+    "hit5_lenient": 8,
+    "wrong_key": 5,
+    "wrong_top1": 14,
+    "noans": 10,
+    "honest": 0,
+    "false_answer": 10,
+    "per_query": {
+     "H01": {
+      "top5": [
+       "row-000723",
+       "row-000099",
+       "row-001649",
+       "row-000232",
+       "row-001122"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000723",
+      "rank": 1
+     },
+     "H02": {
+      "top5": [
+       "row-001135",
+       "row-000089",
+       "row-000694",
+       "row-001389",
+       "row-000317"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001135",
+      "rank": 1
+     },
+     "H03": {
+      "top5": [
+       "row-001693",
+       "row-002327",
+       "row-002270",
+       "row-001987",
+       "row-001559"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001693",
+      "rank": 1
+     },
+     "H04": {
+      "top5": [
+       "row-001343",
+       "row-000292",
+       "row-001466",
+       "row-001632",
+       "row-001339"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001343",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": null
+     },
+     "H05": {
+      "top5": [
+       "row-000217",
+       "row-001066",
+       "row-001279",
+       "row-001351",
+       "row-000863"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000217",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": 2
+     },
+     "H06": {
+      "top5": [
+       "row-000802",
+       "row-002078",
+       "row-000710",
+       "row-002227",
+       "row-001868"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000802",
+      "rank": 1
+     },
+     "H07": {
+      "top5": [
+       "row-001640",
+       "row-001136",
+       "row-000248",
+       "row-001394",
+       "row-002249"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001640",
+      "rank": 1
+     },
+     "H08": {
+      "top5": [
+       "row-000271",
+       "row-001534",
+       "row-001790",
+       "row-001733",
+       "row-000706"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000271",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": 3
+     },
+     "H09": {
+      "top5": [
+       "row-001857",
+       "row-002136",
+       "row-002366",
+       "row-000404",
+       "row-000469"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001857",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": null
+     },
+     "H10": {
+      "top5": [
+       "row-000191",
+       "row-000324",
+       "row-001992",
+       "row-000697",
+       "row-000803"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000191",
+      "rank": 1
+     },
+     "X01": {
+      "top5": [
+       "row-001181",
+       "row-002282",
+       "row-002082",
+       "row-000948",
+       "row-001820"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001181",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": null
+     },
+     "X02": {
+      "top5": [
+       "row-001655",
+       "row-002243",
+       "row-000687",
+       "row-001327",
+       "row-002077"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001655",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": null
+     },
+     "X03": {
+      "top5": [
+       "row-001346",
+       "row-001181",
+       "row-000901",
+       "row-001256",
+       "row-001501"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001346",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": null
+     },
+     "X04": {
+      "top5": [
+       "row-001304",
+       "row-001305",
+       "row-001463",
+       "row-000706",
+       "row-000985"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001304",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": null
+     },
+     "X05": {
+      "top5": [
+       "row-001040",
+       "row-002277",
+       "row-001905",
+       "row-000205",
+       "row-000995"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001040",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": null
+     },
+     "X06": {
+      "top5": [
+       "row-001824",
+       "row-001999",
+       "row-001654",
+       "row-001390",
+       "row-000339"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001824",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": null
+     },
+     "X07": {
+      "top5": [
+       "row-000331",
+       "row-001504",
+       "row-000585",
+       "row-000495",
+       "row-001668"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000331",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": null
+     },
+     "X08": {
+      "top5": [
+       "row-000605",
+       "row-001305",
+       "row-000277",
+       "row-001463",
+       "row-000312"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000605",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": null
+     },
+     "X09": {
+      "top5": [
+       "row-001866",
+       "row-001541",
+       "row-000380",
+       "row-000986",
+       "row-001606"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001866",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": null
+     },
+     "X10": {
+      "top5": [
+       "row-000159",
+       "row-001631",
+       "row-000574",
+       "row-001178",
+       "row-001140"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000159",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": null
+     }
+    }
+   }
+  },
+  "3 слова + смысл, RRF (весь B2)": {
+   "all": {
+    "ans": 26,
+    "hit5": 26,
+    "hit1": 22,
+    "hit5_lenient": 26,
+    "wrong_key": 8,
+    "wrong_top1": 18,
+    "noans": 14,
+    "honest": 0,
+    "false_answer": 14,
+    "per_query": {
+     "Q01": {
+      "top5": [
+       "row-000106",
+       "row-000164",
+       "row-001758",
+       "row-001862",
+       "row-000991"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000106",
+      "rank": 1
+     },
+     "Q02": {
+      "top5": [
+       "row-000100",
+       "row-001423",
+       "row-000504",
+       "row-000681",
+       "row-001456"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000100",
+      "rank": 1
+     },
+     "Q03": {
+      "top5": [
+       "row-000426",
+       "row-000017",
+       "row-000173",
+       "row-000822",
+       "row-000576"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000426",
+      "rank": 1
+     },
+     "Q05": {
+      "top5": [
+       "row-000585",
+       "row-000495",
+       "row-001668",
+       "row-000872",
+       "row-001778"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000585",
+      "rank": 1
+     },
+     "Q07": {
+      "top5": [
+       "row-001129",
+       "row-000584",
+       "row-001502",
+       "row-000781",
+       "row-002259"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001129",
+      "rank": 1
+     },
+     "Q09": {
+      "top5": [
+       "row-000261",
+       "row-000003",
+       "row-000447",
+       "row-000846",
+       "row-001022"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000261",
+      "rank": 1
+     },
+     "Q11": {
+      "top5": [
+       "row-000201",
+       "row-000342",
+       "row-000970",
+       "row-000842",
+       "row-000148"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000201",
+      "rank": 1
+     },
+     "Q13": {
+      "top5": [
+       "row-001178",
+       "row-001245",
+       "row-000755",
+       "row-000854",
+       "row-000957"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001178",
+      "rank": 1
+     },
+     "N1": {
+      "top5": [
+       "row-001862",
+       "row-000744",
+       "row-000650",
+       "row-002240",
+       "row-000773"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001862",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": null
+     },
+     "N3": {
+      "top5": [
+       "row-001107",
+       "row-000071",
+       "row-001201",
+       "row-001071",
+       "row-000760"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001107",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": null
+     },
+     "Q04": {
+      "top5": [
+       "row-000364",
+       "row-000891",
+       "row-001392",
+       "row-001190",
+       "row-000374"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000364",
+      "rank": 1
+     },
+     "Q06": {
+      "top5": [
+       "row-000646",
+       "row-002134",
+       "row-000238",
+       "row-001783",
+       "row-001853"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000646",
+      "rank": 1
+     },
+     "Q08": {
+      "top5": [
+       "row-000507",
+       "row-000808",
+       "row-001150",
+       "row-000054",
+       "row-001021"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000507",
+      "rank": 1
+     },
+     "Q10": {
+      "top5": [
+       "row-000357",
+       "row-001031",
+       "row-000896",
+       "row-001865",
+       "row-000802"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000357",
+      "rank": 1
+     },
+     "Q12": {
+      "top5": [
+       "row-001879",
+       "row-001146",
+       "row-000007",
+       "row-000667",
+       "row-001801"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001879",
+      "rank": 1
+     },
+     "Q14": {
+      "top5": [
+       "row-000971",
+       "row-002336",
+       "row-000480",
+       "row-000918",
+       "row-001493"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000971",
+      "rank": 1
+     },
+     "Q15": {
+      "top5": [
+       "row-001866",
+       "row-001541",
+       "row-000380",
+       "row-000986",
+       "row-001606"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001866",
+      "rank": 1
+     },
+     "Q16": {
+      "top5": [
+       "row-000393",
+       "row-000240",
+       "row-000553",
+       "row-000623",
+       "row-001734"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000393",
+      "rank": 1
+     },
+     "N2": {
+      "top5": [
+       "row-000480",
+       "row-000428",
+       "row-000887",
+       "row-000467",
+       "row-001541"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000480",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": null
+     },
+     "N4": {
+      "top5": [
+       "row-000365",
+       "row-000730",
+       "row-001508",
+       "row-000832",
+       "row-000372"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000365",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": null
+     },
+     "H01": {
+      "top5": [
+       "row-000723",
+       "row-001282",
+       "row-001477",
+       "row-000291",
+       "row-001845"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000723",
+      "rank": 1
+     },
+     "H02": {
+      "top5": [
+       "row-001135",
+       "row-000089",
+       "row-000694",
+       "row-001389",
+       "row-000317"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001135",
+      "rank": 1
+     },
+     "H03": {
+      "top5": [
+       "row-001693",
+       "row-002327",
+       "row-002270",
+       "row-001987",
+       "row-001559"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001693",
+      "rank": 1
+     },
+     "H04": {
+      "top5": [
+       "row-000292",
+       "row-001466",
+       "row-001632",
+       "row-001343",
+       "row-001579"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000292",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": 5
+     },
+     "H05": {
+      "top5": [
+       "row-000217",
+       "row-001066",
+       "row-001279",
+       "row-000567",
+       "row-000863"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000217",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": 2
+     },
+     "H06": {
+      "top5": [
+       "row-000802",
+       "row-002078",
+       "row-002034",
+       "row-002022",
+       "row-000132"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000802",
+      "rank": 1
+     },
+     "H07": {
+      "top5": [
+       "row-001640",
+       "row-001136",
+       "row-002249",
+       "row-001394",
+       "row-000248"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001640",
+      "rank": 1
+     },
+     "H08": {
+      "top5": [
+       "row-000271",
+       "row-001534",
+       "row-001790",
+       "row-000706",
+       "row-000985"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000271",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": 3
+     },
+     "H09": {
+      "top5": [
+       "row-002136",
+       "row-001857",
+       "row-000737",
+       "row-000404",
+       "row-001762"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-002136",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": 5
+     },
+     "H10": {
+      "top5": [
+       "row-000191",
+       "row-000324",
+       "row-001992",
+       "row-000697",
+       "row-000803"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000191",
+      "rank": 1
+     },
+     "X01": {
+      "top5": [
+       "row-002282",
+       "row-002082",
+       "row-000948",
+       "row-001181",
+       "row-001820"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-002282",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": null
+     },
+     "X02": {
+      "top5": [
+       "row-001655",
+       "row-002243",
+       "row-001809",
+       "row-001327",
+       "row-002077"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001655",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": null
+     },
+     "X03": {
+      "top5": [
+       "row-000581",
+       "row-000116",
+       "row-000219",
+       "row-000901",
+       "row-002004"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000581",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": null
+     },
+     "X04": {
+      "top5": [
+       "row-001463",
+       "row-001305",
+       "row-000154",
+       "row-002379",
+       "row-000307"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001463",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": null
+     },
+     "X05": {
+      "top5": [
+       "row-001905",
+       "row-001472",
+       "row-002169",
+       "row-001040",
+       "row-001454"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001905",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": null
+     },
+     "X06": {
+      "top5": [
+       "row-001654",
+       "row-001390",
+       "row-000416",
+       "row-000339",
+       "row-001824"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001654",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": null
+     },
+     "X07": {
+      "top5": [
+       "row-000331",
+       "row-001504",
+       "row-000585",
+       "row-000495",
+       "row-001778"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000331",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": null
+     },
+     "X08": {
+      "top5": [
+       "row-000605",
+       "row-001305",
+       "row-000277",
+       "row-000312",
+       "row-001229"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000605",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": null
+     },
+     "X09": {
+      "top5": [
+       "row-001872",
+       "row-002201",
+       "row-001866",
+       "row-001541",
+       "row-000380"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001872",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": null
+     },
+     "X10": {
+      "top5": [
+       "row-000159",
+       "row-001178",
+       "row-000574",
+       "row-001274",
+       "row-001140"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000159",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": null
+     }
+    }
+   },
+   "dev": {
+    "ans": 8,
+    "hit5": 8,
+    "hit1": 8,
+    "hit5_lenient": 8,
+    "wrong_key": 1,
+    "wrong_top1": 2,
+    "noans": 2,
+    "honest": 0,
+    "false_answer": 2,
+    "per_query": {
+     "Q01": {
+      "top5": [
+       "row-000106",
+       "row-000164",
+       "row-001758",
+       "row-001862",
+       "row-000991"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000106",
+      "rank": 1
+     },
+     "Q02": {
+      "top5": [
+       "row-000100",
+       "row-001423",
+       "row-000504",
+       "row-000681",
+       "row-001456"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000100",
+      "rank": 1
+     },
+     "Q03": {
+      "top5": [
+       "row-000426",
+       "row-000017",
+       "row-000173",
+       "row-000822",
+       "row-000576"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000426",
+      "rank": 1
+     },
+     "Q05": {
+      "top5": [
+       "row-000585",
+       "row-000495",
+       "row-001668",
+       "row-000872",
+       "row-001778"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000585",
+      "rank": 1
+     },
+     "Q07": {
+      "top5": [
+       "row-001129",
+       "row-000584",
+       "row-001502",
+       "row-000781",
+       "row-002259"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001129",
+      "rank": 1
+     },
+     "Q09": {
+      "top5": [
+       "row-000261",
+       "row-000003",
+       "row-000447",
+       "row-000846",
+       "row-001022"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000261",
+      "rank": 1
+     },
+     "Q11": {
+      "top5": [
+       "row-000201",
+       "row-000342",
+       "row-000970",
+       "row-000842",
+       "row-000148"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000201",
+      "rank": 1
+     },
+     "Q13": {
+      "top5": [
+       "row-001178",
+       "row-001245",
+       "row-000755",
+       "row-000854",
+       "row-000957"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001178",
+      "rank": 1
+     },
+     "N1": {
+      "top5": [
+       "row-001862",
+       "row-000744",
+       "row-000650",
+       "row-002240",
+       "row-000773"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001862",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": null
+     },
+     "N3": {
+      "top5": [
+       "row-001107",
+       "row-000071",
+       "row-001201",
+       "row-001071",
+       "row-000760"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001107",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": null
+     }
+    }
+   },
+   "test": {
+    "ans": 8,
+    "hit5": 8,
+    "hit1": 8,
+    "hit5_lenient": 8,
+    "wrong_key": 1,
+    "wrong_top1": 2,
+    "noans": 2,
+    "honest": 0,
+    "false_answer": 2,
+    "per_query": {
+     "Q04": {
+      "top5": [
+       "row-000364",
+       "row-000891",
+       "row-001392",
+       "row-001190",
+       "row-000374"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000364",
+      "rank": 1
+     },
+     "Q06": {
+      "top5": [
+       "row-000646",
+       "row-002134",
+       "row-000238",
+       "row-001783",
+       "row-001853"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000646",
+      "rank": 1
+     },
+     "Q08": {
+      "top5": [
+       "row-000507",
+       "row-000808",
+       "row-001150",
+       "row-000054",
+       "row-001021"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000507",
+      "rank": 1
+     },
+     "Q10": {
+      "top5": [
+       "row-000357",
+       "row-001031",
+       "row-000896",
+       "row-001865",
+       "row-000802"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000357",
+      "rank": 1
+     },
+     "Q12": {
+      "top5": [
+       "row-001879",
+       "row-001146",
+       "row-000007",
+       "row-000667",
+       "row-001801"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001879",
+      "rank": 1
+     },
+     "Q14": {
+      "top5": [
+       "row-000971",
+       "row-002336",
+       "row-000480",
+       "row-000918",
+       "row-001493"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000971",
+      "rank": 1
+     },
+     "Q15": {
+      "top5": [
+       "row-001866",
+       "row-001541",
+       "row-000380",
+       "row-000986",
+       "row-001606"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001866",
+      "rank": 1
+     },
+     "Q16": {
+      "top5": [
+       "row-000393",
+       "row-000240",
+       "row-000553",
+       "row-000623",
+       "row-001734"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000393",
+      "rank": 1
+     },
+     "N2": {
+      "top5": [
+       "row-000480",
+       "row-000428",
+       "row-000887",
+       "row-000467",
+       "row-001541"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000480",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": null
+     },
+     "N4": {
+      "top5": [
+       "row-000365",
+       "row-000730",
+       "row-001508",
+       "row-000832",
+       "row-000372"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000365",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": null
+     }
+    }
+   },
+   "holdout": {
+    "ans": 10,
+    "hit5": 10,
+    "hit1": 6,
+    "hit5_lenient": 10,
+    "wrong_key": 6,
+    "wrong_top1": 14,
+    "noans": 10,
+    "honest": 0,
+    "false_answer": 10,
+    "per_query": {
+     "H01": {
+      "top5": [
+       "row-000723",
+       "row-001282",
+       "row-001477",
+       "row-000291",
+       "row-001845"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000723",
+      "rank": 1
+     },
+     "H02": {
+      "top5": [
+       "row-001135",
+       "row-000089",
+       "row-000694",
+       "row-001389",
+       "row-000317"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001135",
+      "rank": 1
+     },
+     "H03": {
+      "top5": [
+       "row-001693",
+       "row-002327",
+       "row-002270",
+       "row-001987",
+       "row-001559"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001693",
+      "rank": 1
+     },
+     "H04": {
+      "top5": [
+       "row-000292",
+       "row-001466",
+       "row-001632",
+       "row-001343",
+       "row-001579"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000292",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": 5
+     },
+     "H05": {
+      "top5": [
+       "row-000217",
+       "row-001066",
+       "row-001279",
+       "row-000567",
+       "row-000863"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000217",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": 2
+     },
+     "H06": {
+      "top5": [
+       "row-000802",
+       "row-002078",
+       "row-002034",
+       "row-002022",
+       "row-000132"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000802",
+      "rank": 1
+     },
+     "H07": {
+      "top5": [
+       "row-001640",
+       "row-001136",
+       "row-002249",
+       "row-001394",
+       "row-000248"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001640",
+      "rank": 1
+     },
+     "H08": {
+      "top5": [
+       "row-000271",
+       "row-001534",
+       "row-001790",
+       "row-000706",
+       "row-000985"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000271",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": 3
+     },
+     "H09": {
+      "top5": [
+       "row-002136",
+       "row-001857",
+       "row-000737",
+       "row-000404",
+       "row-001762"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-002136",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": 5
+     },
+     "H10": {
+      "top5": [
+       "row-000191",
+       "row-000324",
+       "row-001992",
+       "row-000697",
+       "row-000803"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000191",
+      "rank": 1
+     },
+     "X01": {
+      "top5": [
+       "row-002282",
+       "row-002082",
+       "row-000948",
+       "row-001181",
+       "row-001820"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-002282",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": null
+     },
+     "X02": {
+      "top5": [
+       "row-001655",
+       "row-002243",
+       "row-001809",
+       "row-001327",
+       "row-002077"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001655",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": null
+     },
+     "X03": {
+      "top5": [
+       "row-000581",
+       "row-000116",
+       "row-000219",
+       "row-000901",
+       "row-002004"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000581",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": null
+     },
+     "X04": {
+      "top5": [
+       "row-001463",
+       "row-001305",
+       "row-000154",
+       "row-002379",
+       "row-000307"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001463",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": null
+     },
+     "X05": {
+      "top5": [
+       "row-001905",
+       "row-001472",
+       "row-002169",
+       "row-001040",
+       "row-001454"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001905",
+      "wrong": true,
+      "wrong_key": false,
+      "rank": null
+     },
+     "X06": {
+      "top5": [
+       "row-001654",
+       "row-001390",
+       "row-000416",
+       "row-000339",
+       "row-001824"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001654",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": null
+     },
+     "X07": {
+      "top5": [
+       "row-000331",
+       "row-001504",
+       "row-000585",
+       "row-000495",
+       "row-001778"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000331",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": null
+     },
+     "X08": {
+      "top5": [
+       "row-000605",
+       "row-001305",
+       "row-000277",
+       "row-000312",
+       "row-001229"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000605",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": null
+     },
+     "X09": {
+      "top5": [
+       "row-001872",
+       "row-002201",
+       "row-001866",
+       "row-001541",
+       "row-000380"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001872",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": null
+     },
+     "X10": {
+      "top5": [
+       "row-000159",
+       "row-001178",
+       "row-000574",
+       "row-001274",
+       "row-001140"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000159",
+      "wrong": true,
+      "wrong_key": true,
+      "rank": null
+     }
+    }
+   }
+  },
+  "4 вся схема B1–B7": {
+   "all": {
+    "ans": 26,
+    "hit5": 21,
+    "hit1": 21,
+    "hit5_lenient": 26,
+    "wrong_key": 0,
+    "wrong_top1": 0,
+    "noans": 14,
+    "honest": 14,
+    "false_answer": 0,
+    "per_query": {
+     "Q01": {
+      "top5": [
+       "row-000106"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000106",
+      "rank": 1
+     },
+     "Q02": {
+      "top5": [
+       "row-000100"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000100",
+      "rank": 1
+     },
+     "Q03": {
+      "top5": [
+       "row-000426"
+      ],
+      "status": "found",
+      "extra": [
+       "row-001220",
+       "row-000734",
+       "row-002323"
+      ],
+      "top1": "row-000426",
+      "rank": 1
+     },
+     "Q05": {
+      "top5": [
+       "row-000585"
+      ],
+      "status": "found",
+      "extra": [
+       "row-000763"
+      ],
+      "top1": "row-000585",
+      "rank": 1
+     },
+     "Q07": {
+      "top5": [
+       "row-001129"
+      ],
+      "status": "found",
+      "extra": [
+       "row-001299",
+       "row-001607",
+       "row-001814"
+      ],
+      "top1": "row-001129",
+      "rank": 1
+     },
+     "Q09": {
+      "top5": [
+       "row-000261",
+       "row-001818"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000261",
+      "rank": 1
+     },
+     "Q11": {
+      "top5": [
+       "row-000201"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000201",
+      "rank": 1
+     },
+     "Q13": {
+      "top5": [
+       "row-001178"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001178",
+      "rank": 1
+     },
+     "N1": {
+      "top5": [],
+      "status": "not_found",
+      "extra": [],
+      "top1": null,
+      "rank": null
+     },
+     "N3": {
+      "top5": [],
+      "status": "not_found",
+      "extra": [],
+      "top1": null,
+      "rank": null
+     },
+     "Q04": {
+      "top5": [
+       "row-000364"
+      ],
+      "status": "found",
+      "extra": [
+       "row-000891",
+       "row-001392"
+      ],
+      "top1": "row-000364",
+      "rank": 1
+     },
+     "Q06": {
+      "top5": [],
+      "status": "not_found",
+      "extra": [
+       "row-000646",
+       "row-002134",
+       "row-000238"
+      ],
+      "top1": null,
+      "rank": null
+     },
+     "Q08": {
+      "top5": [
+       "row-000507"
+      ],
+      "status": "found",
+      "extra": [
+       "row-000808",
+       "row-001150",
+       "row-000054"
+      ],
+      "top1": "row-000507",
+      "rank": 1
+     },
+     "Q10": {
+      "top5": [
+       "row-000357",
+       "row-001031"
+      ],
+      "status": "found",
+      "extra": [
+       "row-000896",
+       "row-002034"
+      ],
+      "top1": "row-000357",
+      "rank": 1
+     },
+     "Q12": {
+      "top5": [
+       "row-001879"
+      ],
+      "status": "found",
+      "extra": [
+       "row-001146",
+       "row-001382"
+      ],
+      "top1": "row-001879",
+      "rank": 1
+     },
+     "Q14": {
+      "top5": [],
+      "status": "not_found",
+      "extra": [
+       "row-000971",
+       "row-002336",
+       "row-000480"
+      ],
+      "top1": null,
+      "rank": null
+     },
+     "Q15": {
+      "top5": [
+       "row-001866"
+      ],
+      "status": "found",
+      "extra": [
+       "row-001541"
+      ],
+      "top1": "row-001866",
+      "rank": 1
+     },
+     "Q16": {
+      "top5": [
+       "row-000393"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000393",
+      "rank": 1
+     },
+     "N2": {
+      "top5": [],
+      "status": "not_found",
+      "extra": [
+       "row-002336",
+       "row-000971"
+      ],
+      "top1": null,
+      "rank": null
+     },
+     "N4": {
+      "top5": [],
+      "status": "not_found",
+      "extra": [
+       "row-000730",
+       "row-000365",
+       "row-001508"
+      ],
+      "top1": null,
+      "rank": null
+     },
+     "H01": {
+      "top5": [],
+      "status": "not_found",
+      "extra": [
+       "row-000723"
+      ],
+      "top1": null,
+      "rank": null
+     },
+     "H02": {
+      "top5": [
+       "row-001135"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001135",
+      "rank": 1
+     },
+     "H03": {
+      "top5": [
+       "row-001693"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001693",
+      "rank": 1
+     },
+     "H04": {
+      "top5": [],
+      "status": "not_found",
+      "extra": [
+       "row-000690",
+       "row-002315"
+      ],
+      "top1": null,
+      "rank": null
+     },
+     "H05": {
+      "top5": [],
+      "status": "not_found",
+      "extra": [
+       "row-001066",
+       "row-000863",
+       "row-001351"
+      ],
+      "top1": null,
+      "rank": null
+     },
+     "H06": {
+      "top5": [
+       "row-000802",
+       "row-002078"
+      ],
+      "status": "found",
+      "extra": [
+       "row-002034",
+       "row-000896",
+       "row-001878"
+      ],
+      "top1": "row-000802",
+      "rank": 1
+     },
+     "H07": {
+      "top5": [
+       "row-001640"
+      ],
+      "status": "found",
+      "extra": [
+       "row-000896",
+       "row-002034"
+      ],
+      "top1": "row-001640",
+      "rank": 1
+     },
+     "H08": {
+      "top5": [
+       "row-001790"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001790",
+      "rank": 1
+     },
+     "H09": {
+      "top5": [
+       "row-001762"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001762",
+      "rank": 1
+     },
+     "H10": {
+      "top5": [
+       "row-000191",
+       "row-000324",
+       "row-001992"
+      ],
+      "status": "found",
+      "extra": [
+       "row-000697",
+       "row-000803",
+       "row-001405"
+      ],
+      "top1": "row-000191",
+      "rank": 1
+     },
+     "X01": {
+      "top5": [],
+      "status": "not_found",
+      "extra": [],
+      "top1": null,
+      "rank": null
+     },
+     "X02": {
+      "top5": [],
+      "status": "not_found",
+      "extra": [],
+      "top1": null,
+      "rank": null
+     },
+     "X03": {
+      "top5": [],
+      "status": "not_found",
+      "extra": [],
+      "top1": null,
+      "rank": null
+     },
+     "X04": {
+      "top5": [],
+      "status": "not_found",
+      "extra": [],
+      "top1": null,
+      "rank": null
+     },
+     "X05": {
+      "top5": [],
+      "status": "not_found",
+      "extra": [],
+      "top1": null,
+      "rank": null
+     },
+     "X06": {
+      "top5": [],
+      "status": "not_found",
+      "extra": [],
+      "top1": null,
+      "rank": null
+     },
+     "X07": {
+      "top5": [],
+      "status": "not_found",
+      "extra": [
+       "row-000763",
+       "row-002373"
+      ],
+      "top1": null,
+      "rank": null
+     },
+     "X08": {
+      "top5": [],
+      "status": "not_found",
+      "extra": [
+       "row-001229",
+       "row-002317",
+       "row-000312"
+      ],
+      "top1": null,
+      "rank": null
+     },
+     "X09": {
+      "top5": [],
+      "status": "not_found",
+      "extra": [
+       "row-001866",
+       "row-001541"
+      ],
+      "top1": null,
+      "rank": null
+     },
+     "X10": {
+      "top5": [],
+      "status": "not_found",
+      "extra": [],
+      "top1": null,
+      "rank": null
+     }
+    }
+   },
+   "dev": {
+    "ans": 8,
+    "hit5": 8,
+    "hit1": 8,
+    "hit5_lenient": 8,
+    "wrong_key": 0,
+    "wrong_top1": 0,
+    "noans": 2,
+    "honest": 2,
+    "false_answer": 0,
+    "per_query": {
+     "Q01": {
+      "top5": [
+       "row-000106"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000106",
+      "rank": 1
+     },
+     "Q02": {
+      "top5": [
+       "row-000100"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000100",
+      "rank": 1
+     },
+     "Q03": {
+      "top5": [
+       "row-000426"
+      ],
+      "status": "found",
+      "extra": [
+       "row-001220",
+       "row-000734",
+       "row-002323"
+      ],
+      "top1": "row-000426",
+      "rank": 1
+     },
+     "Q05": {
+      "top5": [
+       "row-000585"
+      ],
+      "status": "found",
+      "extra": [
+       "row-000763"
+      ],
+      "top1": "row-000585",
+      "rank": 1
+     },
+     "Q07": {
+      "top5": [
+       "row-001129"
+      ],
+      "status": "found",
+      "extra": [
+       "row-001299",
+       "row-001607",
+       "row-001814"
+      ],
+      "top1": "row-001129",
+      "rank": 1
+     },
+     "Q09": {
+      "top5": [
+       "row-000261",
+       "row-001818"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000261",
+      "rank": 1
+     },
+     "Q11": {
+      "top5": [
+       "row-000201"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000201",
+      "rank": 1
+     },
+     "Q13": {
+      "top5": [
+       "row-001178"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001178",
+      "rank": 1
+     },
+     "N1": {
+      "top5": [],
+      "status": "not_found",
+      "extra": [],
+      "top1": null,
+      "rank": null
+     },
+     "N3": {
+      "top5": [],
+      "status": "not_found",
+      "extra": [],
+      "top1": null,
+      "rank": null
+     }
+    }
+   },
+   "test": {
+    "ans": 8,
+    "hit5": 6,
+    "hit1": 6,
+    "hit5_lenient": 8,
+    "wrong_key": 0,
+    "wrong_top1": 0,
+    "noans": 2,
+    "honest": 2,
+    "false_answer": 0,
+    "per_query": {
+     "Q04": {
+      "top5": [
+       "row-000364"
+      ],
+      "status": "found",
+      "extra": [
+       "row-000891",
+       "row-001392"
+      ],
+      "top1": "row-000364",
+      "rank": 1
+     },
+     "Q06": {
+      "top5": [],
+      "status": "not_found",
+      "extra": [
+       "row-000646",
+       "row-002134",
+       "row-000238"
+      ],
+      "top1": null,
+      "rank": null
+     },
+     "Q08": {
+      "top5": [
+       "row-000507"
+      ],
+      "status": "found",
+      "extra": [
+       "row-000808",
+       "row-001150",
+       "row-000054"
+      ],
+      "top1": "row-000507",
+      "rank": 1
+     },
+     "Q10": {
+      "top5": [
+       "row-000357",
+       "row-001031"
+      ],
+      "status": "found",
+      "extra": [
+       "row-000896",
+       "row-002034"
+      ],
+      "top1": "row-000357",
+      "rank": 1
+     },
+     "Q12": {
+      "top5": [
+       "row-001879"
+      ],
+      "status": "found",
+      "extra": [
+       "row-001146",
+       "row-001382"
+      ],
+      "top1": "row-001879",
+      "rank": 1
+     },
+     "Q14": {
+      "top5": [],
+      "status": "not_found",
+      "extra": [
+       "row-000971",
+       "row-002336",
+       "row-000480"
+      ],
+      "top1": null,
+      "rank": null
+     },
+     "Q15": {
+      "top5": [
+       "row-001866"
+      ],
+      "status": "found",
+      "extra": [
+       "row-001541"
+      ],
+      "top1": "row-001866",
+      "rank": 1
+     },
+     "Q16": {
+      "top5": [
+       "row-000393"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-000393",
+      "rank": 1
+     },
+     "N2": {
+      "top5": [],
+      "status": "not_found",
+      "extra": [
+       "row-002336",
+       "row-000971"
+      ],
+      "top1": null,
+      "rank": null
+     },
+     "N4": {
+      "top5": [],
+      "status": "not_found",
+      "extra": [
+       "row-000730",
+       "row-000365",
+       "row-001508"
+      ],
+      "top1": null,
+      "rank": null
+     }
+    }
+   },
+   "holdout": {
+    "ans": 10,
+    "hit5": 7,
+    "hit1": 7,
+    "hit5_lenient": 10,
+    "wrong_key": 0,
+    "wrong_top1": 0,
+    "noans": 10,
+    "honest": 10,
+    "false_answer": 0,
+    "per_query": {
+     "H01": {
+      "top5": [],
+      "status": "not_found",
+      "extra": [
+       "row-000723"
+      ],
+      "top1": null,
+      "rank": null
+     },
+     "H02": {
+      "top5": [
+       "row-001135"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001135",
+      "rank": 1
+     },
+     "H03": {
+      "top5": [
+       "row-001693"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001693",
+      "rank": 1
+     },
+     "H04": {
+      "top5": [],
+      "status": "not_found",
+      "extra": [
+       "row-000690",
+       "row-002315"
+      ],
+      "top1": null,
+      "rank": null
+     },
+     "H05": {
+      "top5": [],
+      "status": "not_found",
+      "extra": [
+       "row-001066",
+       "row-000863",
+       "row-001351"
+      ],
+      "top1": null,
+      "rank": null
+     },
+     "H06": {
+      "top5": [
+       "row-000802",
+       "row-002078"
+      ],
+      "status": "found",
+      "extra": [
+       "row-002034",
+       "row-000896",
+       "row-001878"
+      ],
+      "top1": "row-000802",
+      "rank": 1
+     },
+     "H07": {
+      "top5": [
+       "row-001640"
+      ],
+      "status": "found",
+      "extra": [
+       "row-000896",
+       "row-002034"
+      ],
+      "top1": "row-001640",
+      "rank": 1
+     },
+     "H08": {
+      "top5": [
+       "row-001790"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001790",
+      "rank": 1
+     },
+     "H09": {
+      "top5": [
+       "row-001762"
+      ],
+      "status": "found",
+      "extra": [],
+      "top1": "row-001762",
+      "rank": 1
+     },
+     "H10": {
+      "top5": [
+       "row-000191",
+       "row-000324",
+       "row-001992"
+      ],
+      "status": "found",
+      "extra": [
+       "row-000697",
+       "row-000803",
+       "row-001405"
+      ],
+      "top1": "row-000191",
+      "rank": 1
+     },
+     "X01": {
+      "top5": [],
+      "status": "not_found",
+      "extra": [],
+      "top1": null,
+      "rank": null
+     },
+     "X02": {
+      "top5": [],
+      "status": "not_found",
+      "extra": [],
+      "top1": null,
+      "rank": null
+     },
+     "X03": {
+      "top5": [],
+      "status": "not_found",
+      "extra": [],
+      "top1": null,
+      "rank": null
+     },
+     "X04": {
+      "top5": [],
+      "status": "not_found",
+      "extra": [],
+      "top1": null,
+      "rank": null
+     },
+     "X05": {
+      "top5": [],
+      "status": "not_found",
+      "extra": [],
+      "top1": null,
+      "rank": null
+     },
+     "X06": {
+      "top5": [],
+      "status": "not_found",
+      "extra": [],
+      "top1": null,
+      "rank": null
+     },
+     "X07": {
+      "top5": [],
+      "status": "not_found",
+      "extra": [
+       "row-000763",
+       "row-002373"
+      ],
+      "top1": null,
+      "rank": null
+     },
+     "X08": {
+      "top5": [],
+      "status": "not_found",
+      "extra": [
+       "row-001229",
+       "row-002317",
+       "row-000312"
+      ],
+      "top1": null,
+      "rank": null
+     },
+     "X09": {
+      "top5": [],
+      "status": "not_found",
+      "extra": [
+       "row-001866",
+       "row-001541"
+      ],
+      "top1": null,
+      "rank": null
+     },
+     "X10": {
+      "top5": [],
+      "status": "not_found",
+      "extra": [],
+      "top1": null,
+      "rank": null
+     }
+    }
+   }
+  }
+ },
+ "ablations": {
+  "полная схема (как есть)": {
+   "hit5": 21,
+   "hit1": 21,
+   "wrong_key": 0,
+   "honest": 14,
+   "false_answer": 0,
+   "probe_b_confirmed": 0.785,
+   "probe_b_wrong_top1": 0.0
+  },
+  "тип — жёсткий фильтр (кандидаты другого/неизвестного типа отбрасываются)": {
+   "hit5": 21,
+   "hit1": 21,
+   "wrong_key": 0,
+   "honest": 14,
+   "false_answer": 0,
+   "probe_b_confirmed": 0.77,
+   "probe_b_wrong_top1": 0.0
+  },
+  "комплекты без ограничения («та же позиция» возможна)": {
+   "hit5": 22,
+   "hit1": 22,
+   "wrong_key": 0,
+   "honest": 14,
+   "false_answer": 0,
+   "probe_b_confirmed": 0.785,
+   "probe_b_wrong_top1": 0.0
+  },
+  "ранжирование только по баллу (без «класс прежде балла»)": {
+   "hit5": 21,
+   "hit1": 21,
+   "wrong_key": 0,
+   "honest": 14,
+   "false_answer": 0,
+   "probe_b_confirmed": 0.785,
+   "probe_b_wrong_top1": 0.0
+  },
+  "без проверки слов запроса (порог 0)": {
+   "hit5": 21,
+   "hit1": 21,
+   "wrong_key": 0,
+   "honest": 14,
+   "false_answer": 0,
+   "probe_b_confirmed": 0.81,
+   "probe_b_wrong_top1": 0.0
+  },
+  "без требования подтверждённой характеристики": {
+   "hit5": 23,
+   "hit1": 23,
+   "wrong_key": 0,
+   "honest": 13,
+   "false_answer": 1,
+   "probe_b_confirmed": 0.785,
+   "probe_b_wrong_top1": 0.0
+  },
+  "порядок сторон у типов без правила: sorted": {
+   "hit5": 21,
+   "hit1": 21,
+   "wrong_key": 0,
+   "honest": 14,
+   "false_answer": 0,
+   "probe_b_confirmed": 0.925,
+   "probe_b_wrong_top1": 0.0
+  },
+  "экран кабеля «Э» игнорируется (cable_screen: ignore)": {
+   "hit5": 21,
+   "hit1": 21,
+   "wrong_key": 0,
+   "honest": 14,
+   "false_answer": 0,
+   "probe_b_confirmed": 0.785,
+   "probe_b_wrong_top1": 0.0
+  },
+  "без защиты от неразобранных ограничений (blocking_reasons: [])": {
+   "hit5": 21,
+   "hit1": 21,
+   "wrong_key": 0,
+   "honest": 14,
+   "false_answer": 0,
+   "probe_b_confirmed": 0.785,
+   "probe_b_wrong_top1": 0.0
+  }
+ },
+ "display": {
+  "all": {
+   "ans": 26,
+   "shown": 26,
+   "confirmed": 21,
+   "noans": 14,
+   "clean_refusal": 9,
+   "review_shown": 5,
+   "confirmed_on_noans": 0,
+   "per_query": {
+    "Q01": {
+     "display_status": "found",
+     "table": [
+      "row-000106"
+     ]
+    },
+    "Q02": {
+     "display_status": "found",
+     "table": [
+      "row-000100"
+     ]
+    },
+    "Q03": {
+     "display_status": "found",
+     "table": [
+      "row-000426",
+      "row-001220",
+      "row-000734"
+     ]
+    },
+    "Q05": {
+     "display_status": "found",
+     "table": [
+      "row-000585",
+      "row-000763"
+     ]
+    },
+    "Q07": {
+     "display_status": "found",
+     "table": [
+      "row-001129",
+      "row-001299",
+      "row-001607"
+     ]
+    },
+    "Q09": {
+     "display_status": "found",
+     "table": [
+      "row-000261",
+      "row-001818"
+     ]
+    },
+    "Q11": {
+     "display_status": "found",
+     "table": [
+      "row-000201"
+     ]
+    },
+    "Q13": {
+     "display_status": "found",
+     "table": [
+      "row-001178"
+     ]
+    },
+    "N1": {
+     "display_status": "not_found",
+     "table": []
+    },
+    "N3": {
+     "display_status": "not_found",
+     "table": []
+    },
+    "Q04": {
+     "display_status": "found",
+     "table": [
+      "row-000364",
+      "row-000891",
+      "row-001392"
+     ]
+    },
+    "Q06": {
+     "display_status": "review",
+     "table": [
+      "row-000646",
+      "row-002134",
+      "row-000238",
+      "row-001783",
+      "row-001853"
+     ]
+    },
+    "Q08": {
+     "display_status": "found",
+     "table": [
+      "row-000507",
+      "row-000808",
+      "row-001150"
+     ]
+    },
+    "Q10": {
+     "display_status": "found",
+     "table": [
+      "row-000357",
+      "row-001031",
+      "row-000896",
+      "row-002034"
+     ]
+    },
+    "Q12": {
+     "display_status": "found",
+     "table": [
+      "row-001879",
+      "row-001146",
+      "row-001382"
+     ]
+    },
+    "Q14": {
+     "display_status": "review",
+     "table": [
+      "row-000971",
+      "row-002336",
+      "row-000480",
+      "row-000467",
+      "row-000887"
+     ]
+    },
+    "Q15": {
+     "display_status": "found",
+     "table": [
+      "row-001866",
+      "row-001541"
+     ]
+    },
+    "Q16": {
+     "display_status": "found",
+     "table": [
+      "row-000393"
+     ]
+    },
+    "N2": {
+     "display_status": "review",
+     "table": [
+      "row-002336",
+      "row-000971"
+     ]
+    },
+    "N4": {
+     "display_status": "review",
+     "table": [
+      "row-000730",
+      "row-000365",
+      "row-001508",
+      "row-000832",
+      "row-001994"
+     ]
+    },
+    "H01": {
+     "display_status": "review",
+     "table": [
+      "row-000723"
+     ]
+    },
+    "H02": {
+     "display_status": "found",
+     "table": [
+      "row-001135"
+     ]
+    },
+    "H03": {
+     "display_status": "found",
+     "table": [
+      "row-001693"
+     ]
+    },
+    "H04": {
+     "display_status": "review",
+     "table": [
+      "row-000690",
+      "row-002315"
+     ]
+    },
+    "H05": {
+     "display_status": "review",
+     "table": [
+      "row-001066",
+      "row-000863",
+      "row-001351",
+      "row-000567"
+     ]
+    },
+    "H06": {
+     "display_status": "found",
+     "table": [
+      "row-000802",
+      "row-002078",
+      "row-002034",
+      "row-000896"
+     ]
+    },
+    "H07": {
+     "display_status": "found",
+     "table": [
+      "row-001640",
+      "row-000896",
+      "row-002034"
+     ]
+    },
+    "H08": {
+     "display_status": "found",
+     "table": [
+      "row-001790"
+     ]
+    },
+    "H09": {
+     "display_status": "found",
+     "table": [
+      "row-001762"
+     ]
+    },
+    "H10": {
+     "display_status": "found",
+     "table": [
+      "row-000191",
+      "row-000324",
+      "row-001992",
+      "row-000697",
+      "row-000803"
+     ]
+    },
+    "X01": {
+     "display_status": "not_found",
+     "table": []
+    },
+    "X02": {
+     "display_status": "not_found",
+     "table": []
+    },
+    "X03": {
+     "display_status": "not_found",
+     "table": []
+    },
+    "X04": {
+     "display_status": "not_found",
+     "table": []
+    },
+    "X05": {
+     "display_status": "not_found",
+     "table": []
+    },
+    "X06": {
+     "display_status": "not_found",
+     "table": []
+    },
+    "X07": {
+     "display_status": "review",
+     "table": [
+      "row-000763",
+      "row-002373"
+     ]
+    },
+    "X08": {
+     "display_status": "review",
+     "table": [
+      "row-001229",
+      "row-002317",
+      "row-000312",
+      "row-000740",
+      "row-000756"
+     ]
+    },
+    "X09": {
+     "display_status": "review",
+     "table": [
+      "row-001866",
+      "row-001541"
+     ]
+    },
+    "X10": {
+     "display_status": "not_found",
+     "table": []
+    }
+   }
+  },
+  "dev": {
+   "ans": 8,
+   "shown": 8,
+   "confirmed": 8,
+   "noans": 2,
+   "clean_refusal": 2,
+   "review_shown": 0,
+   "confirmed_on_noans": 0,
+   "per_query": {
+    "Q01": {
+     "display_status": "found",
+     "table": [
+      "row-000106"
+     ]
+    },
+    "Q02": {
+     "display_status": "found",
+     "table": [
+      "row-000100"
+     ]
+    },
+    "Q03": {
+     "display_status": "found",
+     "table": [
+      "row-000426",
+      "row-001220",
+      "row-000734"
+     ]
+    },
+    "Q05": {
+     "display_status": "found",
+     "table": [
+      "row-000585",
+      "row-000763"
+     ]
+    },
+    "Q07": {
+     "display_status": "found",
+     "table": [
+      "row-001129",
+      "row-001299",
+      "row-001607"
+     ]
+    },
+    "Q09": {
+     "display_status": "found",
+     "table": [
+      "row-000261",
+      "row-001818"
+     ]
+    },
+    "Q11": {
+     "display_status": "found",
+     "table": [
+      "row-000201"
+     ]
+    },
+    "Q13": {
+     "display_status": "found",
+     "table": [
+      "row-001178"
+     ]
+    },
+    "N1": {
+     "display_status": "not_found",
+     "table": []
+    },
+    "N3": {
+     "display_status": "not_found",
+     "table": []
+    }
+   }
+  },
+  "test": {
+   "ans": 8,
+   "shown": 8,
+   "confirmed": 6,
+   "noans": 2,
+   "clean_refusal": 0,
+   "review_shown": 2,
+   "confirmed_on_noans": 0,
+   "per_query": {
+    "Q04": {
+     "display_status": "found",
+     "table": [
+      "row-000364",
+      "row-000891",
+      "row-001392"
+     ]
+    },
+    "Q06": {
+     "display_status": "review",
+     "table": [
+      "row-000646",
+      "row-002134",
+      "row-000238",
+      "row-001783",
+      "row-001853"
+     ]
+    },
+    "Q08": {
+     "display_status": "found",
+     "table": [
+      "row-000507",
+      "row-000808",
+      "row-001150"
+     ]
+    },
+    "Q10": {
+     "display_status": "found",
+     "table": [
+      "row-000357",
+      "row-001031",
+      "row-000896",
+      "row-002034"
+     ]
+    },
+    "Q12": {
+     "display_status": "found",
+     "table": [
+      "row-001879",
+      "row-001146",
+      "row-001382"
+     ]
+    },
+    "Q14": {
+     "display_status": "review",
+     "table": [
+      "row-000971",
+      "row-002336",
+      "row-000480",
+      "row-000467",
+      "row-000887"
+     ]
+    },
+    "Q15": {
+     "display_status": "found",
+     "table": [
+      "row-001866",
+      "row-001541"
+     ]
+    },
+    "Q16": {
+     "display_status": "found",
+     "table": [
+      "row-000393"
+     ]
+    },
+    "N2": {
+     "display_status": "review",
+     "table": [
+      "row-002336",
+      "row-000971"
+     ]
+    },
+    "N4": {
+     "display_status": "review",
+     "table": [
+      "row-000730",
+      "row-000365",
+      "row-001508",
+      "row-000832",
+      "row-001994"
+     ]
+    }
+   }
+  },
+  "holdout": {
+   "ans": 10,
+   "shown": 10,
+   "confirmed": 7,
+   "noans": 10,
+   "clean_refusal": 7,
+   "review_shown": 3,
+   "confirmed_on_noans": 0,
+   "per_query": {
+    "H01": {
+     "display_status": "review",
+     "table": [
+      "row-000723"
+     ]
+    },
+    "H02": {
+     "display_status": "found",
+     "table": [
+      "row-001135"
+     ]
+    },
+    "H03": {
+     "display_status": "found",
+     "table": [
+      "row-001693"
+     ]
+    },
+    "H04": {
+     "display_status": "review",
+     "table": [
+      "row-000690",
+      "row-002315"
+     ]
+    },
+    "H05": {
+     "display_status": "review",
+     "table": [
+      "row-001066",
+      "row-000863",
+      "row-001351",
+      "row-000567"
+     ]
+    },
+    "H06": {
+     "display_status": "found",
+     "table": [
+      "row-000802",
+      "row-002078",
+      "row-002034",
+      "row-000896"
+     ]
+    },
+    "H07": {
+     "display_status": "found",
+     "table": [
+      "row-001640",
+      "row-000896",
+      "row-002034"
+     ]
+    },
+    "H08": {
+     "display_status": "found",
+     "table": [
+      "row-001790"
+     ]
+    },
+    "H09": {
+     "display_status": "found",
+     "table": [
+      "row-001762"
+     ]
+    },
+    "H10": {
+     "display_status": "found",
+     "table": [
+      "row-000191",
+      "row-000324",
+      "row-001992",
+      "row-000697",
+      "row-000803"
+     ]
+    },
+    "X01": {
+     "display_status": "not_found",
+     "table": []
+    },
+    "X02": {
+     "display_status": "not_found",
+     "table": []
+    },
+    "X03": {
+     "display_status": "not_found",
+     "table": []
+    },
+    "X04": {
+     "display_status": "not_found",
+     "table": []
+    },
+    "X05": {
+     "display_status": "not_found",
+     "table": []
+    },
+    "X06": {
+     "display_status": "not_found",
+     "table": []
+    },
+    "X07": {
+     "display_status": "review",
+     "table": [
+      "row-000763",
+      "row-002373"
+     ]
+    },
+    "X08": {
+     "display_status": "review",
+     "table": [
+      "row-001229",
+      "row-002317",
+      "row-000312",
+      "row-000740",
+      "row-000756"
+     ]
+    },
+    "X09": {
+     "display_status": "review",
+     "table": [
+      "row-001866",
+      "row-001541"
+     ]
+    },
+    "X10": {
+     "display_status": "not_found",
+     "table": []
+    }
+   }
+  }
+ },
+ "separate": {
+  "all": {
+   "positive": 26,
+   "negative": 14,
+   "candidate_hit@50": 26,
+   "candidate_recall@50": 1.0,
+   "confirmed_hit@1": 21,
+   "display_hit@1": 26,
+   "confirmed_hit@5": 21,
+   "display_hit@5": 26,
+   "confirmation_coverage_all": 21,
+   "confirmation_coverage_positive": 21,
+   "confirmation_coverage_negative": 0,
+   "confirmed_top1_in_answer_rows": 21,
+   "confirmed_top1_outside_answer_rows": 0,
+   "confirmed_top1_total": 21,
+   "confirmed_precision@1": {
+    "acceptable": 21,
+    "unacceptable": 0,
+    "unassessed": 0,
+    "total": 21
+   },
+   "technical_error@1_results": {
+    "conflict": 0,
+    "no_conflict": 0,
+    "unknown": 21,
+    "first_rows": 21
+   },
+   "technical_error@1_table": {
+    "conflict": 0,
+    "no_conflict": 0,
+    "unknown": 31,
+    "first_rows": 31
+   },
+   "negative_refusal": 14,
+   "negative_empty_display": 9,
+   "negative_review_display": 5
+  },
+  "dev": {
+   "positive": 8,
+   "negative": 2,
+   "candidate_hit@50": 8,
+   "candidate_recall@50": 1.0,
+   "confirmed_hit@1": 8,
+   "display_hit@1": 8,
+   "confirmed_hit@5": 8,
+   "display_hit@5": 8,
+   "confirmation_coverage_all": 8,
+   "confirmation_coverage_positive": 8,
+   "confirmation_coverage_negative": 0,
+   "confirmed_top1_in_answer_rows": 8,
+   "confirmed_top1_outside_answer_rows": 0,
+   "confirmed_top1_total": 8,
+   "confirmed_precision@1": {
+    "acceptable": 8,
+    "unacceptable": 0,
+    "unassessed": 0,
+    "total": 8
+   },
+   "technical_error@1_results": {
+    "conflict": 0,
+    "no_conflict": 0,
+    "unknown": 8,
+    "first_rows": 8
+   },
+   "technical_error@1_table": {
+    "conflict": 0,
+    "no_conflict": 0,
+    "unknown": 8,
+    "first_rows": 8
+   },
+   "negative_refusal": 2,
+   "negative_empty_display": 2,
+   "negative_review_display": 0
+  },
+  "test": {
+   "positive": 8,
+   "negative": 2,
+   "candidate_hit@50": 8,
+   "candidate_recall@50": 1.0,
+   "confirmed_hit@1": 6,
+   "display_hit@1": 8,
+   "confirmed_hit@5": 6,
+   "display_hit@5": 8,
+   "confirmation_coverage_all": 6,
+   "confirmation_coverage_positive": 6,
+   "confirmation_coverage_negative": 0,
+   "confirmed_top1_in_answer_rows": 6,
+   "confirmed_top1_outside_answer_rows": 0,
+   "confirmed_top1_total": 6,
+   "confirmed_precision@1": {
+    "acceptable": 6,
+    "unacceptable": 0,
+    "unassessed": 0,
+    "total": 6
+   },
+   "technical_error@1_results": {
+    "conflict": 0,
+    "no_conflict": 0,
+    "unknown": 6,
+    "first_rows": 6
+   },
+   "technical_error@1_table": {
+    "conflict": 0,
+    "no_conflict": 0,
+    "unknown": 10,
+    "first_rows": 10
+   },
+   "negative_refusal": 2,
+   "negative_empty_display": 0,
+   "negative_review_display": 2
+  },
+  "holdout": {
+   "positive": 10,
+   "negative": 10,
+   "candidate_hit@50": 10,
+   "candidate_recall@50": 1.0,
+   "confirmed_hit@1": 7,
+   "display_hit@1": 10,
+   "confirmed_hit@5": 7,
+   "display_hit@5": 10,
+   "confirmation_coverage_all": 7,
+   "confirmation_coverage_positive": 7,
+   "confirmation_coverage_negative": 0,
+   "confirmed_top1_in_answer_rows": 7,
+   "confirmed_top1_outside_answer_rows": 0,
+   "confirmed_top1_total": 7,
+   "confirmed_precision@1": {
+    "acceptable": 7,
+    "unacceptable": 0,
+    "unassessed": 0,
+    "total": 7
+   },
+   "technical_error@1_results": {
+    "conflict": 0,
+    "no_conflict": 0,
+    "unknown": 7,
+    "first_rows": 7
+   },
+   "technical_error@1_table": {
+    "conflict": 0,
+    "no_conflict": 0,
+    "unknown": 13,
+    "first_rows": 13
+   },
+   "negative_refusal": 10,
+   "negative_empty_display": 7,
+   "negative_review_display": 3
+  }
+ },
+ "e5": {
+  "stages": {
+   "без E5 (BM25 + токены)": {
+    "metrics": {
+     "positive": 26,
+     "negative": 14,
+     "candidate_hit@50": 26,
+     "candidate_recall@50": 1.0,
+     "confirmed_hit@1": 21,
+     "display_hit@1": 26,
+     "confirmed_hit@5": 21,
+     "display_hit@5": 26,
+     "confirmation_coverage_all": 21,
+     "confirmation_coverage_positive": 21,
+     "confirmation_coverage_negative": 0,
+     "confirmed_top1_in_answer_rows": 21,
+     "confirmed_top1_outside_answer_rows": 0,
+     "confirmed_top1_total": 21,
+     "confirmed_precision@1": {
+      "acceptable": 21,
+      "unacceptable": 0,
+      "unassessed": 0,
+      "total": 21
+     },
+     "technical_error@1_results": {
+      "conflict": 0,
+      "no_conflict": 0,
+      "unknown": 21,
+      "first_rows": 21
+     },
+     "technical_error@1_table": {
+      "conflict": 0,
+      "no_conflict": 0,
+      "unknown": 31,
+      "first_rows": 31
+     },
+     "negative_refusal": 14,
+     "negative_empty_display": 9,
+     "negative_review_display": 5
+    }
+   },
+   "с E5 (RRF, вес 0,5)": {
+    "metrics": {
+     "positive": 26,
+     "negative": 14,
+     "candidate_hit@50": 26,
+     "candidate_recall@50": 1.0,
+     "confirmed_hit@1": 21,
+     "display_hit@1": 26,
+     "confirmed_hit@5": 21,
+     "display_hit@5": 26,
+     "confirmation_coverage_all": 21,
+     "confirmation_coverage_positive": 21,
+     "confirmation_coverage_negative": 0,
+     "confirmed_top1_in_answer_rows": 21,
+     "confirmed_top1_outside_answer_rows": 0,
+     "confirmed_top1_total": 21,
+     "confirmed_precision@1": {
+      "acceptable": 21,
+      "unacceptable": 0,
+      "unassessed": 0,
+      "total": 21
+     },
+     "technical_error@1_results": {
+      "conflict": 0,
+      "no_conflict": 0,
+      "unknown": 21,
+      "first_rows": 21
+     },
+     "technical_error@1_table": {
+      "conflict": 0,
+      "no_conflict": 0,
+      "unknown": 31,
+      "first_rows": 31
+     },
+     "negative_refusal": 14,
+     "negative_empty_display": 9,
+     "negative_review_display": 5
+    }
+   }
+  }
+ },
+ "timing": {
+  "repeats": 3,
+  "queries": 40,
+  "warm_up_passes": 1,
+  "answer_cache": false,
+  "modes": {
+   "B2, без E5": {
+    "p50_ms": 0.3,
+    "p95_ms": 0.5,
+    "calls": 120
+   },
+   "B2, с E5": {
+    "p50_ms": 5.8,
+    "p95_ms": 7.9,
+    "calls": 120
+   },
+   "вся цепочка, без E5": {
+    "p50_ms": 5.5,
+    "p95_ms": 8.0,
+    "calls": 120
+   },
+   "вся цепочка, с E5": {
+    "p50_ms": 13.2,
+    "p95_ms": 19.3,
+    "calls": 120
+   }
+  }
+ },
+ "threshold_baseline": {
+  "threshold": 10.665,
+  "selected_on": "dev (10 запросов, 2 без ответа)",
+  "per_split": {
+   "all": {
+    "hit5": 22,
+    "positive": 26,
+    "refused": 9,
+    "negative": 14
+   },
+   "dev": {
+    "hit5": 6,
+    "positive": 8,
+    "refused": 2,
+    "negative": 2
+   },
+   "test": {
+    "hit5": 8,
+    "positive": 8,
+    "refused": 0,
+    "negative": 2
+   },
+   "holdout": {
+    "hit5": 8,
+    "positive": 10,
+    "refused": 7,
+    "negative": 10
+   }
+  }
+ }
+}

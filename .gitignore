@@ -1,0 +1,12 @@
+.venv/
+models/
+data/index/
+data/processed/
+__pycache__/
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+reports/extraction/*.csv
+reports/quality/runs/
+reports/clean_run/
+eval/blind_sheets/

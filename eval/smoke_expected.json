@@ -1,0 +1,214 @@
+{
+ "rules_sha256": "adcd49d9a54f8387c5076d0680c1fe6a688c6d008a8821731b753710f572d8e3",
+ "tolerance": 0.001,
+ "queries": [
+  "кабель КВВГнг-LS 7*1.5",
+  "камера IP уличная 2 Мп вариофокальная",
+  "ворота откатные 6000х2250",
+  "труба гофра ПВХ 25 мм",
+  "ИБП 12В для улицы",
+  "трансформатор силовой сухой 1000 кВА",
+  "огнетушитель порошковый ОП-5",
+  "Инфракрасный термометр любого производителя",
+  "Тройник 25х30 мм любой цвет",
+  "светильник светодиодный 100 вт IP66"
+ ],
+ "answers": {
+  "кабель КВВГнг-LS 7*1.5": {
+   "status": "not_found",
+   "display_status": "review",
+   "status_line": "Подтверждённых подходящих позиций не найдено. Ниже варианты для проверки",
+   "table": [
+    {
+     "id": "row-001171",
+     "verdict": "check",
+     "price": 40,
+     "score": 0.85,
+     "needs_review": true,
+     "match_basis": null
+    }
+   ]
+  },
+  "камера IP уличная 2 Мп вариофокальная": {
+   "status": "found",
+   "display_status": "found",
+   "status_line": "Найдено подходящих позиций: 3. Ниже варианты, которые требуют проверки",
+   "table": [
+    {
+     "id": "row-000428",
+     "verdict": "same",
+     "price": 160000,
+     "score": 0.9975,
+     "needs_review": false,
+     "match_basis": "request_constraints"
+    },
+    {
+     "id": "row-000887",
+     "verdict": "same",
+     "price": 180000,
+     "score": 0.9961,
+     "needs_review": false,
+     "match_basis": "request_constraints"
+    },
+    {
+     "id": "row-000480",
+     "verdict": "same",
+     "price": 690000,
+     "score": 0.8998,
+     "needs_review": false,
+     "match_basis": "request_constraints"
+    },
+    {
+     "id": "row-000467",
+     "verdict": "check",
+     "price": 200000,
+     "score": 0.6179,
+     "needs_review": true,
+     "match_basis": null
+    },
+    {
+     "id": "row-000971",
+     "verdict": "check",
+     "price": 670000,
+     "score": 0.1463,
+     "needs_review": true,
+     "match_basis": null
+    }
+   ]
+  },
+  "ворота откатные 6000х2250": {
+   "status": "found",
+   "display_status": "found",
+   "status_line": "Найдено подходящих позиций: 1",
+   "table": [
+    {
+     "id": "row-000159",
+     "verdict": "same",
+     "price": 560000,
+     "score": 1.0,
+     "needs_review": false,
+     "match_basis": "request_constraints"
+    }
+   ]
+  },
+  "труба гофра ПВХ 25 мм": {
+   "status": "found",
+   "display_status": "found",
+   "status_line": "Найдено подходящих позиций: 2. Ниже варианты, которые требуют проверки",
+   "table": [
+    {
+     "id": "row-000086",
+     "verdict": "same",
+     "price": 130,
+     "score": 1.0,
+     "needs_review": false,
+     "match_basis": "request_constraints"
+    },
+    {
+     "id": "row-002059",
+     "verdict": "same",
+     "price": 10,
+     "score": 0.9858,
+     "needs_review": false,
+     "match_basis": "request_constraints"
+    },
+    {
+     "id": "row-000761",
+     "verdict": "check",
+     "price": 80,
+     "score": 0.1109,
+     "needs_review": true,
+     "match_basis": null
+    }
+   ]
+  },
+  "ИБП 12В для улицы": {
+   "status": "not_found",
+   "display_status": "review",
+   "status_line": "Подтверждённых подходящих позиций не найдено. Ниже варианты для проверки",
+   "table": [
+    {
+     "id": "row-001541",
+     "verdict": "check",
+     "price": 46000,
+     "score": 0.6881,
+     "needs_review": true,
+     "match_basis": null
+    },
+    {
+     "id": "row-001866",
+     "verdict": "check",
+     "price": 1000,
+     "score": 0.3195,
+     "needs_review": true,
+     "match_basis": null
+    }
+   ]
+  },
+  "трансформатор силовой сухой 1000 кВА": {
+   "status": "not_found",
+   "display_status": "not_found",
+   "status_line": "Не найдено",
+   "table": []
+  },
+  "огнетушитель порошковый ОП-5": {
+   "status": "not_found",
+   "display_status": "not_found",
+   "status_line": "Не найдено",
+   "table": []
+  },
+  "Инфракрасный термометр любого производителя": {
+   "status": "found",
+   "display_status": "found",
+   "status_line": "Найдено подходящих позиций: 1",
+   "table": [
+    {
+     "id": "row-000076",
+     "verdict": "same",
+     "price": 23000,
+     "score": 1.0,
+     "needs_review": false,
+     "match_basis": "type_assumption"
+    }
+   ]
+  },
+  "Тройник 25х30 мм любой цвет": {
+   "status": "found",
+   "display_status": "found",
+   "status_line": "Найдено подходящих позиций: 1",
+   "table": [
+    {
+     "id": "row-000423",
+     "verdict": "same",
+     "price": 370,
+     "score": 1.0,
+     "needs_review": false,
+     "match_basis": "request_constraints"
+    }
+   ]
+  },
+  "светильник светодиодный 100 вт IP66": {
+   "status": "not_found",
+   "display_status": "review",
+   "status_line": "Подтверждённых подходящих позиций не найдено. Ниже варианты для проверки",
+   "table": [
+    {
+     "id": "row-000763",
+     "verdict": "check",
+     "price": 60,
+     "score": 0.1451,
+     "needs_review": true,
+     "match_basis": null
+    },
+    {
+     "id": "row-002373",
+     "verdict": "check",
+     "price": 3800,
+     "score": 0.1391,
+     "needs_review": true,
+     "match_basis": null
+    }
+   ]
+  }
+ }
+}

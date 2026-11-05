@@ -1,0 +1,17 @@
+# Независимая разметка технических ошибок (формат: eval/judgments.py). ЗАПОЛНЯЕТСЯ ЛЮДЬМИ, не системой и не ассистентом:
+# значения кандидата переписываются из xlsx при взгляде на оригинальное название, без запуска нашего извлекателя.
+# Пока пара не размечена, её результат `unknown` (в отчёте виден охват разметкой); «не размечено» не означает «ошибки нет».
+#
+# Листы для слепой разметки (без названия системы, оценки и вердикта): .venv/bin/python -I eval/make_blind_sheets.py
+version: 1
+methodology: "v1: обязательные ограничения запроса + критические значения кандидата, переписанные вручную из xlsx"
+queries: {}
+# пример записи (закомментирован):
+#   Q07:
+#     constraints:
+#       - {attribute: power_kw, expected: 0.1, comparison: equal}
+#       - {attribute: dims, expected: [600, 600], comparison: equal, order_sensitive: false}
+pairs: []
+# пример записи (закомментирован):
+#   - {query_id: X07, candidate_id: row-000331, relevance: unacceptable, critical_values: {power_kw: 0.3},
+#      evidence_text: "Pn=300 Вт", reason: "мощность 300 Вт вместо 100 Вт", author: "ФИО", methodology_version: 1}

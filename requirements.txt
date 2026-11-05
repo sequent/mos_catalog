@@ -1,0 +1,4 @@
+# Окружение разработки (CPU, без torch). Создание: python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
+-r requirements-runtime.txt
+pytest>=8.0
+httpx>=0.27            # TestClient для tests/test_api.py

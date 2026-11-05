@@ -1,0 +1,181 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1820 1710" width="1820" height="1710" font-family="Helvetica, Arial, sans-serif">
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="context-stroke"/></marker><linearGradient id="mix" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#e8f1ff"/><stop offset="1" stop-color="#e3f5e8"/></linearGradient></defs>
+<rect width="1820" height="1710" fill="#ffffff"/>
+<text x="30" y="31" font-size="23" text-anchor="start" font-weight="700" fill="#111111">Похожее описание и подходящее оборудование — разные проверки</text>
+<text x="30" y="56" font-size="14" text-anchor="start" fill="#444444">B2 предлагает кандидатов; B3/B4 проверяют предмет и требования. Ни BM25, ни E5 не утверждают допустимость замены.</text>
+<rect x="20" y="78" width="1780" height="290" rx="14" fill="#f6f9ff" stroke="#c9d8f5" stroke-width="1.5"/>
+<text x="38" y="102" font-size="15" font-weight="700" fill="#2b4f8f">ДВА СПОСОБА НАЙТИ → ОДИН МЕХАНИЗМ ТЕХНИЧЕСКОГО РЕШЕНИЯ</text>
+<rect x="40" y="180" width="230" height="110" rx="50" fill="#ffffff" stroke="#222222" stroke-width="2"/>
+<text x="155.0" y="220.5" font-size="15" text-anchor="middle" font-weight="700" fill="#111111">Запрос и его разбор</text>
+<text x="155.0" y="239.5" font-size="14" text-anchor="middle" fill="#111111">какой предмет нужен;</text>
+<text x="155.0" y="258.5" font-size="14" text-anchor="middle" fill="#111111">что обязательно</text>
+<rect x="340" y="118" width="380" height="100" rx="10" fill="#e8f1ff" stroke="#3b6fd4" stroke-width="2"/>
+<text x="530.0" y="153.5" font-size="15" text-anchor="middle" font-weight="700" fill="#12315f">BM25: слова, коды, числа</text>
+<text x="530.0" y="172.5" font-size="14" text-anchor="middle" fill="#12315f">Риск: параметры совпали,</text>
+<text x="530.0" y="191.5" font-size="14" text-anchor="middle" fill="#12315f">а предметы разные.</text>
+<rect x="340" y="250" width="380" height="100" rx="10" fill="#e3f5e8" stroke="#2f9e57" stroke-width="2"/>
+<text x="530.0" y="285.5" font-size="15" text-anchor="middle" font-weight="700" fill="#0f4a26">E5: близость смысла текста</text>
+<text x="530.0" y="304.5" font-size="14" text-anchor="middle" fill="#0f4a26">Перефразировки и общая тема.</text>
+<text x="530.0" y="323.5" font-size="14" text-anchor="middle" fill="#0f4a26">Не доказывает совместимость.</text>
+<rect x="800" y="176" width="350" height="140" rx="10" fill="#e8f1ff" stroke="#3b6fd4" stroke-width="2"/>
+<text x="975.0" y="222.0" font-size="15" text-anchor="middle" font-weight="700" fill="#12315f">RRF: объединить предложения</text>
+<text x="975.0" y="241.0" font-size="14" text-anchor="middle" fill="#12315f">до 100 + до 100 → до 50;</text>
+<text x="975.0" y="260.0" font-size="14" text-anchor="middle" fill="#12315f">это ещё только кандидаты;</text>
+<text x="975.0" y="279.0" font-size="14" text-anchor="middle" fill="#12315f">потерянного здесь B4 не вернёт</text>
+<rect x="1230" y="176" width="550" height="140" rx="10" fill="#e8f1ff" stroke="#3b6fd4" stroke-width="2"/>
+<text x="1505.0" y="222.0" font-size="15" text-anchor="middle" font-weight="700" fill="#12315f">B3/B4: соответствие по данным названия</text>
+<text x="1505.0" y="241.0" font-size="14" text-anchor="middle" fill="#12315f">Предмет, модель/серия, распознанные признаки.</text>
+<text x="1505.0" y="260.0" font-size="14" text-anchor="middle" fill="#12315f">Совпало / разрешено правилом / конфликт / неизвестно.</text>
+<text x="1505.0" y="279.0" font-size="14" text-anchor="middle" fill="#12315f">За пределами названия нужны сведения специалиста.</text>
+<text x="40" y="395" font-size="14" text-anchor="start" fill="#444444">Где логика может ломаться и что проверять: правый столбец — действия при диагностике, а не обещание готовности всех профилей.</text>
+<text x="40" y="437" font-size="16" text-anchor="start" font-weight="700" fill="#111111">Этап</text>
+<text x="320" y="437" font-size="16" text-anchor="start" font-weight="700" fill="#111111">Ошибка / признак</text>
+<text x="800" y="437" font-size="16" text-anchor="start" font-weight="700" fill="#111111">Как разбирать и исправлять</text>
+<text x="1440" y="437" font-size="16" text-anchor="start" font-weight="700" fill="#111111">Отдельная проверка</text>
+<rect x="40" y="456" width="240" height="146" rx="10" fill="#ffffff" stroke="#444444" stroke-width="2"/>
+<text x="160.0" y="514.5" font-size="15" text-anchor="middle" font-weight="700" fill="#111111">A3–A5 / B1: разбор</text>
+<text x="160.0" y="533.5" font-size="14" text-anchor="middle" fill="#111111">Не распознано требование:</text>
+<text x="160.0" y="552.5" font-size="14" text-anchor="middle" fill="#111111">число, единица, слово, роль.</text>
+<rect x="320" y="456" width="440" height="146" rx="10" fill="#fbe4e4" stroke="#c43b3b" stroke-width="2"/>
+<text x="540.0" y="495.5" font-size="15" text-anchor="middle" font-weight="700" fill="#6b1414">Из запроса исчезло ограничение</text>
+<text x="540.0" y="514.5" font-size="14" text-anchor="middle" fill="#6b1414">100 МЛ, 16 портов, 1-кл.;</text>
+<text x="540.0" y="533.5" font-size="14" text-anchor="middle" fill="#6b1414">сталь трубы принята за свойство прибора;</text>
+<text x="540.0" y="552.5" font-size="14" text-anchor="middle" fill="#6b1414">потеряно словесное требование;</text>
+<text x="540.0" y="571.5" font-size="14" text-anchor="middle" fill="#6b1414">число в обозначении (KLS 300) не размер.</text>
+<rect x="800" y="456" width="600" height="146" rx="10" fill="#fff0dc" stroke="#e08a1e" stroke-width="2"/>
+<text x="1100.0" y="486.0" font-size="15" text-anchor="middle" font-weight="700" fill="#5c3500">Действие при ошибке</text>
+<text x="1100.0" y="505.0" font-size="14" text-anchor="middle" fill="#5c3500">Сравнить исходный текст, атрибуты и остаток;</text>
+<text x="1100.0" y="524.0" font-size="14" text-anchor="middle" fill="#5c3500">нормализовать единицы с правильным масштабом;</text>
+<text x="1100.0" y="543.0" font-size="14" text-anchor="middle" fill="#5c3500">задать профиль: предмет, назначение, роль признака.</text>
+<text x="1100.0" y="562.0" font-size="14" text-anchor="middle" fill="#5c3500">Сохранить evidence и словесные ограничения;</text>
+<text x="1100.0" y="581.0" font-size="14" text-anchor="middle" fill="#5c3500">неясное обязательное требование → check.</text>
+<rect x="1440" y="456" width="340" height="146" rx="10" fill="#e8f1ff" stroke="#3b6fd4" stroke-width="2"/>
+<text x="1610.0" y="505.0" font-size="15" text-anchor="middle" font-weight="700" fill="#12315f">Как увидеть результат</text>
+<text x="1610.0" y="524.0" font-size="14" text-anchor="middle" fill="#12315f">Тесты эквивалентных записей;</text>
+<text x="1610.0" y="543.0" font-size="14" text-anchor="middle" fill="#12315f">известный конфликт и no-data;</text>
+<text x="1610.0" y="562.0" font-size="14" text-anchor="middle" fill="#12315f">проверка роли признака.</text>
+<rect x="40" y="622" width="240" height="146" rx="10" fill="#ffffff" stroke="#444444" stroke-width="2"/>
+<text x="160.0" y="680.5" font-size="15" text-anchor="middle" font-weight="700" fill="#111111">B2: набор кандидатов</text>
+<text x="160.0" y="699.5" font-size="14" text-anchor="middle" fill="#111111">Эталон не попал в top-50.</text>
+<text x="160.0" y="718.5" font-size="14" text-anchor="middle" fill="#111111">B4 его уже не оценит.</text>
+<rect x="320" y="622" width="440" height="146" rx="10" fill="#fbe4e4" stroke="#c43b3b" stroke-width="2"/>
+<text x="540.0" y="671.0" font-size="15" text-anchor="middle" font-weight="700" fill="#6b1414">Не найдено или потеряно в B2</text>
+<text x="540.0" y="690.0" font-size="14" text-anchor="middle" fill="#6b1414">Другие слова, код, неверный пул;</text>
+<text x="540.0" y="709.0" font-size="14" text-anchor="middle" fill="#6b1414">BM25 и E5 могут потерять нужную строку.</text>
+<text x="540.0" y="728.0" font-size="14" text-anchor="middle" fill="#6b1414">Пустой экран не доказывает сбой B2.</text>
+<rect x="800" y="622" width="600" height="146" rx="10" fill="#fff0dc" stroke="#e08a1e" stroke-width="2"/>
+<text x="1100.0" y="661.5" font-size="15" text-anchor="middle" font-weight="700" fill="#5c3500">Действие при ошибке</text>
+<text x="1100.0" y="680.5" font-size="14" text-anchor="middle" fill="#5c3500">По trace проверить пул и ID кандидатов;</text>
+<text x="1100.0" y="699.5" font-size="14" text-anchor="middle" fill="#5c3500">сопоставить BM25 и гибрид на одном наборе;</text>
+<text x="1100.0" y="718.5" font-size="14" text-anchor="middle" fill="#5c3500">исправлять токены/поиск только после атрибуции.</text>
+<text x="1100.0" y="737.5" font-size="14" text-anchor="middle" fill="#5c3500">Не отрезать допустимые замены и unknown-факты.</text>
+<rect x="1440" y="622" width="340" height="146" rx="10" fill="#e8f1ff" stroke="#3b6fd4" stroke-width="2"/>
+<text x="1610.0" y="671.0" font-size="15" text-anchor="middle" font-weight="700" fill="#12315f">Как увидеть результат</text>
+<text x="1610.0" y="690.0" font-size="14" text-anchor="middle" fill="#12315f">candidate_hit@50;</text>
+<text x="1610.0" y="709.0" font-size="14" text-anchor="middle" fill="#12315f">candidate_recall@50;</text>
+<text x="1610.0" y="728.0" font-size="14" text-anchor="middle" fill="#12315f">ранг эталона до matching.</text>
+<rect x="40" y="788" width="240" height="146" rx="10" fill="#ffffff" stroke="#444444" stroke-width="2"/>
+<text x="160.0" y="846.5" font-size="15" text-anchor="middle" font-weight="700" fill="#111111">B3/B4: сравнение</text>
+<text x="160.0" y="865.5" font-size="14" text-anchor="middle" fill="#111111">Похожие параметры</text>
+<text x="160.0" y="884.5" font-size="14" text-anchor="middle" fill="#111111">скрывают другой товар.</text>
+<rect x="320" y="788" width="440" height="146" rx="10" fill="#fbe4e4" stroke="#c43b3b" stroke-width="2"/>
+<text x="540.0" y="837.0" font-size="15" text-anchor="middle" font-weight="700" fill="#6b1414">Опасное ложное подтверждение</text>
+<text x="540.0" y="856.0" font-size="14" text-anchor="middle" fill="#6b1414">Розетка вместо выключателя;</text>
+<text x="540.0" y="875.0" font-size="14" text-anchor="middle" fill="#6b1414">труба вместо толщиномера;</text>
+<text x="540.0" y="894.0" font-size="14" text-anchor="middle" fill="#6b1414">две клавиши или другая модель.</text>
+<rect x="800" y="788" width="600" height="146" rx="10" fill="#fff0dc" stroke="#e08a1e" stroke-width="2"/>
+<text x="1100.0" y="827.5" font-size="15" text-anchor="middle" font-weight="700" fill="#5c3500">Действие при ошибке</text>
+<text x="1100.0" y="846.5" font-size="14" text-anchor="middle" fill="#5c3500">Проверить предмет и каждое обязательное требование;</text>
+<text x="1100.0" y="865.5" font-size="14" text-anchor="middle" fill="#5c3500">известное несовпадение → reject, не компенсация score;</text>
+<text x="1100.0" y="884.5" font-size="14" text-anchor="middle" fill="#5c3500">неизвестное → check; замена только с правилом.</text>
+<text x="1100.0" y="903.5" font-size="14" text-anchor="middle" fill="#5c3500">Сходство текста не является допуском специалиста.</text>
+<rect x="1440" y="788" width="340" height="146" rx="10" fill="#e8f1ff" stroke="#3b6fd4" stroke-width="2"/>
+<text x="1610.0" y="837.0" font-size="15" text-anchor="middle" font-weight="700" fill="#12315f">Как увидеть результат</text>
+<text x="1610.0" y="856.0" font-size="14" text-anchor="middle" fill="#12315f">Фиксированные пары без B2;</text>
+<text x="1610.0" y="875.0" font-size="14" text-anchor="middle" fill="#12315f">все ложные подтверждения;</text>
+<text x="1610.0" y="894.0" font-size="14" text-anchor="middle" fill="#12315f">разрезы: предмет / требования.</text>
+<rect x="40" y="954" width="240" height="146" rx="10" fill="#ffffff" stroke="#444444" stroke-width="2"/>
+<text x="160.0" y="1012.5" font-size="15" text-anchor="middle" font-weight="700" fill="#111111">B4/B6: уверенность</text>
+<text x="160.0" y="1031.5" font-size="14" text-anchor="middle" fill="#111111">Все сведения есть, но check;</text>
+<text x="160.0" y="1050.5" font-size="14" text-anchor="middle" fill="#111111">конфликт назван неизвестным.</text>
+<rect x="320" y="954" width="440" height="146" rx="10" fill="#fbe4e4" stroke="#c43b3b" stroke-width="2"/>
+<text x="540.0" y="1003.0" font-size="15" text-anchor="middle" font-weight="700" fill="#6b1414">Неверная оценка неопределённости</text>
+<text x="540.0" y="1022.0" font-size="14" text-anchor="middle" fill="#6b1414">Пример первого прогона: P10 → check;</text>
+<text x="540.0" y="1041.0" font-size="14" text-anchor="middle" fill="#6b1414">иная серия → не просто «нет размера»;</text>
+<text x="540.0" y="1060.0" font-size="14" text-anchor="middle" fill="#6b1414">состав комплекта не сверён.</text>
+<rect x="800" y="954" width="600" height="146" rx="10" fill="#fff0dc" stroke="#e08a1e" stroke-width="2"/>
+<text x="1100.0" y="993.5" font-size="15" text-anchor="middle" font-weight="700" fill="#5c3500">Действие при ошибке</text>
+<text x="1100.0" y="1012.5" font-size="14" text-anchor="middle" fill="#5c3500">Разделить match, conflict и unknown по признакам;</text>
+<text x="1100.0" y="1031.5" font-size="14" text-anchor="middle" fill="#5c3500">извлечь качественные свойства и требуемый состав;</text>
+<text x="1100.0" y="1050.5" font-size="14" text-anchor="middle" fill="#5c3500">если данных действительно нет — запросить уточнение.</text>
+<text x="1100.0" y="1069.5" font-size="14" text-anchor="middle" fill="#5c3500">Подтверждение по типу не снимает остальных требований.</text>
+<rect x="1440" y="954" width="340" height="146" rx="10" fill="#e8f1ff" stroke="#3b6fd4" stroke-width="2"/>
+<text x="1610.0" y="1003.0" font-size="15" text-anchor="middle" font-weight="700" fill="#12315f">Как увидеть результат</text>
+<text x="1610.0" y="1022.0" font-size="14" text-anchor="middle" fill="#12315f">Матрица решений человека;</text>
+<text x="1610.0" y="1041.0" font-size="14" text-anchor="middle" fill="#12315f">лишний check для допустимой пары;</text>
+<text x="1610.0" y="1060.0" font-size="14" text-anchor="middle" fill="#12315f">check при известном конфликте.</text>
+<rect x="40" y="1120" width="240" height="146" rx="10" fill="#ffffff" stroke="#444444" stroke-width="2"/>
+<text x="160.0" y="1178.5" font-size="15" text-anchor="middle" font-weight="700" fill="#111111">B5–B7: отбор и вывод</text>
+<text x="160.0" y="1197.5" font-size="14" text-anchor="middle" fill="#111111">Кандидат проверен,</text>
+<text x="160.0" y="1216.5" font-size="14" text-anchor="middle" fill="#111111">но нужная строка не показана.</text>
+<rect x="320" y="1120" width="440" height="146" rx="10" fill="#fbe4e4" stroke="#c43b3b" stroke-width="2"/>
+<text x="540.0" y="1169.0" font-size="15" text-anchor="middle" font-weight="700" fill="#6b1414">Выдача скрыла результат или риск</text>
+<text x="540.0" y="1188.0" font-size="14" text-anchor="middle" fill="#6b1414">Ранг/лимит, слабое evidence, фильтр таблицы;</text>
+<text x="540.0" y="1207.0" font-size="14" text-anchor="middle" fill="#6b1414">ошибочная строка ниже верного top-1;</text>
+<text x="540.0" y="1226.0" font-size="14" text-anchor="middle" fill="#6b1414">review смешан с подтверждённым found.</text>
+<rect x="800" y="1120" width="600" height="146" rx="10" fill="#fff0dc" stroke="#e08a1e" stroke-width="2"/>
+<text x="1100.0" y="1159.5" font-size="15" text-anchor="middle" font-weight="700" fill="#5c3500">Действие при ошибке</text>
+<text x="1100.0" y="1178.5" font-size="14" text-anchor="middle" fill="#5c3500">Проследить класс → вердикт → ранг → on_screen;</text>
+<text x="1100.0" y="1197.5" font-size="14" text-anchor="middle" fill="#5c3500">считать results и table раздельно, проверять все строки;</text>
+<text x="1100.0" y="1216.5" font-size="14" text-anchor="middle" fill="#5c3500">показывать причину, исходное название и цену.</text>
+<text x="1100.0" y="1235.5" font-size="14" text-anchor="middle" fill="#5c3500">Не выдавать высокий балл за вероятность пригодности.</text>
+<rect x="1440" y="1120" width="340" height="146" rx="10" fill="#e8f1ff" stroke="#3b6fd4" stroke-width="2"/>
+<text x="1610.0" y="1169.0" font-size="15" text-anchor="middle" font-weight="700" fill="#12315f">Как увидеть результат</text>
+<text x="1610.0" y="1188.0" font-size="14" text-anchor="middle" fill="#12315f">Confirmed / Display Hit@5;</text>
+<text x="1610.0" y="1207.0" font-size="14" text-anchor="middle" fill="#12315f">состояния: empty / review / found;</text>
+<text x="1610.0" y="1226.0" font-size="14" text-anchor="middle" fill="#12315f">число ошибок, не одна средняя.</text>
+<rect x="40" y="1314" width="550" height="180" rx="10" fill="#ffffff" stroke="#444444" stroke-width="2"/>
+<text x="315.0" y="1361.0" font-size="15" text-anchor="middle" font-weight="700" fill="#111111">Похожи словами, но разные товары</text>
+<text x="315.0" y="1380.0" font-size="14" text-anchor="middle" fill="#111111">Выключатель 250 В / 16 А ↔ розетка 250 В / 16 А.</text>
+<text x="315.0" y="1399.0" font-size="14" text-anchor="middle" fill="#111111">Известный конфликт предмета → reject.</text>
+<text x="315.0" y="1418.0" font-size="14" text-anchor="middle" fill="#111111">Толщиномер стальных труб ↔ стальная труба:</text>
+<text x="315.0" y="1437.0" font-size="14" text-anchor="middle" fill="#111111">материал объекта измерения не делает трубу прибором.</text>
+<text x="315.0" y="1456.0" font-size="14" text-anchor="middle" fill="#111111">Тип не установлен → не подтверждать по общим числам.</text>
+<rect x="635" y="1314" width="550" height="180" rx="10" fill="#ffffff" stroke="#444444" stroke-width="2"/>
+<text x="910.0" y="1370.5" font-size="15" text-anchor="middle" font-weight="700" fill="#111111">Разные слова, одно назначение</text>
+<text x="910.0" y="1389.5" font-size="14" text-anchor="middle" fill="#111111">Пирометр ↔ инфракрасный термометр.</text>
+<text x="910.0" y="1408.5" font-size="14" text-anchor="middle" fill="#111111">Словарь или E5 помогает предложить кандидата.</text>
+<text x="910.0" y="1427.5" font-size="14" text-anchor="middle" fill="#111111">Затем проверяются заданные бренд и параметры;</text>
+<text x="910.0" y="1446.5" font-size="14" text-anchor="middle" fill="#111111">допустимость замены всё равно требует основания.</text>
+<rect x="1230" y="1314" width="550" height="180" rx="10" fill="#ffffff" stroke="#444444" stroke-width="2"/>
+<text x="1505.0" y="1370.5" font-size="15" text-anchor="middle" font-weight="700" fill="#111111">Оформление или смысл требования?</text>
+<text x="1505.0" y="1389.5" font-size="14" text-anchor="middle" fill="#111111">Песок II класса: запятые не меняют товар.</text>
+<text x="1505.0" y="1408.5" font-size="14" text-anchor="middle" fill="#111111">L 3000 mm = L=3000 мм: это одна длина.</text>
+<text x="1505.0" y="1427.5" font-size="14" text-anchor="middle" fill="#111111">Сталь 1,5 мм без слова «толщина»: нужен профиль</text>
+<text x="1505.0" y="1446.5" font-size="14" text-anchor="middle" fill="#111111">или уточнение, а не молчаливое предположение.</text>
+<rect x="40" y="1530" width="1740" height="145" rx="10" fill="#e8f1ff" stroke="#3b6fd4" stroke-width="2"/>
+<text x="910.0" y="1578.5" font-size="15" text-anchor="middle" font-weight="700" fill="#12315f">Срез контрольной проверки · 4 ноября 2026</text>
+<text x="910.0" y="1597.5" font-size="14" text-anchor="middle" fill="#12315f">Контрольный набор из 20 запросов (12 с ответом, 8 без), разобранный и исправленный: все 12 эталонов среди 50 кандидатов, подтверждено 12/12, ложных строк 0, отказов 8/8.</text>
+<text x="910.0" y="1616.5" font-size="14" text-anchor="middle" fill="#12315f">Первый прогон до исправлений дал 5 из 12 при 8 ложных подтверждениях: цифры после исправлений это регрессия, а не независимая оценка.</text>
+<text x="910.0" y="1635.5" font-size="14" text-anchor="middle" fill="#12315f">Общая полнота понимания не доказана; независимая проверка описана в eval/PROTOCOL.md; границы реализации — в README и ARCHITECTURE.</text>
+<polyline points="270.0,235.0 305.0,235.0 305.0,168.0 340.0,168.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+<polyline points="270.0,235.0 305.0,235.0 305.0,300.0 340.0,300.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+<polyline points="720.0,168.0 760.0,168.0 760.0,211.0 800.0,211.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+<polyline points="720.0,300.0 760.0,300.0 760.0,281.0 800.0,281.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+<polyline points="1150.0,246.0 1230.0,246.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+<polyline points="280.0,529.0 320.0,529.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+<polyline points="760.0,529.0 800.0,529.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+<polyline points="1400.0,529.0 1440.0,529.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+<polyline points="280.0,695.0 320.0,695.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+<polyline points="760.0,695.0 800.0,695.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+<polyline points="1400.0,695.0 1440.0,695.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+<polyline points="280.0,861.0 320.0,861.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+<polyline points="760.0,861.0 800.0,861.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+<polyline points="1400.0,861.0 1440.0,861.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+<polyline points="280.0,1027.0 320.0,1027.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+<polyline points="760.0,1027.0 800.0,1027.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+<polyline points="1400.0,1027.0 1440.0,1027.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+<polyline points="280.0,1193.0 320.0,1193.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+<polyline points="760.0,1193.0 800.0,1193.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+<polyline points="1400.0,1193.0 1440.0,1193.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+</svg>

@@ -1,0 +1,233 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2100 1420" width="2100" height="1420" font-family="Helvetica, Arial, sans-serif">
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="context-stroke"/></marker><linearGradient id="mix" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#e8f1ff"/><stop offset="1" stop-color="#e3f5e8"/></linearGradient></defs>
+<rect width="2100" height="1420" fill="#ffffff"/>
+<text x="20" y="30" font-size="22" text-anchor="start" font-weight="700" fill="#111111">Поиск аналогов: как запрос превращается в список позиций</text>
+<text x="20" y="49" font-size="13" text-anchor="start" fill="#555555">Состояние реализованного прототипа на 4 ноября 2026. Пунктир: не реализовано, планируется.</text>
+<rect x="20" y="64" width="1760" height="310" rx="14" fill="#f6f9ff" stroke="#c9d8f5" stroke-width="1.5"/>
+<text x="38" y="88" font-size="15" font-weight="700" fill="#2b4f8f">ЗАРАНЕЕ: при изменении данных, словаря или кода извлечения (правила пересчёта не требуют)</text>
+<rect x="20" y="392" width="1760" height="140" rx="14" fill="#f7fbf8" stroke="#cfe5d6" stroke-width="1.5"/>
+<text x="38" y="416" font-size="15" font-weight="700" fill="#2f6b46">ПРИ СТАРТЕ СЕРВИСА: один раз, секунды</text>
+<rect x="20" y="552" width="1760" height="830" rx="14" fill="#fafafa" stroke="#d6d6d6" stroke-width="1.5"/>
+<text x="38" y="576" font-size="15" font-weight="700" fill="#444444">НА КАЖДЫЙ ЗАПРОС: десятки миллисекунд</text>
+<rect x="40" y="100" width="250" height="140" rx="10" fill="#e8f1ff" stroke="#3b6fd4" stroke-width="2"/>
+<text x="165.0" y="138.0" font-size="14" text-anchor="middle" font-weight="700" fill="#12315f">A1 Загрузка и чистка</text>
+<text x="165.0" y="156.0" font-size="13" text-anchor="middle" fill="#12315f">лист «База позиций», проверка</text>
+<text x="165.0" y="174.0" font-size="13" text-anchor="middle" fill="#12315f">структуры; оригинал названия</text>
+<text x="165.0" y="192.0" font-size="13" text-anchor="middle" fill="#12315f">и цена не меняются</text>
+<text x="165.0" y="210.0" font-size="13" text-anchor="middle" font-weight="700" fill="#12315f">▸ 2381 строка</text>
+<rect x="330" y="100" width="250" height="140" rx="10" fill="#e8f1ff" stroke="#3b6fd4" stroke-width="2"/>
+<text x="455.0" y="138.0" font-size="14" text-anchor="middle" font-weight="700" fill="#12315f">A2 Пометки</text>
+<text x="455.0" y="156.0" font-size="13" text-anchor="middle" fill="#12315f">флаги для всех строк: услуга,</text>
+<text x="455.0" y="174.0" font-size="13" text-anchor="middle" fill="#12315f">надбавка, комплект;</text>
+<text x="455.0" y="192.0" font-size="13" text-anchor="middle" fill="#12315f">строки не удаляются</text>
+<text x="455.0" y="210.0" font-size="13" text-anchor="middle" font-weight="700" fill="#12315f">▸ main 2277 · service 104</text>
+<rect x="620" y="100" width="250" height="140" rx="10" fill="#e8f1ff" stroke="#3b6fd4" stroke-width="2"/>
+<text x="745.0" y="147.0" font-size="14" text-anchor="middle" font-weight="700" fill="#12315f">A3 Нормализация</text>
+<text x="745.0" y="165.0" font-size="13" text-anchor="middle" fill="#12315f">х x * → x; 1,5 → 1.5; вт = Вт;</text>
+<text x="745.0" y="183.0" font-size="13" text-anchor="middle" fill="#12315f">кириллица в кодах;</text>
+<text x="745.0" y="201.0" font-size="13" text-anchor="middle" fill="#12315f">«прим.» отдельно</text>
+<rect x="802" y="91" width="62" height="18" rx="9" fill="#ffffff" stroke="#e08a1e" stroke-width="1.5"/><text x="833.0" y="104" font-size="11.5" text-anchor="middle" font-weight="700" fill="#e08a1e">словарь</text>
+<rect x="910" y="100" width="250" height="140" rx="10" fill="#e8f1ff" stroke="#3b6fd4" stroke-width="2"/>
+<text x="1035.0" y="147.0" font-size="14" text-anchor="middle" font-weight="700" fill="#12315f">A5 Тип изделия</text>
+<text x="1035.0" y="165.0" font-size="13" text-anchor="middle" fill="#12315f">по словарю: сигнал, не фильтр;</text>
+<text x="1035.0" y="183.0" font-size="13" text-anchor="middle" fill="#12315f">общий или конкретный;</text>
+<text x="1035.0" y="201.0" font-size="13" text-anchor="middle" fill="#12315f">опознан у 86 % строк</text>
+<rect x="1092" y="91" width="62" height="18" rx="9" fill="#ffffff" stroke="#e08a1e" stroke-width="1.5"/><text x="1123.0" y="104" font-size="11.5" text-anchor="middle" font-weight="700" fill="#e08a1e">словарь</text>
+<rect x="1200" y="100" width="250" height="140" rx="10" fill="#e8f1ff" stroke="#3b6fd4" stroke-width="2"/>
+<text x="1325.0" y="147.0" font-size="14" text-anchor="middle" font-weight="700" fill="#12315f">A4 Характеристики</text>
+<text x="1325.0" y="165.0" font-size="13" text-anchor="middle" fill="#12315f">нужен тип: «7×1.5» у кабеля</text>
+<text x="1325.0" y="183.0" font-size="13" text-anchor="middle" fill="#12315f">это жилы×сечение;</text>
+<text x="1325.0" y="201.0" font-size="13" text-anchor="middle" fill="#12315f">порядок сторон сохраняется</text>
+<rect x="1382" y="91" width="62" height="18" rx="9" fill="#ffffff" stroke="#e08a1e" stroke-width="1.5"/><text x="1413.0" y="104" font-size="11.5" text-anchor="middle" font-weight="700" fill="#e08a1e">словарь</text>
+<rect x="1490" y="100" width="250" height="140" rx="10" fill="url(#mix)" stroke="#3b6fd4" stroke-width="2"/>
+<text x="1615.0" y="147.0" font-size="14" text-anchor="middle" font-weight="700" fill="#12315f">A6 Каталог и dense-индекс</text>
+<text x="1615.0" y="165.0" font-size="13" text-anchor="middle" fill="#12315f">каталог: код; матрица эмбеддингов</text>
+<text x="1615.0" y="183.0" font-size="13" text-anchor="middle" fill="#12315f">E5: модель, считается здесь и</text>
+<text x="1615.0" y="201.0" font-size="13" text-anchor="middle" fill="#12315f">сохраняется; BM25 здесь не строится</text>
+<rect x="1200" y="268" width="250" height="88" rx="10" fill="#f3f3f3" stroke="#8a8a8a" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="1325.0" y="298.0" font-size="14" text-anchor="middle" font-weight="700" fill="#444444">A4+ Остаток через ИИ</text>
+<text x="1325.0" y="316.0" font-size="13" text-anchor="middle" fill="#444444">что код не понял: ИИ пакетно</text>
+<text x="1325.0" y="334.0" font-size="13" text-anchor="middle" fill="#444444">[не реализовано]</text>
+<rect x="910" y="268" width="250" height="88" rx="10" fill="#fff0dc" stroke="#e08a1e" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="1035.0" y="298.0" font-size="14" text-anchor="middle" font-weight="700" fill="#5c3500">Утверждение человеком</text>
+<text x="1035.0" y="316.0" font-size="13" text-anchor="middle" fill="#5c3500">предложение попадает в каталог</text>
+<text x="1035.0" y="334.0" font-size="13" text-anchor="middle" fill="#5c3500">только после утверждения</text>
+<rect x="1490" y="428" width="250" height="90" rx="10" fill="#e8f1ff" stroke="#3b6fd4" stroke-width="2"/>
+<text x="1615.0" y="459.0" font-size="14" text-anchor="middle" font-weight="700" fill="#12315f">Файлы артефактов</text>
+<text x="1615.0" y="477.0" font-size="13" text-anchor="middle" fill="#12315f">каталог, индекс, модель,</text>
+<text x="1615.0" y="495.0" font-size="13" text-anchor="middle" fill="#12315f">правила, словарь</text>
+<rect x="1200" y="428" width="250" height="90" rx="10" fill="#e8f1ff" stroke="#3b6fd4" stroke-width="2"/>
+<text x="1325.0" y="459.0" font-size="14" text-anchor="middle" font-weight="700" fill="#12315f">SearchEngine.build</text>
+<text x="1325.0" y="477.0" font-size="13" text-anchor="middle" fill="#12315f">проверка манифестов:</text>
+<text x="1325.0" y="495.0" font-size="13" text-anchor="middle" fill="#12315f">устаревший каталог не стартует</text>
+<rect x="1382" y="419" width="62" height="18" rx="9" fill="#ffffff" stroke="#a35c00" stroke-width="1.5"/><text x="1413.0" y="432" font-size="11.5" text-anchor="middle" font-weight="700" fill="#a35c00">правила</text>
+<path d="M620,442 q0,-14 270.0,-14 q270.0,0 270.0,14 v62 q0,14 -270.0,14 q-270.0,0 -270.0,-14 z" fill="#e8f1ff" stroke="#3b6fd4" stroke-width="2"/><path d="M620,442 q0,14 270.0,14 q270.0,0 270.0,-14" fill="none" stroke="#3b6fd4" stroke-width="1.5"/>
+<text x="890.0" y="470.0" font-size="14" text-anchor="middle" font-weight="700" fill="#12315f">Каталог и индексы в памяти</text>
+<text x="890.0" y="488.0" font-size="13" text-anchor="middle" fill="#12315f">пулы main 2277 и service 104; BM25 строится по пулам</text>
+<text x="890.0" y="506.0" font-size="13" text-anchor="middle" fill="#12315f">E5 только загружается и сверяется; правила и словарь</text>
+<rect x="40" y="610" width="250" height="120" rx="50" fill="#ffffff" stroke="#222222" stroke-width="2"/>
+<text x="165.0" y="656.0" font-size="14" text-anchor="middle" font-weight="700" fill="#111111">Запрос</text>
+<text x="165.0" y="674.0" font-size="13" text-anchor="middle" fill="#111111">POST /search</text>
+<text x="165.0" y="692.0" font-size="13" text-anchor="middle" fill="#111111">до 500 символов, limit от 1 до 5</text>
+<rect x="330" y="600" width="250" height="140" rx="10" fill="#e8f1ff" stroke="#3b6fd4" stroke-width="2"/>
+<text x="455.0" y="647.0" font-size="14" text-anchor="middle" font-weight="700" fill="#12315f">B1 Разбор запроса</text>
+<text x="455.0" y="665.0" font-size="13" text-anchor="middle" fill="#12315f">общие функции A3–A5 + режим</text>
+<text x="455.0" y="683.0" font-size="13" text-anchor="middle" fill="#12315f">запроса: сдвиг типа, коды, фразы;</text>
+<text x="455.0" y="701.0" font-size="13" text-anchor="middle" fill="#12315f">флаги → пул main или service</text>
+<rect x="512" y="591" width="62" height="18" rx="9" fill="#ffffff" stroke="#e08a1e" stroke-width="1.5"/><text x="543.0" y="604" font-size="11.5" text-anchor="middle" font-weight="700" fill="#e08a1e">словарь</text>
+<rect x="620" y="600" width="250" height="140" rx="10" fill="url(#mix)" stroke="#3b6fd4" stroke-width="2"/>
+<text x="745.0" y="638.0" font-size="14" text-anchor="middle" font-weight="700" fill="#12315f">B2 Похожие кандидаты</text>
+<text x="745.0" y="656.0" font-size="13" text-anchor="middle" fill="#12315f">BM25: слова и коды, до 100</text>
+<text x="745.0" y="674.0" font-size="13" text-anchor="middle" fill="#12315f">E5: смысл текста, до 100</text>
+<text x="745.0" y="692.0" font-size="13" text-anchor="middle" fill="#12315f">RRF: слияние, ещё не аналоги</text>
+<text x="745.0" y="710.0" font-size="13" text-anchor="middle" font-weight="700" fill="#12315f">▸ выбранный пул → до 50</text>
+<rect x="910" y="600" width="250" height="140" rx="10" fill="#e8f1ff" stroke="#3b6fd4" stroke-width="2"/>
+<text x="1035.0" y="638.0" font-size="14" text-anchor="middle" font-weight="700" fill="#12315f">B3 Тип: сигнал</text>
+<text x="1035.0" y="656.0" font-size="13" text-anchor="middle" fill="#12315f">неизвестный нейтрален;</text>
+<text x="1035.0" y="674.0" font-size="13" text-anchor="middle" fill="#12315f">общий или иной → проверка;</text>
+<text x="1035.0" y="692.0" font-size="13" text-anchor="middle" fill="#12315f">конкретный конфликт → B4</text>
+<text x="1035.0" y="710.0" font-size="13" text-anchor="middle" font-weight="700" fill="#12315f">▸ до 50 → до 50</text>
+<rect x="1092" y="591" width="62" height="18" rx="9" fill="#ffffff" stroke="#a35c00" stroke-width="1.5"/><text x="1123.0" y="604" font-size="11.5" text-anchor="middle" font-weight="700" fill="#a35c00">правила</text>
+<rect x="1200" y="600" width="250" height="140" rx="10" fill="#e8f1ff" stroke="#3b6fd4" stroke-width="2"/>
+<text x="1325.0" y="638.0" font-size="14" text-anchor="middle" font-weight="700" fill="#12315f">B4 Техническая проверка</text>
+<text x="1325.0" y="656.0" font-size="13" text-anchor="middle" fill="#12315f">предмет, модель/серия и числа;</text>
+<text x="1325.0" y="674.0" font-size="13" text-anchor="middle" fill="#12315f">по распознанным признакам;</text>
+<text x="1325.0" y="692.0" font-size="13" text-anchor="middle" fill="#12315f">текстовый score не доказательство</text>
+<text x="1325.0" y="710.0" font-size="13" text-anchor="middle" font-weight="700" fill="#12315f">▸ до 50</text>
+<rect x="1316" y="591" width="62" height="18" rx="9" fill="#ffffff" stroke="#e08a1e" stroke-width="1.5"/><text x="1347.0" y="604" font-size="11.5" text-anchor="middle" font-weight="700" fill="#e08a1e">словарь</text>
+<rect x="1382" y="591" width="62" height="18" rx="9" fill="#ffffff" stroke="#a35c00" stroke-width="1.5"/><text x="1413.0" y="604" font-size="11.5" text-anchor="middle" font-weight="700" fill="#a35c00">правила</text>
+<rect x="330" y="778" width="250" height="88" rx="10" fill="#e8f1ff" stroke="#3b6fd4" stroke-width="2"/>
+<text x="455.0" y="799.0" font-size="14" text-anchor="middle" font-weight="700" fill="#12315f">Полнота разбора</text>
+<text x="455.0" y="817.0" font-size="13" text-anchor="middle" fill="#12315f">ограничение запроса не разобрано</text>
+<text x="455.0" y="835.0" font-size="13" text-anchor="middle" fill="#12315f">(число с единицей или после</text>
+<text x="455.0" y="853.0" font-size="13" text-anchor="middle" fill="#12315f">названия величины) → «проверить»</text>
+<rect x="1200" y="880" width="250" height="140" rx="10" fill="#e8f1ff" stroke="#3b6fd4" stroke-width="2"/>
+<text x="1325.0" y="918.0" font-size="14" text-anchor="middle" font-weight="700" fill="#12315f">B5 Ранжирование</text>
+<text x="1325.0" y="936.0" font-size="13" text-anchor="middle" fill="#12315f">порядок внутри класса:</text>
+<text x="1325.0" y="954.0" font-size="13" text-anchor="middle" fill="#12315f">0,6 × характеристики +</text>
+<text x="1325.0" y="972.0" font-size="13" text-anchor="middle" fill="#12315f">0,4 × текст; не вероятность</text>
+<text x="1325.0" y="990.0" font-size="13" text-anchor="middle" font-weight="700" fill="#12315f">▸ до 50</text>
+<rect x="1382" y="871" width="62" height="18" rx="9" fill="#ffffff" stroke="#a35c00" stroke-width="1.5"/><text x="1413.0" y="884" font-size="11.5" text-anchor="middle" font-weight="700" fill="#a35c00">правила</text>
+<rect x="910" y="880" width="250" height="140" rx="10" fill="#e8f1ff" stroke="#3b6fd4" stroke-width="2"/>
+<text x="1035.0" y="927.0" font-size="14" text-anchor="middle" font-weight="700" fill="#12315f">B6 Списки и статус</text>
+<text x="1035.0" y="945.0" font-size="13" text-anchor="middle" fill="#12315f">подтверждённые → found;</text>
+<text x="1035.0" y="963.0" font-size="13" text-anchor="middle" fill="#12315f">иначе варианты к проверке</text>
+<text x="1035.0" y="981.0" font-size="13" text-anchor="middle" fill="#12315f">или «не найдено»</text>
+<rect x="1092" y="871" width="62" height="18" rx="9" fill="#ffffff" stroke="#a35c00" stroke-width="1.5"/><text x="1123.0" y="884" font-size="11.5" text-anchor="middle" font-weight="700" fill="#a35c00">правила</text>
+<rect x="620" y="880" width="250" height="140" rx="10" fill="#e8f1ff" stroke="#3b6fd4" stroke-width="2"/>
+<text x="745.0" y="927.0" font-size="14" text-anchor="middle" font-weight="700" fill="#12315f">Основная таблица</text>
+<text x="745.0" y="945.0" font-size="13" text-anchor="middle" fill="#12315f">не больше limit ≤ 5:</text>
+<text x="745.0" y="963.0" font-size="13" text-anchor="middle" fill="#12315f">подтверждённые, затем</text>
+<text x="745.0" y="981.0" font-size="13" text-anchor="middle" fill="#12315f">«требует проверки»</text>
+<rect x="802" y="871" width="62" height="18" rx="9" fill="#ffffff" stroke="#a35c00" stroke-width="1.5"/><text x="833.0" y="884" font-size="11.5" text-anchor="middle" font-weight="700" fill="#a35c00">правила</text>
+<rect x="330" y="880" width="250" height="140" rx="10" fill="#e8f1ff" stroke="#3b6fd4" stroke-width="2"/>
+<text x="455.0" y="927.0" font-size="14" text-anchor="middle" font-weight="700" fill="#12315f">B7 Объяснение</text>
+<text x="455.0" y="945.0" font-size="13" text-anchor="middle" fill="#12315f">шаблоном, без ИИ: что совпало,</text>
+<text x="455.0" y="963.0" font-size="13" text-anchor="middle" fill="#12315f">что допустимо по правилу,</text>
+<text x="455.0" y="981.0" font-size="13" text-anchor="middle" fill="#12315f">чего нет, что не разобрано</text>
+<rect x="40" y="1090" width="910" height="190" rx="10" fill="#ffffff" stroke="#222222" stroke-width="2"/>
+<text x="495.0" y="1144.0" font-size="14" text-anchor="middle" font-weight="700" fill="#111111">Результат на экране</text>
+<text x="495.0" y="1162.0" font-size="13" text-anchor="middle" fill="#111111">1. Есть подтверждённые: «совпадает по указанным параметрам» или «допустимая замена по правилу»;</text>
+<text x="495.0" y="1180.0" font-size="13" text-anchor="middle" fill="#111111">    «та же позиция по данным названия» только если совпало всё нормализованное название.</text>
+<text x="495.0" y="1198.0" font-size="13" text-anchor="middle" fill="#111111">2. Подтверждённых нет, есть слабые: «Подтверждённых подходящих позиций не найдено. Ниже варианты для проверки».</text>
+<text x="495.0" y="1216.0" font-size="13" text-anchor="middle" fill="#111111">3. Ничего подходящего: «Не найдено». Ближайший отказ с причиной: диагностика, не результат.</text>
+<text x="495.0" y="1234.0" font-size="13" text-anchor="middle" fill="#111111">У каждой позиции: название, цена, оценка и её состав, совпало / отличается / нет данных.</text>
+<rect x="1000" y="1090" width="250" height="110" rx="10" fill="#fff0dc" stroke="#e08a1e" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="1125.0" y="1122.0" font-size="14" text-anchor="middle" font-weight="700" fill="#5c3500">B8 Специалист</text>
+<text x="1125.0" y="1140.0" font-size="13" text-anchor="middle" fill="#5c3500">подтверждает или отклоняет</text>
+<text x="1125.0" y="1158.0" font-size="13" text-anchor="middle" fill="#5c3500">пару «запрос → кандидат»</text>
+<text x="1125.0" y="1176.0" font-size="13" text-anchor="middle" fill="#5c3500">[не реализовано]</text>
+<path d="M1290,1104 q0,-14 120.0,-14 q120.0,0 120.0,14 v82 q0,14 -120.0,14 q-120.0,0 -120.0,-14 z" fill="#f3f3f3" stroke="#8a8a8a" stroke-width="2" stroke-dasharray="7 5"/><path d="M1290,1104 q0,14 120.0,14 q120.0,0 120.0,-14" fill="none" stroke="#8a8a8a" stroke-width="1.5" stroke-dasharray="7 5"/>
+<text x="1410.0" y="1133.0" font-size="14" text-anchor="middle" font-weight="700" fill="#444444">Журнал подтверждений</text>
+<text x="1410.0" y="1151.0" font-size="13" text-anchor="middle" fill="#444444">запрос, кандидат, версия</text>
+<text x="1410.0" y="1169.0" font-size="13" text-anchor="middle" fill="#444444">каталога, да/нет, причина</text>
+<text x="1410.0" y="1187.0" font-size="13" text-anchor="middle" fill="#444444">[не реализовано]</text>
+<rect x="1000" y="1250" width="250" height="100" rx="10" fill="#f3f3f3" stroke="#8a8a8a" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="1125.0" y="1277.0" font-size="14" text-anchor="middle" font-weight="700" fill="#444444">Контрольные запросы</text>
+<text x="1125.0" y="1295.0" font-size="13" text-anchor="middle" fill="#444444">новые пары становятся</text>
+<text x="1125.0" y="1313.0" font-size="13" text-anchor="middle" fill="#444444">regression-набором</text>
+<text x="1125.0" y="1331.0" font-size="13" text-anchor="middle" fill="#444444">[не реализовано]</text>
+<rect x="1290" y="1250" width="240" height="100" rx="10" fill="#f3f3f3" stroke="#8a8a8a" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="1410.0" y="1277.0" font-size="14" text-anchor="middle" font-weight="700" fill="#444444">Очередь предложений</text>
+<text x="1410.0" y="1295.0" font-size="13" text-anchor="middle" fill="#444444">повторы → предложение</text>
+<text x="1410.0" y="1313.0" font-size="13" text-anchor="middle" fill="#444444">правила или синонима</text>
+<text x="1410.0" y="1331.0" font-size="13" text-anchor="middle" fill="#444444">[не реализовано]</text>
+<rect x="1560" y="1250" width="190" height="100" rx="10" fill="#fff0dc" stroke="#e08a1e" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="1655.0" y="1286.0" font-size="14" text-anchor="middle" font-weight="700" fill="#5c3500">Утверждает человек</text>
+<text x="1655.0" y="1304.0" font-size="13" text-anchor="middle" fill="#5c3500">новая версия файла</text>
+<text x="1655.0" y="1322.0" font-size="13" text-anchor="middle" fill="#5c3500">[не реализовано]</text>
+<path d="M1830,424 q0,-14 125.0,-14 q125.0,0 125.0,14 v102 q0,14 -125.0,14 q-125.0,0 -125.0,-14 z" fill="#fff0dc" stroke="#e08a1e" stroke-width="2"/><path d="M1830,424 q0,14 125.0,14 q125.0,0 125.0,-14" fill="none" stroke="#e08a1e" stroke-width="1.5"/>
+<text x="1955.0" y="454.0" font-size="14" text-anchor="middle" font-weight="700" fill="#5c3500">Словарь</text>
+<text x="1955.0" y="472.0" font-size="13" text-anchor="middle" fill="#5c3500">config/dictionaries.yaml</text>
+<text x="1955.0" y="490.0" font-size="13" text-anchor="middle" fill="#5c3500">типы, синонимы, материалы, цвета</text>
+<text x="1955.0" y="508.0" font-size="13" text-anchor="middle" fill="#5c3500">ведёт специалист</text>
+<text x="1955.0" y="526.0" font-size="13" text-anchor="middle" fill="#5c3500">используют: A3 A4 A5 B1 B4</text>
+<path d="M1830,874 q0,-14 125.0,-14 q125.0,0 125.0,14 v162 q0,14 -125.0,14 q-125.0,0 -125.0,-14 z" fill="#fff0dc" stroke="#e08a1e" stroke-width="2"/><path d="M1830,874 q0,14 125.0,14 q125.0,0 125.0,-14" fill="none" stroke="#e08a1e" stroke-width="1.5"/>
+<text x="1955.0" y="925.0" font-size="14" text-anchor="middle" font-weight="700" fill="#5c3500">Правила</text>
+<text x="1955.0" y="943.0" font-size="13" text-anchor="middle" fill="#5c3500">config/rules.yaml</text>
+<text x="1955.0" y="961.0" font-size="13" text-anchor="middle" fill="#5c3500">ведёт специалист, код не меняется</text>
+<text x="1955.0" y="979.0" font-size="13" text-anchor="middle" fill="#5c3500">сечение кабеля строго, камера</text>
+<text x="1955.0" y="997.0" font-size="13" text-anchor="middle" fill="#5c3500">±1 ступень (допущения прототипа)</text>
+<text x="1955.0" y="1015.0" font-size="13" text-anchor="middle" fill="#5c3500">используют: B3 B4 B5 B6 таблица</text>
+<rect x="1830" y="575" width="250" height="240" rx="10" fill="#ffffff" stroke="#444444" stroke-width="2"/>
+<text x="1955.0" y="639.0" font-size="13" text-anchor="middle" font-weight="700" fill="#111111">Два разных решения</text>
+<text x="1955.0" y="656.0" font-size="12" text-anchor="middle" fill="#111111">B2: описание похоже —</text>
+<text x="1955.0" y="673.0" font-size="12" text-anchor="middle" fill="#111111">предложить кандидата.</text>
+<text x="1955.0" y="690.0" font-size="12" text-anchor="middle" fill="#111111">B4: требования подтверждены —</text>
+<text x="1955.0" y="707.0" font-size="12" text-anchor="middle" fill="#111111">разрешить выдачу как подходящего.</text>
+<text x="1955.0" y="724.0" font-size="12" text-anchor="middle" fill="#111111">Близость E5 не доказывает</text>
+<text x="1955.0" y="741.0" font-size="12" text-anchor="middle" fill="#111111">техническую взаимозаменяемость.</text>
+<text x="1955.0" y="758.0" font-size="12" text-anchor="middle" fill="#111111">Риски и действия: лист 3.</text>
+<text x="1830" y="85" font-size="15" text-anchor="start" font-weight="700" fill="#111111">Легенда</text>
+<rect x="1830" y="100" width="34" height="22" rx="10" fill="#e8f1ff" stroke="#3b6fd4" stroke-width="2"/>
+<text x="1876" y="114" font-size="14" text-anchor="start" fill="#111111">код</text>
+<rect x="1830" y="136" width="34" height="22" rx="10" fill="#e3f5e8" stroke="#2f9e57" stroke-width="2"/>
+<text x="1876" y="150" font-size="14" text-anchor="start" fill="#111111">модель (ИИ)</text>
+<rect x="1830" y="172" width="34" height="22" rx="10" fill="url(#mix)" stroke="#3b6fd4" stroke-width="2"/>
+<text x="1876" y="186" font-size="14" text-anchor="start" fill="#111111">код и модель</text>
+<rect x="1830" y="208" width="34" height="22" rx="10" fill="#fff0dc" stroke="#e08a1e" stroke-width="2"/>
+<text x="1876" y="222" font-size="14" text-anchor="start" fill="#111111">решает человек</text>
+<rect x="1830" y="244" width="34" height="22" rx="10" fill="#f3f3f3" stroke="#8a8a8a" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="1876" y="258" font-size="14" text-anchor="start" fill="#111111">не реализовано</text>
+<text x="1830" y="302" font-size="12" text-anchor="start" fill="#444444">Метки «словарь» и «правила»</text>
+<text x="1830" y="318" font-size="12" text-anchor="start" fill="#444444">у блока: он читает этот файл.</text>
+<text x="1830" y="334" font-size="12" text-anchor="start" fill="#444444">Числа: сколько позиций остаётся</text>
+<text x="1830" y="350" font-size="12" text-anchor="start" fill="#444444">после шага (пример из замера).</text>
+<polyline points="290.0,170.0 330.0,170.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+<polyline points="580.0,170.0 620.0,170.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+<polyline points="870.0,170.0 910.0,170.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+<polyline points="1160.0,170.0 1200.0,170.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+<polyline points="1450.0,170.0 1490.0,170.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+<polyline points="1325.0,240.0 1325.0,268.0" fill="none" stroke="#333333" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arr)"/>
+<polyline points="1200.0,312.0 1160.0,312.0" fill="none" stroke="#333333" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arr)"/>
+<polyline points="1035.0,356.0 1035.0,366.0 1540.0,366.0 1540.0,240.0" fill="none" stroke="#333333" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arr)"/>
+<rect x="1206.9" y="356.0" width="161.2" height="20" rx="4" fill="#ffffff" opacity="0.92"/>
+<text x="1287.5" y="371.0" font-size="12.5" text-anchor="middle" fill="#333333">новая версия каталога</text>
+<polyline points="1690.0,240.0 1690.0,428.0 1690.0,428.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+<polyline points="1490.0,473.0 1450.0,473.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+<polyline points="1200.0,473.0 1160.0,473.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+<polyline points="290.0,670.0 330.0,670.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+<polyline points="580.0,670.0 620.0,670.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+<polyline points="870.0,670.0 910.0,670.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+<polyline points="1160.0,670.0 1200.0,670.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+<polyline points="455.0,740.0 455.0,778.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+<polyline points="580.0,822.0 1250.0,822.0 1250.0,740.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+<polyline points="728.0,518.0 745.0,518.0 745.0,600.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+<polyline points="971.0,518.0 1035.0,518.0 1035.0,600.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+<polyline points="1106.0,518.0 1106.0,572.0 1275.0,572.0 1275.0,600.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+<polyline points="1325.0,740.0 1325.0,880.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+<polyline points="1200.0,950.0 1160.0,950.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+<polyline points="910.0,950.0 870.0,950.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+<polyline points="620.0,950.0 580.0,950.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+<polyline points="455.0,1020.0 455.0,1050.0 267.0,1050.0 267.5,1090.0" fill="none" stroke="#333333" stroke-width="2" marker-end="url(#arr)"/>
+<polyline points="950.0,1185.0 975.0,1185.0 975.0,1145.0 1000.0,1145.0" fill="none" stroke="#333333" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arr)"/>
+<polyline points="1250.0,1145.0 1290.0,1145.0" fill="none" stroke="#333333" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arr)"/>
+<polyline points="1387.4,1090.0 1387.5,1020.0" fill="none" stroke="#333333" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arr)"/>
+<rect x="1285.3" y="1048.5" width="204.4" height="20" rx="4" fill="#ffffff" opacity="0.92"/>
+<text x="1387.5" y="1063.5" font-size="12.5" text-anchor="middle" fill="#333333">локальная добавка к порядку</text>
+<polyline points="1410.0,1200.0 1410.0,1250.0" fill="none" stroke="#333333" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arr)"/>
+<polyline points="1338.0,1200.0 1338.0,1226.0 1125.0,1226.0 1125.0,1250.0" fill="none" stroke="#333333" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arr)"/>
+<polyline points="1530.0,1300.0 1560.0,1300.0" fill="none" stroke="#333333" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arr)"/>
+<polyline points="1750.0,1300.0 1795.0,1300.0 1795.0,993.0 1830.0,993.0" fill="none" stroke="#e08a1e" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arr)"/>
+<polyline points="1750.0,1300.0 1795.0,1300.0 1795.0,501.0 1830.0,501.0" fill="none" stroke="#e08a1e" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#arr)"/>
+</svg>
