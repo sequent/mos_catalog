@@ -10,7 +10,7 @@ LABELS = {
     "pressure_mpa": "давление", "pn": "PN", "climate": "климатическое исполнение", "standard": "стандарт",
     "poles": "полюса", "cable_mark": "марка кабеля", "cable_screen": "экран кабеля", "fire_class": "класс пожарной безопасности",
     "rated_voltage_v": "номинальное напряжение кабеля", "length_mm": "длина", "perimeter_mm": "периметр", "height_mm": "высота",
-    "side_mm": "сторона", "mass_kg": "масса", "area_m2": "площадь", "volume_m3": "объём", "volume_l": "объём",
+    "side_mm": "сторона", "mass_kg": "масса", "distance_km": "расстояние", "area_m2": "площадь", "volume_m3": "объём", "volume_l": "объём",
     "temperature_c": "температура", "range_mm": "диапазон", "numeric_code": "серия / код", "model_codes": "модель",
     "placement": "исполнение", "fire_resistance_ei": "предел огнестойкости EI", "bare_mm": "размер", "type": "тип изделия",
     "name": "название", "material": "материал", "color": "цвет", "switch_gang_count": "число клавиш", "series": "производитель / серия",
@@ -25,7 +25,7 @@ STATUS_TEXT = {
 }
 _UNITS = {"diameter_mm": "мм", "nominal_bore_mm": "мм", "thickness_mm": "мм", "length_mm": "мм", "perimeter_mm": "мм",
           "height_mm": "мм", "side_mm": "мм", "bare_mm": "мм", "current_a": "А", "power_kw": "кВт", "apparent_power_kva": "кВА",
-          "resolution_mp": "Мп", "pressure_mpa": "МПа", "pn": "бар", "mass_kg": "кг", "area_m2": "м²", "volume_m3": "м³",
+          "resolution_mp": "Мп", "pressure_mpa": "МПа", "pn": "бар", "mass_kg": "кг", "distance_km": "км", "area_m2": "м²", "volume_m3": "м³",
           "volume_l": "л", "temperature_c": "°C", "rated_voltage_v": "В", "storage_duration_days": "сут", "quantity_pcs": "шт"}
 
 

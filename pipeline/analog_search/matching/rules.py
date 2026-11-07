@@ -33,7 +33,7 @@ _PLAIN = ("exact", "flag", "ignore", "info")
 ATTRIBUTE_MODES: dict[str, tuple[str, ...]] = {
     **{a: _SCALAR for a in ("current_a", "power_kw", "apparent_power_kva", "resolution_mp", "pressure_mpa", "pn", "diameter_mm",
                             "nominal_bore_mm", "thickness_mm", "length_mm", "perimeter_mm", "height_mm", "side_mm", "mass_kg",
-                            "area_m2", "volume_m3", "volume_l", "fire_resistance_ei", "rated_voltage_v")},
+                            "area_m2", "volume_m3", "volume_l", "fire_resistance_ei", "rated_voltage_v", "distance_km")},
     **{a: _PLAIN for a in ("voltage_v", "temperature_c", "range_mm", "ip", "climate", "standard", "poles", "cable_mark",
                            "cable_screen", "fire_class", "placement", "conductor_form", "switch_gang_count", "port_count", "quantity_pcs",
                            "storage_duration_days", "print_technology", "print_color_mode", "paper_format", "connector_type", "mounting",

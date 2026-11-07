@@ -94,6 +94,7 @@ CLASS_ROMAN_RE = re.compile(rf"(?<![{_L}0-9])(?P<n>[IVX]{{1,4}})(?![{_L}0-9])\s+
 PURPOSE_RE = re.compile(rf"(?<![{_L}])для\s+(?:контрол|измерен|проверк|определен|диагностик|испытан)\w*[^,;.]*", re.I)
 LENGTH_RE = re.compile(rf"(?<![{_L}0-9])L\s*(?P<sep>[=:])?\s*(?P<v>{NUM})(?:\s*(?P<u>мм|см|м)(?![{_L}0-9]))?")
 MASS_RE = re.compile(rf"(?<![{_L}0-9.])(?P<v>{NUM})\s*(?P<u>кг|т)(?![{_L}0-9])")
+DISTANCE_KM_RE = re.compile(rf"(?<![{_L}0-9.])(?P<v>{NUM})\s*км(?![{_L}0-9/])")           # «до 12 км»; «60 км/ч» is a speed, not a distance
 AREA_RE = re.compile(rf"(?<![{_L}0-9.])(?P<v>{NUM})\s*м2(?![{_L}0-9])")
 VOLUME_M3_RE = re.compile(rf"(?<![{_L}0-9.])(?P<v>{NUM})\s*м3(?![{_L}0-9])")
 VOLUME_L_RE = re.compile(rf"(?<![{_L}0-9.])(?P<v>{NUM})\s*(?P<u>мл|л)(?![{_L}0-9])")
@@ -252,6 +253,8 @@ def extract_attributes(text: str, family: str | None = None, source: str = "main
     # --- other measures: mass, area, volume, length in metres, temperature
     for m in MASS_RE.finditer(text):
         add("mass_kg", _num(str(float(m.group("v")) * (1000 if m.group("u") == "т" else 1))), m, unit="kg")
+    for m in DISTANCE_KM_RE.finditer(text):
+        add("distance_km", _num(m.group("v")), m, unit="km")
     for m in AREA_RE.finditer(text):
         add("area_m2", _num(m.group("v")), m, unit="m2")
     for m in VOLUME_M3_RE.finditer(text):
