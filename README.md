@@ -70,7 +70,7 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 .venv/bin/python -I -m uvicorn --app-dir pipeline analog_search.api:app --port 8765
 ```
 
-Тесты (943 штуки: нормализатор, извлечение, типы, правила и их валидация, сравнение, вердикт, лимит, манифесты, API и страница, схема, замер, реестр допущений):
+Тесты (946 штук: нормализатор, извлечение, типы, правила и их валидация, сравнение, вердикт, лимит, манифесты, API и страница, схема, замер, реестр допущений):
 
 ```bash
 .venv/bin/python -I -m pytest -q -p no:cacheprovider
@@ -81,7 +81,7 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 ```bash
 .venv/bin/python -I scripts/search_cli.py "кабель КВВГнг-LS 7*1.5" --debug   # полный ответ схемы в консоли; --debug: сравнение по каждой характеристике
 .venv/bin/python -I scripts/explain.py "кабель КВВГнг-LS 7*1.5"             # как система понимает любой текст: тип, характеристики, пометки
-.venv/bin/python -I scripts/batch_search.py ведомость.xlsx --column "Позиция"            # список позиций (xlsx, csv, txt) через всю схему, результат в CSV; битая строка не останавливает прогон
+.venv/bin/python -I scripts/batch_search.py ведомость.xlsx --column "Позиция"            # список позиций (xlsx, csv, txt) через всю схему, результат в CSV (состояние входной ячейки `input_state`, статус, первая строка таблицы, а для не подтверждённой строки ещё ближайшая отклонённая позиция и причина отказа: `nearest_rejected_name`, `nearest_rejected_why`); битая строка не останавливает прогон. В контейнере писать в `/app` нельзя: указывайте `--out /tmp/result.csv`
 .venv/bin/python -I eval/evaluate.py --run-id my-run                        # проверка качества на 40 контрольных запросах (отчёт в reports/quality/runs/my-run/)
 ```
 
@@ -105,7 +105,7 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 | `Dockerfile`, `docker-compose.yml`, `.dockerignore`, `requirements*.txt`, `constraints.txt` | запуск одной командой: образ с моделью, каталогом и индексом |
 | `База_позиций_тестовое.xlsx` | исходная база (единственный источник данных) |
 | `scripts/` | подготовка каталога и индекса, загрузка модели, поиск и разбор из консоли, пакетный поиск по списку позиций (`batch_search.py`), `smoke_test.py`, `clean_run_check.sh`, `build_scheme.py` |
-| `tests/` | 943 теста |
+| `tests/` | 946 тестов |
 | `eval/` | контрольные запросы `queries.yaml`, `evaluate.py` (прогоны в `reports/quality/runs/`, не перезаписываются), независимая разметка (`judgments.*`), слепые листы, `PROTOCOL.md` (протокол независимой проверки), шаблон независимого набора, снимок для smoke-проверки |
 | `reports/quality/` | отчёт о качестве на контрольных запросах (`quality.md`, `results.json`) и разбор ошибок (`errors.md`) |
 | `reports/extraction/coverage.md`, `reports/retrieval/` | покрытие извлечения характеристик; выводы по поиску кандидатов и данные пробных наборов |

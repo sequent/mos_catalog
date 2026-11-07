@@ -13,12 +13,20 @@ sys.path.insert(0, str(ROOT / "pipeline"))
 spec.loader.exec_module(B)
 
 
+REJECTED = {"name": "Труба ПВХ 32 мм", "price": 7, "verdict_text": "не подходит", "explanation": "Отличается: диаметр (запрос: 25 мм, в базе: 32 мм)."}
+
+
 def fake_search(text, limit):
     if text == "БОМБА":
         raise RuntimeError("boom")
     found = "кабель" in text
     row = {"name": "Кабель", "price": 100, "verdict_text": "совпадает по указанным параметрам", "explanation": "Совпало: сечение."}
-    return {"status": "found" if found else "not_found", "display_status": "found" if found else "not_found", "table": [row] if found else [], "results": [row] if found else []}
+    if text == "камера":                                                          # nothing confirmed, a variant to check is on the screen
+        weak = {"name": "Камера 2 Мп", "price": 5, "verdict_text": "проверить", "explanation": "Нет данных: разрешение."}
+        return {"status": "not_found", "display_status": "review", "table": [weak], "results": [], "nearest_rejected": REJECTED}
+    nearest = None if found or text != "труба" else REJECTED                      # the engine always has this key: None or the closest rejected position
+    return {"status": "found" if found else "not_found", "display_status": "found" if found else "not_found", "table": [row] if found else [],
+            "results": [row] if found else [], "nearest_rejected": nearest}
 
 
 def test_classify_the_cells():
@@ -70,3 +78,38 @@ def test_the_tool_on_the_real_engine(tmp_path):
     rows = list(csv.DictReader(out.open(encoding="utf-8-sig"), delimiter=";"))
     assert [r["status"] for r in rows] == ["found", "not_searched", "found", "not_found"]
     assert rows[0]["top_name"] and rows[1]["error"]
+
+
+def test_a_not_found_row_says_why_and_a_found_row_does_not():
+    """The statement is read without the screen: a row that was not confirmed carries the closest rejected position and the reason."""
+    rows = B.run(["кабель 3х1,5", "труба", "огнетушитель", "камера", None], fake_search)
+    found, pipe, nothing, review, empty = rows
+    assert pipe["nearest_rejected_name"] == "Труба ПВХ 32 мм" and "диаметр" in pipe["nearest_rejected_why"]
+    assert review["nearest_rejected_name"] == "Труба ПВХ 32 мм"                       # a variant to check does not hide the closest rejected one
+    assert found["nearest_rejected_name"] == "" and found["nearest_rejected_why"] == ""     # a confirmed row needs no reason of refusal
+    assert nothing["nearest_rejected_name"] == "" and empty["nearest_rejected_name"] == ""   # nothing close and nothing searched: the cells are empty, not invented
+
+
+def test_the_summary_counts_the_variants_to_check_apart_from_the_nothing_found():
+    rows = B.run(["кабель 3х1,5", "камера", "труба", None], fake_search)
+    assert B.review_count(rows) == 1
+    assert B.totals(rows)["not_found"] == 2                                           # the strict status stays strict: a variant to check is not a confirmed one
+
+
+def test_the_csv_and_the_summary_line_of_the_command(tmp_path, monkeypatch, capsys):
+    import analog_search.engine as engine
+
+    class Fake:
+        def search(self, q, top_k=5):
+            return fake_search(q, top_k)
+
+    monkeypatch.setattr(engine.SearchEngine, "build", classmethod(lambda cls: Fake()))
+    src = tmp_path / "v.txt"
+    src.write_text("кабель 3х1,5\nкамера\nтруба\n\n", encoding="utf-8")
+    out = tmp_path / "out.csv"
+    assert B.main([str(src), "--out", str(out)]) == 0
+    rows = list(csv.DictReader(out.open(encoding="utf-8-sig"), delimiter=";"))
+    assert "nearest_rejected_name" in rows[0] and "nearest_rejected_why" in rows[0]
+    assert rows[2]["nearest_rejected_why"].startswith("Отличается: диаметр")
+    printed = capsys.readouterr().out
+    assert "подтверждено: 1" in printed and "не найдено: 2" in printed and "из них с вариантами для проверки: 1" in printed
