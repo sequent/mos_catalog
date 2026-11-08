@@ -1,5 +1,5 @@
 {
- "run_id": "hv2-after-robustness",
+ "run_id": "after-h05-cmp",
  "set": {
   "set_name": "internal-regression-v1",
   "usage": "regression",
@@ -1175,10 +1175,10 @@
    "all": {
     "ans": 26,
     "hit5": 24,
-    "hit1": 20,
+    "hit1": 21,
     "hit5_lenient": 24,
     "wrong_key": 8,
-    "wrong_top1": 19,
+    "wrong_top1": 18,
     "noans": 14,
     "honest": 1,
     "false_answer": 13,
@@ -1503,18 +1503,16 @@
      },
      "H05": {
       "top5": [
-       "row-000217",
        "row-001066",
+       "row-000217",
        "row-001279",
        "row-001351",
        "row-000863"
       ],
       "status": "found",
       "extra": [],
-      "top1": "row-000217",
-      "wrong": true,
-      "wrong_key": false,
-      "rank": 2
+      "top1": "row-001066",
+      "rank": 1
      },
      "H06": {
       "top5": [
@@ -2030,10 +2028,10 @@
    "holdout": {
     "ans": 10,
     "hit5": 8,
-    "hit1": 6,
+    "hit1": 7,
     "hit5_lenient": 8,
     "wrong_key": 5,
-    "wrong_top1": 14,
+    "wrong_top1": 13,
     "noans": 10,
     "honest": 0,
     "false_answer": 10,
@@ -2094,18 +2092,16 @@
      },
      "H05": {
       "top5": [
-       "row-000217",
        "row-001066",
+       "row-000217",
        "row-001279",
        "row-001351",
        "row-000863"
       ],
       "status": "found",
       "extra": [],
-      "top1": "row-000217",
-      "wrong": true,
-      "wrong_key": false,
-      "rank": 2
+      "top1": "row-001066",
+      "rank": 1
      },
      "H06": {
       "top5": [
@@ -2333,10 +2329,10 @@
    "all": {
     "ans": 26,
     "hit5": 26,
-    "hit1": 22,
+    "hit1": 23,
     "hit5_lenient": 26,
     "wrong_key": 8,
-    "wrong_top1": 18,
+    "wrong_top1": 17,
     "noans": 14,
     "honest": 0,
     "false_answer": 14,
@@ -2665,18 +2661,16 @@
      },
      "H05": {
       "top5": [
-       "row-000217",
        "row-001066",
+       "row-000217",
        "row-001279",
-       "row-000567",
-       "row-000863"
+       "row-000863",
+       "row-001351"
       ],
       "status": "found",
       "extra": [],
-      "top1": "row-000217",
-      "wrong": true,
-      "wrong_key": false,
-      "rank": 2
+      "top1": "row-001066",
+      "rank": 1
      },
      "H06": {
       "top5": [
@@ -3196,10 +3190,10 @@
    "holdout": {
     "ans": 10,
     "hit5": 10,
-    "hit1": 6,
+    "hit1": 7,
     "hit5_lenient": 10,
     "wrong_key": 6,
-    "wrong_top1": 14,
+    "wrong_top1": 13,
     "noans": 10,
     "honest": 0,
     "false_answer": 10,
@@ -3260,18 +3254,16 @@
      },
      "H05": {
       "top5": [
-       "row-000217",
        "row-001066",
+       "row-000217",
        "row-001279",
-       "row-000567",
-       "row-000863"
+       "row-000863",
+       "row-001351"
       ],
       "status": "found",
       "extra": [],
-      "top1": "row-000217",
-      "wrong": true,
-      "wrong_key": false,
-      "rank": 2
+      "top1": "row-001066",
+      "rank": 1
      },
      "H06": {
       "top5": [
@@ -3498,8 +3490,8 @@
   "4 вся схема B1–B7": {
    "all": {
     "ans": 26,
-    "hit5": 21,
-    "hit1": 21,
+    "hit5": 22,
+    "hit1": 22,
     "hit5_lenient": 26,
     "wrong_key": 0,
     "wrong_top1": 0,
@@ -3755,15 +3747,17 @@
       "rank": null
      },
      "H05": {
-      "top5": [],
-      "status": "not_found",
-      "extra": [
-       "row-001066",
-       "row-000863",
-       "row-001351"
+      "top5": [
+       "row-001066"
       ],
-      "top1": null,
-      "rank": null
+      "status": "found",
+      "extra": [
+       "row-000863",
+       "row-001351",
+       "row-000567"
+      ],
+      "top1": "row-001066",
+      "rank": 1
      },
      "H06": {
       "top5": [
@@ -4144,8 +4138,8 @@
    },
    "holdout": {
     "ans": 10,
-    "hit5": 7,
-    "hit1": 7,
+    "hit5": 8,
+    "hit1": 8,
     "hit5_lenient": 10,
     "wrong_key": 0,
     "wrong_top1": 0,
@@ -4191,15 +4185,17 @@
       "rank": null
      },
      "H05": {
-      "top5": [],
-      "status": "not_found",
-      "extra": [
-       "row-001066",
-       "row-000863",
-       "row-001351"
+      "top5": [
+       "row-001066"
       ],
-      "top1": null,
-      "rank": null
+      "status": "found",
+      "extra": [
+       "row-000863",
+       "row-001351",
+       "row-000567"
+      ],
+      "top1": "row-001066",
+      "rank": 1
      },
      "H06": {
       "top5": [
@@ -4346,24 +4342,6 @@
  },
  "ablations": {
   "полная схема (как есть)": {
-   "hit5": 21,
-   "hit1": 21,
-   "wrong_key": 0,
-   "honest": 14,
-   "false_answer": 0,
-   "probe_b_confirmed": 0.785,
-   "probe_b_wrong_top1": 0.0
-  },
-  "тип — жёсткий фильтр (кандидаты другого/неизвестного типа отбрасываются)": {
-   "hit5": 21,
-   "hit1": 21,
-   "wrong_key": 0,
-   "honest": 14,
-   "false_answer": 0,
-   "probe_b_confirmed": 0.77,
-   "probe_b_wrong_top1": 0.0
-  },
-  "комплекты без ограничения («та же позиция» возможна)": {
    "hit5": 22,
    "hit1": 22,
    "wrong_key": 0,
@@ -4372,9 +4350,27 @@
    "probe_b_confirmed": 0.785,
    "probe_b_wrong_top1": 0.0
   },
+  "тип — жёсткий фильтр (кандидаты другого/неизвестного типа отбрасываются)": {
+   "hit5": 22,
+   "hit1": 22,
+   "wrong_key": 0,
+   "honest": 14,
+   "false_answer": 0,
+   "probe_b_confirmed": 0.77,
+   "probe_b_wrong_top1": 0.0
+  },
+  "комплекты без ограничения («та же позиция» возможна)": {
+   "hit5": 23,
+   "hit1": 23,
+   "wrong_key": 0,
+   "honest": 14,
+   "false_answer": 0,
+   "probe_b_confirmed": 0.785,
+   "probe_b_wrong_top1": 0.0
+  },
   "ранжирование только по баллу (без «класс прежде балла»)": {
-   "hit5": 21,
-   "hit1": 21,
+   "hit5": 22,
+   "hit1": 22,
    "wrong_key": 0,
    "honest": 14,
    "false_answer": 0,
@@ -4382,8 +4378,8 @@
    "probe_b_wrong_top1": 0.0
   },
   "без проверки слов запроса (порог 0)": {
-   "hit5": 21,
-   "hit1": 21,
+   "hit5": 22,
+   "hit1": 22,
    "wrong_key": 0,
    "honest": 14,
    "false_answer": 0,
@@ -4391,8 +4387,8 @@
    "probe_b_wrong_top1": 0.0
   },
   "без требования подтверждённой характеристики": {
-   "hit5": 23,
-   "hit1": 23,
+   "hit5": 24,
+   "hit1": 24,
    "wrong_key": 0,
    "honest": 13,
    "false_answer": 1,
@@ -4400,8 +4396,8 @@
    "probe_b_wrong_top1": 0.0
   },
   "порядок сторон у типов без правила: sorted": {
-   "hit5": 21,
-   "hit1": 21,
+   "hit5": 22,
+   "hit1": 22,
    "wrong_key": 0,
    "honest": 14,
    "false_answer": 0,
@@ -4409,8 +4405,8 @@
    "probe_b_wrong_top1": 0.0
   },
   "экран кабеля «Э» игнорируется (cable_screen: ignore)": {
-   "hit5": 21,
-   "hit1": 21,
+   "hit5": 22,
+   "hit1": 22,
    "wrong_key": 0,
    "honest": 14,
    "false_answer": 0,
@@ -4418,8 +4414,8 @@
    "probe_b_wrong_top1": 0.0
   },
   "без защиты от неразобранных ограничений (blocking_reasons: [])": {
-   "hit5": 21,
-   "hit1": 21,
+   "hit5": 22,
+   "hit1": 22,
    "wrong_key": 0,
    "honest": 14,
    "false_answer": 0,
@@ -4431,7 +4427,7 @@
   "all": {
    "ans": 26,
    "shown": 26,
-   "confirmed": 21,
+   "confirmed": 22,
    "noans": 14,
    "clean_refusal": 9,
    "review_shown": 5,
@@ -4608,12 +4604,11 @@
      ]
     },
     "H05": {
-     "display_status": "review",
+     "display_status": "found",
      "table": [
       "row-001066",
       "row-000863",
-      "row-001351",
-      "row-000567"
+      "row-001351"
      ]
     },
     "H06": {
@@ -4879,7 +4874,7 @@
   "holdout": {
    "ans": 10,
    "shown": 10,
-   "confirmed": 7,
+   "confirmed": 8,
    "noans": 10,
    "clean_refusal": 7,
    "review_shown": 3,
@@ -4911,12 +4906,11 @@
      ]
     },
     "H05": {
-     "display_status": "review",
+     "display_status": "found",
      "table": [
       "row-001066",
       "row-000863",
-      "row-001351",
-      "row-000567"
+      "row-001351"
      ]
     },
     "H06": {
@@ -5019,27 +5013,27 @@
    "negative": 14,
    "candidate_hit@50": 26,
    "candidate_recall@50": 1.0,
-   "confirmed_hit@1": 21,
+   "confirmed_hit@1": 22,
    "display_hit@1": 26,
-   "confirmed_hit@5": 21,
+   "confirmed_hit@5": 22,
    "display_hit@5": 26,
-   "confirmation_coverage_all": 21,
-   "confirmation_coverage_positive": 21,
+   "confirmation_coverage_all": 22,
+   "confirmation_coverage_positive": 22,
    "confirmation_coverage_negative": 0,
-   "confirmed_top1_in_answer_rows": 21,
+   "confirmed_top1_in_answer_rows": 22,
    "confirmed_top1_outside_answer_rows": 0,
-   "confirmed_top1_total": 21,
+   "confirmed_top1_total": 22,
    "confirmed_precision@1": {
-    "acceptable": 21,
+    "acceptable": 22,
     "unacceptable": 0,
     "unassessed": 0,
-    "total": 21
+    "total": 22
    },
    "technical_error@1_results": {
     "conflict": 0,
     "no_conflict": 0,
-    "unknown": 21,
-    "first_rows": 21
+    "unknown": 22,
+    "first_rows": 22
    },
    "technical_error@1_table": {
     "conflict": 0,
@@ -5130,27 +5124,27 @@
    "negative": 10,
    "candidate_hit@50": 10,
    "candidate_recall@50": 1.0,
-   "confirmed_hit@1": 7,
+   "confirmed_hit@1": 8,
    "display_hit@1": 10,
-   "confirmed_hit@5": 7,
+   "confirmed_hit@5": 8,
    "display_hit@5": 10,
-   "confirmation_coverage_all": 7,
-   "confirmation_coverage_positive": 7,
+   "confirmation_coverage_all": 8,
+   "confirmation_coverage_positive": 8,
    "confirmation_coverage_negative": 0,
-   "confirmed_top1_in_answer_rows": 7,
+   "confirmed_top1_in_answer_rows": 8,
    "confirmed_top1_outside_answer_rows": 0,
-   "confirmed_top1_total": 7,
+   "confirmed_top1_total": 8,
    "confirmed_precision@1": {
-    "acceptable": 7,
+    "acceptable": 8,
     "unacceptable": 0,
     "unassessed": 0,
-    "total": 7
+    "total": 8
    },
    "technical_error@1_results": {
     "conflict": 0,
     "no_conflict": 0,
-    "unknown": 7,
-    "first_rows": 7
+    "unknown": 8,
+    "first_rows": 8
    },
    "technical_error@1_table": {
     "conflict": 0,
@@ -5171,27 +5165,27 @@
      "negative": 14,
      "candidate_hit@50": 26,
      "candidate_recall@50": 1.0,
-     "confirmed_hit@1": 21,
+     "confirmed_hit@1": 22,
      "display_hit@1": 26,
-     "confirmed_hit@5": 21,
+     "confirmed_hit@5": 22,
      "display_hit@5": 26,
-     "confirmation_coverage_all": 21,
-     "confirmation_coverage_positive": 21,
+     "confirmation_coverage_all": 22,
+     "confirmation_coverage_positive": 22,
      "confirmation_coverage_negative": 0,
-     "confirmed_top1_in_answer_rows": 21,
+     "confirmed_top1_in_answer_rows": 22,
      "confirmed_top1_outside_answer_rows": 0,
-     "confirmed_top1_total": 21,
+     "confirmed_top1_total": 22,
      "confirmed_precision@1": {
-      "acceptable": 21,
+      "acceptable": 22,
       "unacceptable": 0,
       "unassessed": 0,
-      "total": 21
+      "total": 22
      },
      "technical_error@1_results": {
       "conflict": 0,
       "no_conflict": 0,
-      "unknown": 21,
-      "first_rows": 21
+      "unknown": 22,
+      "first_rows": 22
      },
      "technical_error@1_table": {
       "conflict": 0,
@@ -5210,27 +5204,27 @@
      "negative": 14,
      "candidate_hit@50": 26,
      "candidate_recall@50": 1.0,
-     "confirmed_hit@1": 21,
+     "confirmed_hit@1": 22,
      "display_hit@1": 26,
-     "confirmed_hit@5": 21,
+     "confirmed_hit@5": 22,
      "display_hit@5": 26,
-     "confirmation_coverage_all": 21,
-     "confirmation_coverage_positive": 21,
+     "confirmation_coverage_all": 22,
+     "confirmation_coverage_positive": 22,
      "confirmation_coverage_negative": 0,
-     "confirmed_top1_in_answer_rows": 21,
+     "confirmed_top1_in_answer_rows": 22,
      "confirmed_top1_outside_answer_rows": 0,
-     "confirmed_top1_total": 21,
+     "confirmed_top1_total": 22,
      "confirmed_precision@1": {
-      "acceptable": 21,
+      "acceptable": 22,
       "unacceptable": 0,
       "unassessed": 0,
-      "total": 21
+      "total": 22
      },
      "technical_error@1_results": {
       "conflict": 0,
       "no_conflict": 0,
-      "unknown": 21,
-      "first_rows": 21
+      "unknown": 22,
+      "first_rows": 22
      },
      "technical_error@1_table": {
       "conflict": 0,
@@ -5257,18 +5251,18 @@
     "calls": 120
    },
    "B2, с E5": {
-    "p50_ms": 5.8,
-    "p95_ms": 7.9,
+    "p50_ms": 4.6,
+    "p95_ms": 5.9,
     "calls": 120
    },
    "вся цепочка, без E5": {
-    "p50_ms": 5.5,
-    "p95_ms": 8.0,
+    "p50_ms": 5.2,
+    "p95_ms": 7.6,
     "calls": 120
    },
    "вся цепочка, с E5": {
-    "p50_ms": 13.2,
-    "p95_ms": 19.3,
+    "p50_ms": 11.1,
+    "p95_ms": 16.1,
     "calls": 120
    }
   }
