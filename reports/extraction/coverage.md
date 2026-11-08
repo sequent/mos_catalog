@@ -5,8 +5,8 @@ Rows: 2381; searchable (not service/adjustment): 2277
 - services: 90; adjustments: 14; composite: 59 (header 46, inline 13)
 - numbering prefix removed: 7; rows with «(прим.)» fragments: 133
 - type recognised: 1934 (84.9%); unknown: 343 (15.1%)
-- at least one attribute (excluding model codes): 1482 (65.1%)
-- every number of the name explained by an attribute or code: 1750 (76.9%)
+- at least one attribute (excluding model codes): 1487 (65.3%)
+- every number of the name explained by an attribute or code: 1756 (77.1%)
 
 ## Rows per attribute
 
@@ -15,8 +15,8 @@ Rows: 2381; searchable (not service/adjustment): 2277
 | model_codes | 1499 | 1499 |
 | material | 572 | 572 |
 | dims | 393 | 431 |
+| numeric_code | 257 | 272 |
 | diameter_mm | 254 | 286 |
-| numeric_code | 251 | 266 |
 | voltage_v | 204 | 216 |
 | thickness_mm | 149 | 149 |
 | cores_section | 120 | 120 |
@@ -112,5 +112,5 @@ Rows: 2381; searchable (not service/adjustment): 2277
 
 `ограждение`×7, `монтажный`×6, `аккумуляторный`×4, `крепежный`×4, `оптический`×4, `соединительная`×4, `торцевая`×4, `адресный`×3, `антиприсадочное`×3, `декоративная`×3, `детали`×3, `доукомплектация`×3, `крепежное`×3, `окгт-ц-`×3, `опорная`×3, `резьбовая`×3, `рефнет`×3, `соединение`×3, `состав`×3, `u-`×2, `абонентские`×2, `барабан`×2, `батарея`×2, `бирки`×2, `битумы`×2, `быстроразъемное`×2, `воронка`×2, `высоковольтный`×2, `гипсокартонный`×2, `доводчик`×2, `дождеприемник`×2, `замок`×2, `зонты`×2, `измерительный`×2, `иэу`×2, `комплектное`×2, `концевая`×2, `короб`×2, `листы`×2, `мембрана`×2, `монтажная`×2, `оборудование`×2, `огнестойкий`×2, `оповещатель`×2, `панели`×2, `панель`×2, `пенополистирол`×2, `перегородка`×2, `передвижная`×2, `переносной`×2, `подушка`×2, `пожарная`×2, `прокат`×2, `профилированный`×2, `регулятор`×2, `резервированный`×2, `ригели`×2, `рог`×2, `сварочный`×2, `смеси`×2
 
-## Uncovered numbers: 961 occurrences in 527 rows
+## Uncovered numbers: 955 occurrences in 521 rows
 

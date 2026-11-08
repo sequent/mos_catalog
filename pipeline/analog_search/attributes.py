@@ -101,6 +101,9 @@ VOLUME_L_RE = re.compile(rf"(?<![{_L}0-9.])(?P<v>{NUM})\s*(?P<u>мл|л)(?![{_L}
 LENGTH_M_RE = re.compile(rf"(?<![{_L}0-9.x])(?P<v>{NUM})\s*(?:м|метр\w*)(?![{_L}0-9=/])")
 TEMP_RE = re.compile(rf"(?P<a>[+-]?{NUM})(?:\s*(?:до|\.\.\.|…|–)\s*(?P<b>[+-]?{NUM}))?\s*°\s*[СC]")
 NUMCODE_RE = re.compile(rf"(?<![{_L}0-9./-])(?P<c>\d+(?:\.\d+)?(?:[/-]\d+(?:\.\d+)?)+)(?![{_L}0-9])")
+# a row of two diameters with the ring-stiffness class after each number: «250 SN8/400 SN8» is the series «250/400» (A29). Narrow on
+# purpose: both numbers carry their own «SN<n>»; «250 SN8», «250 SN8/400», «SN8» alone are not turned into a series.
+SN_PAIR_RE = re.compile(rf"(?<![{_L}0-9./-])(?P<a>\d+)\s+(?i:SN)\d+/(?P<b>\d+)\s+(?i:SN)\d+(?![{_L}0-9])")
 RANGE_MM_RE = re.compile(rf"(?<![{_L}0-9.])(?P<a>{NUM})\s*[–—-]\s*(?P<b>{NUM})\s*(?P<u>мм|м)(?![{_L}])")
 BARE_MM_RE = re.compile(rf"(?<![{_L}0-9.x])(?P<v>{NUM})\s*мм(?![{_L}0-9])")
 OUTDOOR_RE = re.compile(r"\b(?:уличн\w*|наружн(?!\w*\s+диаметр)\w*)|для улицы", re.I)
@@ -271,6 +274,8 @@ def extract_attributes(text: str, family: str | None = None, source: str = "main
     for m in RANGE_MM_RE.finditer(text):
         k = _TO_MM[m.group("u")]
         add("range_mm", [_num(str(float(m.group("a")) * k)), _num(str(float(m.group("b")) * k))], m, unit="mm")
+    for m in SN_PAIR_RE.finditer(text):               # «250 SN8/400 SN8» = «250/400»: the same series as in a query that omits the classes
+        add("numeric_code", f"{m.group('a')}/{m.group('b')}", m)
     taken = [a.span for a in out]
     code_spans = [(s, e) for _, _, s, e in code_tokens(text)]
     for m in NUMCODE_RE.finditer(text):               # series like «221.04-1», «50/125», «41/21»
